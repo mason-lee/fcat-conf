@@ -1,7 +1,7 @@
 /*
 	Initial Style Setup
  */
-body {
+/*body {
 	color: #202020;
 }
 
@@ -28,17 +28,16 @@ a:hover {
 h4 {
 	font-size: 1.2em !important;
 	font-weight: bold !important;
-}
+}*/
 /*
 	Layout styling starts
  */
-header {
+/*header {
 	width: 275px;
 	position: fixed;
 	top: 0px;
 	bottom: 0px;
 	left: 0px;
-	/*background-color: #f4f4f4;*/
 	z-index: 36;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
@@ -83,23 +82,7 @@ header ul li a {
 
 .submit-story-wrapper {
 	padding: 15px 0;	
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}*/
 
 
 

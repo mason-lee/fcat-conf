@@ -1,12 +1,69 @@
-<h1>Test</h1>
-<p>
-<% _.each(users, function(user) { %>
-	<%= user.firstName %>
-	<form action="/admin/submissions/<%= user.id %>/approve" method="post">
-		<input type="submit" value="Approve">
-	</form>
-	<form action="/admin/submissions/<%= user.id %>/reject" method="post">
-		<input type="submit" value="Reject">
-	</form>
-<% }) %>
-</p>
+<h1>Submitted form</h1>
+<table class="table table-hover">
+	<thead>
+		<tr>
+			<th>
+				#
+			</th>
+			<th>
+				Avatar
+			</th>
+			<th>
+				Name
+			</th>
+			<th>
+				Email
+			</th>
+			<th>
+				Phone
+			</th>
+			<th>
+				Credential
+			</th>
+			<th>
+				Categories
+			</th>
+			<th>
+				Publishing Decision
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% _.each(users, function(user, index) { %>
+		<tr>
+			<td>
+				<%= index + 1 %>
+			</td>
+			<td>
+				picture
+			</td>
+			<td>
+				<%= user.firstName %>
+				<%= user.lastName %>
+			</td>
+			<td>
+				<%= user.email %>
+			</td>
+			<td>
+				<%= user.phone %>
+			</td>
+			<td>
+				<%= user.credential %>
+			</td>
+			<td>
+				<%= user.categories %>
+			</td>
+			<td>
+				<form action="/admin/submissions/<%= user.id %>/approve" method="post">
+					<input type="submit" value="Approve" class="btn btn-success">
+				</form>
+			</td>
+			<td>
+				<form action="/admin/submissions/<%= user.id %>/reject" method="post">
+					<input type="submit" value="Reject" class="btn btn-danger">
+				</form>
+			</td>
+		<% }) %>
+		</tr>
+	</tbody>
+</table>

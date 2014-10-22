@@ -1,5 +1,10 @@
 module.exports = {
 	new: function(req, res) {
+		/**
+		 * Use a different layout
+		 * Tutorial is here - http://lift.pressmist.com/use-different-layout-sails-js
+		 */
+		res.locals.layout = 'layoutadmin';
 		res.view();
 	},
 
@@ -15,17 +20,13 @@ module.exports = {
 			/*
 				todo: Show error message
 			 */
-			
-
-
 			// res.send('Invalid password: ' + req.param('password'));
-			res.send('Invalid password. Please try again.');
-
+			res.send("<p class='bg-danger'>The password is invalid.</p>");
 		}
 	},
 
 	destroy: function(req, res) {
 		req.session.authenticated = false;
-		res.send('logged out')
+		res.send('logged out');
 	}
 };
