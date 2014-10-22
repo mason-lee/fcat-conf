@@ -45,7 +45,7 @@ module.exports.routes = {
 	*                                                                          *
 	***************************************************************************/
 
-	'/register': 'UserController.new',
+	'/submit': 'UserController.new',
 	
 	'/about': {
 		view: 'static/about'
