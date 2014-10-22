@@ -10,6 +10,11 @@ module.exports = {
 	schema: true,
 	
 	attributes: {
+		status: {
+			type: 'string',
+			defaultsTo: 'pending'
+		},
+
 		firstName: {
 			type: 'string'
 		},
@@ -33,6 +38,10 @@ module.exports = {
 		},
 
 		categories: {
+			type: 'string'
+		},
+
+		imageUrl: {
 			type: 'string'
 		}
 

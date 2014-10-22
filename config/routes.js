@@ -31,9 +31,7 @@ module.exports.routes = {
 	* `assets` directory)                                                      *
 	*                                                                          *
 	***************************************************************************/
-	'/': {
-		view: 'static/index'
-	},
+	'/': 'MainController.index',
 
 	/***************************************************************************
 	*                                                                          *
@@ -49,7 +47,15 @@ module.exports.routes = {
 	
 	'/about': {
 		view: 'static/about'
-	}
+	},
+
+	'/admin/login': 'SessionController.new',
+	'post /session': 'SessionController.create',
+	'/admin/logout': 'SessionController.destroy',
+
+	'/admin/submissions': 'SubmissionController.index',
+	'post /admin/submissions/:id/approve': 'SubmissionController.approve',
+	'post /admin/submissions/:id/reject': 'SubmissionController.reject'
 };
 
 

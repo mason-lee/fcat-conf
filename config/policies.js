@@ -28,6 +28,10 @@ module.exports.policies = {
 
   // '*': true,
 
+  SubmissionController: {
+    // '*': 'isAdmin'
+  }
+
   /***************************************************************************
   *                                                                          *
   * Here's an example of mapping some policies to run before a controller    *

@@ -1,0 +1,12 @@
+<h1>Test</h1>
+<p>
+<% _.each(users, function(user) { %>
+	<%= user.firstName %>
+	<form action="/admin/submissions/<%= user.id %>/approve" method="post">
+		<input type="submit" value="Approve">
+	</form>
+	<form action="/admin/submissions/<%= user.id %>/reject" method="post">
+		<input type="submit" value="Reject">
+	</form>
+<% }) %>
+</p>
