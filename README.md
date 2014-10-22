@@ -17,6 +17,6 @@ a [Sails](http://sailsjs.org) application
 # Run the application
 Once you have installed Sails. Clone this repository and 'npm install' and 'sails lift'
 
-
-
+#### Note(These are just things to keep in find before deploy)
+* Configure blueprint.js - set shortcut to "false".
 
