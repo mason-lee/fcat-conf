@@ -41,7 +41,7 @@ module.exports = {
 			type: 'string'
 		},
 
-		imageUrl: {
+		avatar: {
 			type: 'string'
 		}
 

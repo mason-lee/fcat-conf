@@ -1,5 +1,20 @@
-<h1>Approved</h1>
+<div class="hero-section">
+	<div>
+		<img src="images/temp-banner.png" alt="FCAT Banner">
+	</div>
+</div>
+<div class="featured-people-wrapper container-fluid">
+	<% _.each(users, function(user, index) { %>			
 
-<% _.each(users, function(user) { %>
-	<%= user.firstName %>
-<% }) %>
+		<div class="pull-left col-md-4 post">
+			<div class="featured-people-wrapper">
+				<%= user.firstName %>
+				<%= user.lastName %>
+				<%= user.email %>
+				<%= user.phone %>
+				<%= user.credential %>
+				<%= user.categories %>
+			</div>
+		</div>
+	<% }) %>
+</div>

@@ -28,6 +28,27 @@ module.exports = {
 		// if (req.file )
 		// res.send(req.file('uploadFile')._files[0].stream.filename);
 		// return;
+		// 
+		res.setTimeout(0);
+
+		req.file('avatar').upload({
+			adapter: require('skipper-s3'),
+			bucket: 'fcat-images',
+			/**
+			 *  These keys should be hidden
+			 */
+			key: 'AKIAJ4BD3GPOXVPPONBQ', 
+			secret: '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'
+		}, function (err, uploadedFiles) {
+			if(err) return res.send(500, err);
+			return res.json({
+				message: uploadedFiles.length + ' file(s) uploaded successfully!',
+				files: uploadedFiles,
+				textParams: req.params.all()
+			});
+		});
+
+
 
 		User.create(req.params.all(), function UserCreated(err, user) {
 			if(err) {
@@ -36,7 +57,7 @@ module.exports = {
 
 			// Redirect to the index page once a user is 
 			// successfully created
-			res.redirect('/');
+			// res.redirect('/');
 		});
 	}
 };

@@ -21,14 +21,14 @@ module.exports = {
 	approve: function(req, res) {
 		User.update({id: req.param('id')}, { status: 'approved' }).exec(function(err, user) {
 			res.redirect('/admin/submissions');
-			res.view("<h4 class='bg-success'>Successfully published.</h4>");
+			// res.view("<h4 class='bg-success'>Successfully published.</h4>");
 		});
 	},
 
 	reject: function(req, res) {
 		User.update({id: req.param('id')}, {status: 'rejected'}).exec(function(err, user) {
 			res.redirect('/admin/submissions');
-			res.view("<h4 class='bg-danger'>Successfully deleted the information.</h4>");
+			// res.view("<h4 class='bg-danger'>Successfully deleted the information.</h4>");
 		});
 	}
 };
