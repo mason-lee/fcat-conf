@@ -1,4 +1,7 @@
-<span class="form-success"><%- req.flash('message') %></span>
+<div class="form-success alert alert-warning fade in" role="alert" style="display: none;">
+	<a class="close" data-hide="alert">x</a>
+	<%- req.flash('message') %>
+</div>
 
 <div class="hero-section">
 	<div>

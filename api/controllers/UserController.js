@@ -28,6 +28,7 @@ module.exports = {
 			// successfully created
 			req.flash('message', 'Thank you for your submission! The admins will review your submission before publishing.');
 			res.redirect('/');
+			res.end();
 		});
 
 		/*
