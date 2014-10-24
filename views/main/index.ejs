@@ -1,3 +1,5 @@
+<span class="form-success"><%- req.flash('message') %></span>
+
 <div class="hero-section">
 	<div>
 		<img src="images/temp-banner.png" alt="FCAT Banner">
@@ -5,16 +7,31 @@
 </div>
 <div class="featured-people-wrapper container-fluid">
 	<% _.each(users, function(user, index) { %>			
-
-		<div class="pull-left col-md-4 post">
-			<div class="featured-people-wrapper">
-				<%= user.firstName %>
-				<%= user.lastName %>
-				<%= user.email %>
-				<%= user.phone %>
-				<%= user.credential %>
-				<%= user.categories %>
+		<% if ( (index+1)%3 !==0) { %>
+			<div class="pull-left col-md-4 post">
+				<div class="featured-people-wrapper">
+					<%=: user.firstName | capitalize %>
+					<%=: user.lastName | capitalize %>
+					<%= user.email %>
+					<%= user.phone %>
+					<%=: user.credential | capitalize %>
+					<%=: user.categories | capitalize %>
+				</div>
 			</div>
-		</div>
+		<% } %>
+		
+		<!-- Every 3 divs no padding-right -->
+		<% if ( (index+1)%3 === 0) { %>
+			<div class="new-left col-md-4 post">
+				<div class="featured-people-wrapper">
+					<%=: user.firstName | capitalize %>
+					<%=: user.lastName | capitalize %>
+					<%= user.email %>
+					<%= user.phone %>
+					<%=: user.credential | capitalize %>
+					<%=: user.categories | capitalize %>
+				</div>
+			</div>
+		<% } %>
 	<% }) %>
 </div>

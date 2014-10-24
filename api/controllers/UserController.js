@@ -13,22 +13,26 @@ module.exports = {
 	create: function(req, res) {
 		// Create a User with the parameters sent from 
 		// the form
-		
+		/*
+			Save all of user input
+		 */
+		User.create(req.params.all(), function UserCreated(err, user) {
+			/*
+				When there is an error, redirect the user to the submit page
+			 */
+			if(err) {
+				res.redirect('/submit');
+			}
+
+			// Redirect to the index page once a user is 
+			// successfully created
+			req.flash('message', 'Thank you for your submission! The admins will review your submission before publishing.');
+			res.redirect('/');
+		});
+
 		/*
 			Uploading image
 		 */
-		// var file = req.file('uploadFile').;
-
-		// if (file) {
-		// 	res.send(file);
-		// }  else {
-		// 	res.send('no file')
-		// }
-		// return;
-		// if (req.file )
-		// res.send(req.file('uploadFile')._files[0].stream.filename);
-		// return;
-		// 
 		res.setTimeout(0);
 
 		req.file('avatar').upload({
@@ -46,18 +50,6 @@ module.exports = {
 				files: uploadedFiles,
 				textParams: req.params.all()
 			});
-		});
-
-
-
-		User.create(req.params.all(), function UserCreated(err, user) {
-			if(err) {
-				console.log(err);
-			}
-
-			// Redirect to the index page once a user is 
-			// successfully created
-			// res.redirect('/');
 		});
 	}
 };
