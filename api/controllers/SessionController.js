@@ -28,5 +28,6 @@ module.exports = {
 	destroy: function(req, res) {
 		req.session.authenticated = false;
 		res.send('logged out');
+		res.redirect("/");
 	}
 };

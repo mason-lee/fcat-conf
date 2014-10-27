@@ -17,6 +17,7 @@ module.exports = {
 
 		firstName: {
 			type: 'string'
+			// required: true
 		},
 
 		lastName: {
@@ -41,7 +42,7 @@ module.exports = {
 			type: 'string'
 		},
 
-		imageUrl: {
+		avatar: {
 			type: 'string'
 		}
 
