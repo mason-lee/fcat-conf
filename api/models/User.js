@@ -22,39 +22,69 @@ module.exports = {
 
 		lastName: {
 			type: 'string'
+			// required: true
 		},
 
 		email: {
 			type: 'email',
-			email: true
-			// unique: true
+			email: true,
+			unique: true
+			// required: true
 		},
 
-		phone: {
-			type: 'integer'
-		},
-
-		credential: {
-			type: 'string'
-		},
-
-		categories: {
+		location: {
 			type: 'string'
 		},
 
 		avatar: {
 			type: 'string'
+		},
+
+		categories: {
+			type: 'string'
+			// required: true
+		},
+
+		portfolio: {
+			type:'string'
+		},
+
+		credential: {
+			type: 'string'
+			// required: true
+		},
+
+		company: {
+			type: 'string'
+		},
+
+		position: {
+			type: 'string'
+		},
+
+		responsibility: {
+			type: 'string'
+		},
+
+		love: {
+			type: 'string'
+		},
+
+		failure: {
+			type: 'string'
+		},
+
+		wish: {
+			type: 'string'
+		},
+
+		wisdom: {
+			type: 'string'
+		},
+
+		share: {
+			type: 'boolean'
 		}
-
-		// Strip out the information that is returned to the users
-		// toJSON: function() {
-		// 	var obj = this.toObject();
-		// 	delete obj.categories;
-		// 	delete obj.phone;
-		// 	delete obj._csrf;
-		// 	return obj;
-		// }
-
 	}
 };
 

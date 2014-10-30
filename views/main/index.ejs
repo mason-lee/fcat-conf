@@ -6,21 +6,17 @@
 <div class="featured-people-wrapper container-fluid">
 
 	<% _.each(users, function(user, index) { %>			
-		<% if ( (index+1)%3 !==0) { %>
-			<div class="pull-left post element-item">
-				<div class="image-wrapper"></div>
-				<div class="inner-featured-people-wrapper">
-					<div class="image-wrapper">
-
-					</div>
-					<%=: user.firstName | capitalize %>
-					<%=: user.lastName | capitalize %>
-					<%= user.email %>
-					<%= user.phone %>
-					<%=: user.credential | capitalize %>
-					<%=: user.categories | capitalize %>
+		<div class="pull-left post element-item" data-filter="<%= "."+user.categories %>">
+			<div class="inner-featured-people-wrapper">
+				<div class="image-wrapper">
+					
 				</div>
+				<%=: user.firstName | capitalize %>
+				<%=: user.lastName | capitalize %>
+				<%=: user.categories | capitalize %>
+				<%=: user.position | capitalize %>
 			</div>
-		<% } %>
+		</div>
+	
 	<% }) %>
 </div>

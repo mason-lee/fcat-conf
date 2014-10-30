@@ -13,21 +13,24 @@
 	</head>
 
 	<body>
-		<header>
-			<div class="header-inner-wrapper">
-				<div class="logo-wrapper">
+		<div class="admin-header container">
+			<div class="header-inner-wrapper row">
+				<div class="logo-wrapper pull-left">
 					<a href="/">
 						<img src="../images/FCAT-logo.svg" alt="fcat-logo" width="150">
 					</a>
 				</div>
+				<div class="pull-right">
+					<h4>Admin Page</h4>	
+				</div>
+				
 			</div>
-			<div class="about-wrapper">
-				<h4>Admin Page</h4>
-				<a href="/admin/logout">Log out</a>
-			</div>
-		</header>
+			<!-- <div class="about-wrapper">
+				
+			</div> -->
+		</div>
 
-		<section id="content">
+		<section id="content-admin">
 			<%- body %>	
 		</section>
 
@@ -83,7 +86,6 @@
 <script src="/js/dependencies/bootstrap.min.js"></script>
 <script src="/js/dependencies/isotope.pkgd.min.js"></script>
 <script src="/js/dependencies/jquery.js"></script>
-<script src="/js/dependencies/masonry.pkgd.min.js"></script>
 <script src="/js/main.js"></script>
 <!--SCRIPTS END-->
 	</body>

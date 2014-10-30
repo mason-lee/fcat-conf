@@ -3,5 +3,5 @@ module.exports = {
 		User.find({ where: { status: 'approved' } }).exec(function(err, users) {
 			res.view({users: users});
 		});
-	}
+	} 
 }

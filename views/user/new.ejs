@@ -1,7 +1,9 @@
-<section class="clearfix">
+<section class="clearfix new-form">
 	<div class="container col-md-5 center-block">
-		
 		<form class="form-horizontal" role="form" action="/user" method="POST" enctype="multipart/form-data">
+			<div class="form-group">
+				<h3>Biography</h3>	
+			</div>
 			<div class="form-group">
 				<label for="firstName">First Name</label>
 				<input type="text" name="firstName" class="form-control">
@@ -11,16 +13,19 @@
 				<input type="text" name="lastName" class="form-control">
 			</div>
 			<div class="form-group">
+				<!-- 
+					Option to check email as private
+				-->
 				<label for="email">Email</label>
 				<input type="email" name="email" class="form-control">
 			</div>
 			<div class="form-group">
-				<label for="phone">Phone</label>
-				<input type="number" name="phone" class="form-control">
+				<label for="location">Current Location</label>
+				<input type="text" name="location" class="form-control">
 			</div>
 			<div class="form-group">
-				<label for="credential">SFU Graduation Credential</label>
-				<input type="text" name="credential" class="form-control">
+				<label for="avatar">Attach Photo</label>
+				<input type="file" name="avatar" class="form-control">
 			</div>
 			<div class="form-group">
 				<label>Categories</label>
@@ -33,11 +38,56 @@
 				</select>
 			</div>
 			<div class="form-group">
-				<label for="avatar">Attach Photo</label>
-				<input type="file" name="avatar" class="form-control">
+				<label for="portfolio">Portfolio(URL)</label>
+				<input type="url" name="portfolio" class="form-control">
 			</div>
-			<button type="submit" class="btn btn-primary">Submit</button>
+			<div class="form-group">
+				<label for="credential">SFU Graduation Credential</label>
+				<input type="text" name="credential" class="form-control">
+			</div>
+
+
+			<div class="form-group">
+				<h3>Career</h3>
+			</div>	
+			<div class="form-group">
+				<label for="company">Company</label>
+				<input type="text" name="company" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="position">Position/title</label>
+				<input type="text" name="position" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="responsibility">What do you do at your work?</label>
+				<textarea class="form-control" name="responsibility" rows="3"></textarea>	
+			</div>
+			<div class="form-group">
+				<label for="love">Why you love what you do?</label>
+				<textarea class="form-control" name="love" rows="3"></textarea>	
+			</div>
+			<div class="form-group">
+				<label for="failure">What was your most spectacular failure moment?</label>
+				<textarea class="form-control" name="failure" rows="3"></textarea>	
+			</div>
+			<div class="form-group">
+				<label for="wish">I wish I known...</label>
+				<textarea class="form-control" name="wish" rows="3"></textarea>	
+			</div>
+			<div class="form-group">
+				<label for="wisdom">Any word of wisdom for students?</label>
+				<textarea class="form-control" name="wisdom" rows="3"></textarea>	
+			</div>
+			<div class="form-group">
+				<div class="checkbox">
+					<label for="share">
+						<input type="checkbox" name="share">I agree to share my information with SFU alumni relations.
+					</label>
+				</div>	
+			</div>
+			<div class="form-group">
+				<button type="submit" class="btn btn-primary">Submit</button>	
+			</div>
 		</form>
-	
 	</div>
 </section>
