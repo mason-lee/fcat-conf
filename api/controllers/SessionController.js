@@ -1,16 +1,12 @@
 module.exports = {
 	new: function(req, res) {
-		/**
-		 * Use a different layout
-		 * Tutorial is here - http://lift.pressmist.com/use-different-layout-sails-js
-		 */
 		res.locals.layout = 'layoutadmin';
 		res.view();
 	},
 
 	create: function(req, res) {
 		// Move this to an environment variable!
-		if (req.param('password') === "PASSWORD") {
+		if (req.param('password') === "password") {
 			req.session.authenticated = true;
 			// res.send('logged in!');
 			res.redirect('/admin/submissions');

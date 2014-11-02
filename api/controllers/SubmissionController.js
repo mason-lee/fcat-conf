@@ -23,15 +23,19 @@ module.exports = {
 
 	update: function(req, res) {
 		// In case you only allow to update specific fields.
-		// User.update({id: req.param('id')}, {wisdom: wisdom}).exec(function(err, updated) {
-
+		// User.update({id: req.param('id')}, {responsibility: responsibility, love: love, failure: failure, wish: wish, wisdom: wisdom}).exec(function(err, updated) {
+		// 	return res.json({success: 'okay updated.'});
 		// });
+
+		User.update({id: req.param('id')}, {responsibility: responsibility}).exec(function(err, updated) {
+			return res.json({success: 'okay updated.'});
+		});
 
 		// In case we want to update everything.
 		// User.update({id: req.param('id')}, req.params.all()).exec(function(err, updated) {
 			
 		// });
-	}
+	},
 
 	approve: function(req, res) {
 		User.update({id: req.param('id')}, { status: 'approved' }).exec(function(err, user) {

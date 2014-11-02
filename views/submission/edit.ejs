@@ -1,12 +1,15 @@
 <% _.each(users, function(user, index) { %>		
 	<h1>Edit Page</h1>
-	<form action="/admin/submissions/<%= user.id %>/update" method="post">
+	<form role="form" action="/admin/submissions/<%= user.id %>/update" method="post">
 		<span>
-			<%= user.firstName %>
-			<%= user.lastName %>
+			<h3>
+				<%= user.firstName %> <%= user.lastName %>
+			</h3>	
 		</span>
 		<span>
-			<%= user.email %>
+			<h3>
+				<%= user.email %>	
+			</h3>
 		</span>
 		<span>
 			<%= user.credential %>
