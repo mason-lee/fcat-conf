@@ -8,7 +8,7 @@
 module.exports = {
 	// Allow us to save only the data that we wanted to the server
 	schema: true,
-	
+
 	attributes: {
 		status: {
 			type: 'string',
@@ -61,7 +61,7 @@ module.exports = {
 		position: {
 			type: 'string'
 		},
-
+	
 		responsibility: {
 			type: 'string'
 		},

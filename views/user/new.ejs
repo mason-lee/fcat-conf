@@ -1,6 +1,6 @@
 <section class="clearfix new-form">
 	<div class="container col-md-5 center-block">
-		<form class="form-horizontal" role="form" action="/user" method="POST" enctype="multipart/form-data">
+		<form class="form-horizontal" id="biography-form" role="form" action="/user" method="POST" enctype="multipart/form-data">
 			<div class="form-group">
 				<h3>Biography</h3>	
 			</div>
@@ -23,9 +23,9 @@
 				<label for="location">Current Location</label>
 				<input type="text" name="location" class="form-control">
 			</div>
-			<div class="form-group">
+			<div class="form-group avatar-input-group">
 				<label for="avatar">Attach Photo</label>
-				<input type="file" name="avatar" class="form-control">
+				<input type="file" name="avatar" class="form-control" />
 			</div>
 			<div class="form-group">
 				<label>Categories</label>
@@ -81,7 +81,7 @@
 			<div class="form-group">
 				<div class="checkbox">
 					<label for="share">
-						<input type="checkbox" name="share">I agree to share my information with SFU alumni relations.
+						<input type="checkbox" id="share" name="share">I agree to share my information with SFU alumni relations.
 					</label>
 				</div>	
 			</div>

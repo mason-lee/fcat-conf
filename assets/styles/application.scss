@@ -37,9 +37,19 @@ a {
 	}
 }
 
+.btn-filter {
+	background: none;
+	border: none;
+
+}
+
 h4 {
 	font-size: 1.2em !important;
 	font-weight: bold !important;
+}
+
+h5 {
+	font-weight: 200 !important;
 }
 /*
 	Layout styling starts
@@ -139,6 +149,17 @@ header {
 		.post {
 			margin-bottom: 30px;
 			width: 270px;
+			
+			.inner-featured-people-wrapper {
+
+				.image-wrapper {
+
+					img {
+						width: 100%;
+					}
+				}
+			}
+
 		}
 
 		.pull-left {
@@ -160,23 +181,25 @@ header {
 
 	.new-form {
 		padding-bottom: 80px;
-	}
-
+	}	
 }
-
 
 
 /*
-	Session page
- */
+	Admin panel
+*/
+#content-admin {
+	
+	.avatar-cell {
+		width: 200px;
+		height: 150px;
+		overflow: hidden;
 
-
-
-.image-wrapper {
-	background-color: #f7f7f7;
-	height: 150px;
+		img {
+			width: 100%;
+		}
+	}
 }
-
 
 
 

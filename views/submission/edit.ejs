@@ -1,0 +1,38 @@
+<% _.each(users, function(user, index) { %>		
+	<h1>Edit Page</h1>
+	<form action="/admin/submissions/<%= user.id %>/update" method="post">
+		<span>
+			<%= user.firstName %>
+			<%= user.lastName %>
+		</span>
+		<span>
+			<%= user.email %>
+		</span>
+		<span>
+			<%= user.credential %>
+		</span>
+		<span>
+			<%= user.categories %>
+		</span>
+		<span>
+			<%= user.portfolio %>
+		</span>
+		<span>
+			<%= user.company %>
+			<%= user.position %>
+		</span>
+		<span>
+			<%= user.position %>
+		</span>
+		
+		<input type="text" value="<%= user.responsibility %>" name="responsibility"> 
+		<input type="text" value="<%= user.love %>" name="love">
+		<input type="text" value="<%= user.failure %>" name="failure">	
+		<input type="text" value="<%= user.wish %>" name="wish">
+		<input type="text" value="<%= user.wisdom %>" name="wisdom">
+		<span>
+			<%= user.share %>
+		</span>
+		<input type="submit" value="Update the content" class="btn btn-info">
+	</form>
+<% }) %>

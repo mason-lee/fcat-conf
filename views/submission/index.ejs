@@ -9,25 +9,55 @@
 				#
 			</th>
 			<th>
-				Avatar
+				Picture
 			</th>
 			<th>
 				Name
 			</th>
 			<th>
-				Email
-			</th>
-			<th>
-				Phone
+				Contact
 			</th>
 			<th>
 				Credential
 			</th>
 			<th>
-				Categories
+				Faculty
 			</th>
 			<th>
-				Publishing Decision
+				Portfolio
+			</th>
+			<th>
+				Company
+			</th>
+			<th>
+				Position
+			</th>
+			<th>
+				Responsibility
+			</th>
+			<th>
+				Love
+			</th>
+			<th>
+				Failure
+			</th>
+			<th>
+				Wish
+			</th>
+			<th>
+				Wisdom
+			</th>
+			<th>
+				Share
+			</th>
+			<th>
+				Edit
+			</th>
+			<th>
+				Approve
+			</th>
+			<th>
+				Disapprove
 			</th>
 		</tr>
 	</thead>
@@ -38,7 +68,9 @@
 				<%= index + 1 %>
 			</td>
 			<td>
-				<img src="http://s3.amazonaws.com/fcat-images/af11dadf-2e9a-4e2d-b107-667cfd42ab5f.jpg" alt="">
+				<div class="avatar-cell">
+					<img src="<%= user.avatar %>" alt="Profile picture of <%=: user.firstName | capitalize%> <%=: user.lastName | capitalize %>">	
+				</div>
 			</td>
 			<td>
 				<%= user.firstName %>
@@ -48,13 +80,42 @@
 				<%= user.email %>
 			</td>
 			<td>
-				<%= user.phone %>
-			</td>
-			<td>
 				<%= user.credential %>
 			</td>
 			<td>
 				<%= user.categories %>
+			</td>
+			<td>
+				<%= user.portfolio %>
+			</td>
+			<td>
+				<%= user.company %>
+			</td>
+			<td>
+				<%= user.position %>
+			</td>
+			<td>
+				<%= user.responsibility %>
+			</td>
+			<td>
+				<%= user.love %>
+			</td>
+			<td>
+				<%= user.failure %>
+			</td>
+			<td>
+				<%= user.wish %>
+			</td>
+			<td>
+				<%= user.wisdom %>
+			</td>
+			<td>
+				<%= user.share %>
+			</td>
+			<td>
+				<form action="/admin/submissions/<%= user.id %>/edit" method="post">
+					<input type="submit" value="Edit" class="btn btn-default">
+				</form>
 			</td>
 			<td>
 				<form action="/admin/submissions/<%= user.id %>/approve" method="post">

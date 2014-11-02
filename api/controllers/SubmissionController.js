@@ -9,14 +9,29 @@
 module.exports = {
 	index: function(req, res) {
 		User.find({ where: { status: 'pending' } }).exec(function(err, users) {
-			/**
-			 * Use a different layout
-			 * Tutorial is here - http://lift.pressmist.com/use-different-layout-sails-js
-			 */
 			res.locals.layout = 'layoutadmin';
 			res.view({users: users});
 		});
 	},
+
+	edit: function(req, res) {
+		User.find({ where: {id: req.param('id')} }).exec(function(err, users) {
+			res.locals.layout = 'layoutadmin';
+			res.view({users: users});
+		});
+	},
+
+	update: function(req, res) {
+		// In case you only allow to update specific fields.
+		// User.update({id: req.param('id')}, {wisdom: wisdom}).exec(function(err, updated) {
+
+		// });
+
+		// In case we want to update everything.
+		// User.update({id: req.param('id')}, req.params.all()).exec(function(err, updated) {
+			
+		// });
+	}
 
 	approve: function(req, res) {
 		User.update({id: req.param('id')}, { status: 'approved' }).exec(function(err, user) {

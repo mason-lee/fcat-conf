@@ -1,29 +1,17 @@
 $(function() {
 
-	// init Isotope
-	var $container = $('.project-wrapper').isotope({
-		itemSelector: '.post'
-	});
-	// // filter functions - These exists for more advanced features but 
-	// you don't need to declare anything in this function.
-	var filterFns = {
-		
-	};
+	$('#biography-form').submit(function() {
+		$(this).find('.avatar-input-group').detach().appendTo($(this)).hide();
+	})
 
-	// bind filter button click
-	// $("#filters a").on("click", function(e) {
-	// 	e.preventDefault();
-	// 	var filterValue = $(this).attr('data-filter');
-	// 	// use filterFn if matches value
-	// 	filterValue = filterFns[ filterValue ] || filterValue;
-	// 	$container.isotope({ filter: filterValue });
-	// })
+	// init Isotope
+	var $container = $('.featured-people-wrapper').isotope({
+		itemSelector: '.element-item'
+	});
 
 	$('#filters').on('click', 'button', function() {
 		var filterValue = $(this).attr('data-filter');
-		// use filterFn if matches value
-		filterValue = filterFns[ filterValue ] || filterValue;
-		$container.isotope({ filter: filterValue });
+    		$container.isotope({ filter: filterValue });
 	});
 
 	// change is-checked class on buttons
@@ -35,13 +23,6 @@ $(function() {
 		});
 	});
 
-	// Masonry dynamic column grid
-	// var $container = $('.featured-people-wrapper');
-	// // initialize
-	// $container.masonry({
-	// 	itemSelector: '.post'
-	// });
-	
 }); // end of jquery script
 
 

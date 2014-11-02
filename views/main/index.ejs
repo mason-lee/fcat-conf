@@ -6,15 +6,24 @@
 <div class="featured-people-wrapper container-fluid">
 
 	<% _.each(users, function(user, index) { %>			
-		<div class="pull-left post element-item" data-filter="<%= "."+user.categories %>">
+		<div class="pull-left post element-item <%= user.categories %>">
 			<div class="inner-featured-people-wrapper">
 				<div class="image-wrapper">
-					
+					<img src="<%= user.avatar %>" alt="Profile picture of <%=: user.firstName | capitalize%> <%=: user.lastName | capitalize %>">
 				</div>
-				<%=: user.firstName | capitalize %>
-				<%=: user.lastName | capitalize %>
-				<%=: user.categories | capitalize %>
-				<%=: user.position | capitalize %>
+				<h3>
+					<%=: user.firstName | capitalize %>
+					<%=: user.lastName | capitalize %>
+				</h3>
+				<h5>
+					<%=: user.categories | capitalize %>	
+				</h5>
+				<h5>
+					<%=: user.company | capitalize %>	
+				</h5>
+				<h5>
+					<%=: user.position | capitalize %>	
+				</h5>
 			</div>
 		</div>
 	
