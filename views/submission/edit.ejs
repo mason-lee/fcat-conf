@@ -1,5 +1,5 @@
 <% _.each(users, function(user, index) { %>		
-	<h1>Edit Page</h1>
+<div class="container center"><h1>Edit Page</h1>
 	<form role="form" action="/user/update/<%= user.id %>" method="post">
 		<span>
 			<h3>
@@ -11,31 +11,59 @@
 				<%= user.email %>	
 			</h3>
 		</span>
-		<span>
-			<%= user.credential %>
-		</span>
-		<span>
-			<%= user.categories %>
-		</span>
-		<span>
-			<%= user.portfolio %>
-		</span>
-		<span>
-			<%= user.company %>
+		<div>
+			<b>Credential: </b><%= user.credential %>
+		</div>
+		<div>
+			<b>Category: </b><%= user.categories %>
+		</div>
+		<div>
+			<b>Portfolio: </b><%= user.portfolio %>
+		</div>
+		<div>
+			<b>Company: </b><%= user.company %>
+		</div>
+
+		<div>
+			<b>Position: </b>
 			<%= user.position %>
-		</span>
-		<span>
-			<%= user.position %>
-		</span>
-		
-		<input type="text" value="<%= user.responsibility %>" name="responsibility"> 
-		<input type="text" value="<%= user.love %>" name="love">
-		<input type="text" value="<%= user.failure %>" name="failure">	
-		<input type="text" value="<%= user.wish %>" name="wish">
-		<input type="text" value="<%= user.wisdom %>" name="wisdom">
-		<span>
-			<%= user.share %>
-		</span>
-		<input type="submit" value="Update the content" class="btn btn-info">
+		</div>
+
+		<div>
+			<b>Responsibility: </b>
+		</div>
+		<textarea name="responsibility"><%= user.responsibility %></textarea>
+
+			<div>
+				<b>Love: </b>
+			</div>
+		<textarea name="love"><%= user.love %></textarea>
+
+			<div>
+				<b>Failure: </b>
+			</div>
+		<textarea name="failure"><%= user.failure %></textarea>
+
+			<div>
+				<b>Wish: </b>
+			</div>
+		<textarea name="wish"><%= user.wish %></textarea>
+
+			<div>
+				<b>Wisdom: </b>
+			</div>
+		<textarea name="wisdom"><%= user.wisdom %></textarea>
+
+		<div>
+			<b>Share: </b>
+		</div>
+		<%= user.share %>
+
+	<div>
+		<input type="submit" value="Update user info" class="btn btn-info">
+	</div>
 	</form>
+
+	<a class="btn btn-default" href="/admin/submissions/">Cancel</a>
+</div>
 <% }) %>
