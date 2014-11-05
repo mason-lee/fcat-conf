@@ -35,6 +35,9 @@
     "type": "git",
     "url": "git://github.com/Mason/FCAT-Conference.git"
   },
+  "engines": {
+       "node": "0.10.x"
+     },
   "author": "Mason",
   "license": "",
   "devDependencies": {
