@@ -22,25 +22,20 @@ module.exports = {
 	},
 
 	update: function(req, res) {
-		// In case you only allow to update specific fields.
-		// User.update({id: req.param('id')}, {responsibility: responsibility, love: love, failure: failure, wish: wish, wisdom: wisdom}).exec(function(err, updated) {
-		// 	return res.json({success: 'okay updated.'});
-		// });
+		var responsibility = req.param('responsibility'),
+			love = req.param('love'),
+			failure = req.param('failure'),
+			wish = req.param('wish'),
+			wisdom = req.param('wisdom');
 
-		User.update({id: req.param('id')}, {responsibility: responsibility}).exec(function(err, updated) {
-			return res.json({success: 'okay updated.'});
+		User.update({id: req.param('id')}, {responsibility: responsibility}, {love: love}, {failure: failure}, {wish: wish}, {wisdom: wisdom}).exec(function(err, user) {
+			res.redirect('/admin/submissions');
 		});
-
-		// In case we want to update everything.
-		// User.update({id: req.param('id')}, req.params.all()).exec(function(err, updated) {
-			
-		// });
 	},
 
 	approve: function(req, res) {
 		User.update({id: req.param('id')}, { status: 'approved' }).exec(function(err, user) {
 			res.redirect('/admin/submissions');
-			// res.view("<h4 class='bg-success'>Successfully published.</h4>");
 		});
 	},
 

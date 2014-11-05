@@ -1,6 +1,6 @@
 <% _.each(users, function(user, index) { %>		
 	<h1>Edit Page</h1>
-	<form role="form" action="/admin/submissions/<%= user.id %>/update" method="post">
+	<form role="form" action="/user/update/<%= user.id %>" method="post">
 		<span>
 			<h3>
 				<%= user.firstName %> <%= user.lastName %>
