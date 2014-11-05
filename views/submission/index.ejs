@@ -1,133 +1,129 @@
-<a href="/admin/logout">Log out</a>
+<div class="container admin-title-container">
+	<h2 class="pull-left admin-title">Submitted forms</h2>
+	<a href="/admin/logout" class="pull-right custom-button">Log out</a>
+</div>
+<div class="container table-container">
+	<table class="user-table table table-hover">
+		<thead>
+			<tr>
+				<th>
+					#
+				</th>
+				<th>
+					Picture
+				</th>
+				<th>
+					Name
+				</th>
+				<th>
+					Contact
+				</th>
+				<th>
+					Credential
+				</th>
+				<th>
+					Faculty
+				</th>
+				<th>
+					Portfolio
+				</th>
+				<th>
+					Company
+				</th>
+				<th>
+					Position
+				</th>
+<!-- 				<th>
+					Responsibility
+				</th>
+				<th>
+					Love
+				</th>
+				<th>
+					Failure
+				</th>
+				<th>
+					Wish
+				</th>
+				<th>
+					Wisdom
+				</th>
+				<th>
+					Share
+				</th> -->
+				<th>
+					
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% _.each(users, function(user, index) { %>
+			<tr>
+				<td>
+					<%= index + 1 %>
+				</td>
+				<td>
+					<div class="avatar-cell">
+						<img src="<%= user.avatar %>" alt="Profile picture of <%=: user.firstName | capitalize%> <%=: user.lastName | capitalize %>">
+					</div>
+				</td>
+				<td>
+					<%= user.firstName %>
+					<%= user.lastName %>
+				</td>
+				<td>
+					<a href="mailto:<%= user.email %>" target="_top"><%= user.email %></a>
+				</td>
+				<td>
+					<%= user.credential %>
+				</td>
+				<td>
+					<%= user.categories %>
+				</td>
+				<td>
+					<a href="<%= user.portfolio %>" title="<%=: user.firstName | capitalize%>'s Portfolio">
+						<%= user.portfolio %>
+					</a>
+				</td>
+				<td>
+					<%= user.company %>
+				</td>
+				<td>
+					<%= user.position %>
+				</td>
+<!-- 				<td>
+					<%= user.responsibility %>
+				</td>
+				<td>
+					<%= user.love %>
+				</td>
+				<td>
+					<%= user.failure %>
+				</td>
+				<td>
+					<%= user.wish %>
+				</td>
+				<td>
+					<%= user.wisdom %>
+				</td>
+				<td>
+					<%= user.share %>
+				</td> -->
+				<td>
+					<form action="/admin/submissions/<%= user.id %>/edit" method="post">
+						<input type="submit" value="View / Edit Info" class="btn btn-default">
+					</form>
 
-<h1>Submitted form</h1>
+					<form action="/admin/submissions/<%= user.id %>/approve" method="post">
+						<input type="submit" value="Approve" class="btn btn-success">
+					</form>
 
-<table class="table table-hover">
-	<thead>
-		<tr>
-			<th>
-				#
-			</th>
-			<th>
-				Picture
-			</th>
-			<th>
-				Name
-			</th>
-			<th>
-				Contact
-			</th>
-			<th>
-				Credential
-			</th>
-			<th>
-				Faculty
-			</th>
-			<th>
-				Portfolio
-			</th>
-			<th>
-				Company
-			</th>
-			<th>
-				Position
-			</th>
-			<th>
-				Responsibility
-			</th>
-			<th>
-				Love
-			</th>
-			<th>
-				Failure
-			</th>
-			<th>
-				Wish
-			</th>
-			<th>
-				Wisdom
-			</th>
-			<th>
-				Share
-			</th>
-			<th>
-				Edit
-			</th>
-			<th>
-				Approve
-			</th>
-			<th>
-				Disapprove
-			</th>
-		</tr>
-	</thead>
-	<tbody>
-		<% _.each(users, function(user, index) { %>
-		<tr>
-			<td>
-				<%= index + 1 %>
-			</td>
-			<td>
-				<div class="avatar-cell">
-					<img src="<%= user.avatar %>" alt="Profile picture of <%=: user.firstName | capitalize%> <%=: user.lastName | capitalize %>">	
-				</div>
-			</td>
-			<td>
-				<%= user.firstName %>
-				<%= user.lastName %>
-			</td>
-			<td>
-				<%= user.email %>
-			</td>
-			<td>
-				<%= user.credential %>
-			</td>
-			<td>
-				<%= user.categories %>
-			</td>
-			<td>
-				<%= user.portfolio %>
-			</td>
-			<td>
-				<%= user.company %>
-			</td>
-			<td>
-				<%= user.position %>
-			</td>
-			<td>
-				<%= user.responsibility %>
-			</td>
-			<td>
-				<%= user.love %>
-			</td>
-			<td>
-				<%= user.failure %>
-			</td>
-			<td>
-				<%= user.wish %>
-			</td>
-			<td>
-				<%= user.wisdom %>
-			</td>
-			<td class="shareability">
-				<%= user.share %>
-			</td>
-			<td>
-				<form action="/admin/submissions/<%= user.id %>/edit" method="post">
-					<input type="submit" value="Edit" class="btn btn-default">
-				</form>
-			</td>
-			<td>
-				<form action="/admin/submissions/<%= user.id %>/approve" method="post">
-					<input type="submit" value="Approve" class="btn btn-success">
-				</form>
-			</td>
-			<td>
-				<form action="/admin/submissions/<%= user.id %>/reject" method="post">
-					<input type="submit" value="Reject" class="btn btn-danger">
-				</form>
-			</td>
-		<% }) %>
-		</tr>
-	</tbody>
-</table>
+					<form action="/admin/submissions/<%= user.id %>/reject" method="post">
+						<input type="submit" value="Reject" class="btn btn-danger">
+					</form>
+				</td>
+			<% }) %>
+			</tr>
+		</tbody>
+	</table>
+</div>
