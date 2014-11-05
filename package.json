@@ -23,7 +23,7 @@
     "lodash": "^2.4.1",
     "rc": "~0.5.0",
     "sails": "~0.10.5",
-    "sails-disk": "~0.10.0",
+    "sails-disk": "^0.10.4",
     "skipper-s3": "^0.5.5"
   },
   "scripts": {
@@ -36,8 +36,8 @@
     "url": "git://github.com/Mason/FCAT-Conference.git"
   },
   "engines": {
-       "node": "0.10.x"
-     },
+    "node": "0.10.x"
+  },
   "author": "Mason",
   "license": "",
   "devDependencies": {
