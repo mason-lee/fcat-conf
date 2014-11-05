@@ -1,5 +1,7 @@
 $(function() {
-
+	/*
+		A little hack to make image uploading working
+	 */
 	$('#biography-form').submit(function() {
 		$(this).find('.avatar-input-group').detach().appendTo($(this)).hide();
 	})
@@ -23,6 +25,27 @@ $(function() {
 		});
 	});
 
+	// change the text of the shareability
+	var share = [];
+	$(".shareability").each(function() {
+		share.push($(this).text().trim());
+	});
+
+	var shareElement = [];
+	$(".shareability").each(function() {
+		shareElement.push($(this));
+	});
+
+	$.each(share, function(key) {
+		if(share[key] == "false"){
+			var okay = share[key].replace("false", "Okay");
+			shareElement[key].html(okay);	
+		}
+		else {
+			var no = share[key].replace("true", "No");
+			shareElement[key].html(no);	
+		}
+	});
 }); // end of jquery script
 
 
