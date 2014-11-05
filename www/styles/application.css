@@ -1,3 +1,129 @@
+/*
+	Initial Style Setup
+*/
+body {
+  color: #202020; }
 
+a {
+  color: #202020 !important; }
+  a:hover {
+    text-decoration: none !important; }
+
+.is-checked {
+  color: #ff7b5a; }
+
+.custom-button {
+  background: none;
+  display: inline-block;
+  line-height: 1.42857143;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-image: none;
+  padding: 6px 12px;
+  border: 2px solid #202020;
+  border-radius: 0; }
+  .custom-button:hover {
+    background-color: #525252 !important;
+    color: white !important; }
+
+.btn-filter {
+  background: none;
+  border: none; }
+
+h4 {
+  font-size: 1.2em !important;
+  font-weight: bold !important; }
+
+h5 {
+  font-weight: 200 !important; }
+
+/*
+	Layout styling starts
+ */
+header {
+  width: 275px;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 36;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-top: 35px;
+  padding-left: 30px;
+  padding-right: 30px; }
+  header ul {
+    list-style-type: none;
+    padding-left: 0 !important; }
+    header ul li a {
+      font-size: 0.8em; }
+  header .logo-wrapper {
+    margin-bottom: 50px; }
+  header .about-wrapper {
+    border-bottom: 1px solid #f4f4f4;
+    padding: 15px 0; }
+  header .stories-wrapper {
+    border-bottom: 1px solid #f4f4f4;
+    padding: 15px 0; }
+  header .submit-story-wrapper {
+    padding: 15px 0; }
+
+.admin-header {
+  padding: 90px; }
+
+#content-admin {
+  text-align: center; }
+  #content-admin .authentication {
+    width: 500px;
+    margin: 50px auto; }
+
+#content {
+  height: 100%;
+  margin-left: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 0 0 275px;
+  min-height: 100%;
+  padding-top: 35px;
+  /*
+  	Index page
+   */ }
+  #content .hero-section {
+    margin-bottom: 30px;
+    padding-right: 30px;
+    width: 810px; }
+    #content .hero-section img {
+      width: 100%; }
+  #content .container-fluid {
+    padding: 0; }
+  #content .featured-people-wrapper .post {
+    margin-bottom: 30px;
+    width: 270px; }
+    #content .featured-people-wrapper .post .inner-featured-people-wrapper .image-wrapper img {
+      width: 100%; }
+  #content .featured-people-wrapper .pull-left {
+    padding-left: 0;
+    padding-right: 30px; }
+  #content .featured-people-wrapper .new-left {
+    padding-left: 0;
+    padding-right: 0; }
+  #content .featured-people-wrapper .pull-right {
+    padding-right: 0;
+    padding-left: 0; }
+  #content .new-form {
+    padding-bottom: 80px; }
+
+/*
+	Admin panel
+*/
+#content-admin .avatar-cell {
+  width: 200px;
+  height: 150px;
+  overflow: hidden; }
+  #content-admin .avatar-cell img {
+    width: 100%; }
 
 /*# sourceMappingURL=application.css.map */
