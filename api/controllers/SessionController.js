@@ -5,7 +5,7 @@ module.exports = {
 	},
 
 	create: function(req, res) {
-		// Move this to an environment variable!
+		// Don't forget to move this to environmental variable
 		if (req.param('password') === "password") {
 			req.session.authenticated = true;
 			// res.send('logged in!');

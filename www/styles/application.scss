@@ -2,13 +2,16 @@
 /*
 	Initial Style Setup
 */
+
+$main-text-color: #202020;
+
 body {
-	color: #202020;
+	color: $main-text-color;
 }
 
 a {
-	color: #202020 !important;
-	
+	// color: $main-text-color !important;
+
 	&:hover {
 		text-decoration: none !important;
 	}
@@ -22,14 +25,15 @@ a {
 	background: none;
 	display: inline-block;
 	line-height: 1.42857143;
-	white-space: nowrap;
-	vertical-align: middle;
+	// white-space: nowrap;
+	// vertical-align: middle;
 	cursor: pointer;
 	user-select: none;
 	background-image: none;
 	padding: 6px 12px;
-	border: 2px solid #202020;
-	border-radius: 0;
+	border: 2px solid $main-text-color;
+	// border-radius: 0;
+	color: $main-text-color;
 
 	&:hover {
 		background-color: #525252 !important;
@@ -87,6 +91,10 @@ header {
 	.about-wrapper {
 		border-bottom: 1px solid #f4f4f4;
 		padding: 15px 0;
+
+		a {
+			color: $main-text-color;
+		}
 	}
 
 	.stories-wrapper {
@@ -95,17 +103,18 @@ header {
 	}
 
 	.submit-story-wrapper {
-		padding: 15px 0;	
+		padding: 15px 0;
 	}
 }
 
 
 .admin-header {
-	padding: 90px;
+	padding-bottom: 30px;
+	padding-top: 30px;
 }
 
 #content-admin {
-	text-align: center;
+	// text-align: center;
 
 	.authentication {
 		width: 500px;
@@ -128,7 +137,7 @@ header {
 	/*
 		Index page
 	 */
-	
+
 	.hero-section {
 		margin-bottom: 30px;
 		padding-right: 30px;
@@ -139,17 +148,17 @@ header {
 		}
 
 	}
-	
+
 	.container-fluid {
 		padding: 0;
 	}
-	
+
 	.featured-people-wrapper {
-		
+
 		.post {
 			margin-bottom: 30px;
 			width: 270px;
-			
+
 			.inner-featured-people-wrapper {
 
 				.image-wrapper {
@@ -166,7 +175,7 @@ header {
 			padding-left: 0;
 		 	padding-right: 30px;
 		}
-		
+
 		.new-left {
 			padding-left: 0;
 			padding-right: 0;
@@ -181,7 +190,7 @@ header {
 
 	.new-form {
 		padding-bottom: 80px;
-	}	
+	}
 }
 
 
@@ -189,31 +198,28 @@ header {
 	Admin panel
 */
 #content-admin {
-	
+
 	.avatar-cell {
 		width: 200px;
 		height: 150px;
 		overflow: hidden;
 
 		img {
-			width: 100%;
+			max-height: 100%;
+			max-width: 100%;
 		}
 	}
 }
 
+.table-container {
+		overflow: scroll;
+		border: 1px solid #ddd;
+}
 
+.admin-title-container {
+	margin: 20px 0;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.admin-title {
+	margin: 0;
+}

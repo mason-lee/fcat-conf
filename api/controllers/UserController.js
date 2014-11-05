@@ -8,7 +8,7 @@
 module.exports = {
 	new: function(req, res) {
 		res.view();
-	},
+	}, //end new action
 
 	create: function  (req, res) {
 
@@ -22,9 +22,6 @@ module.exports = {
 			req.file('avatar').upload({
 				adapter: require('skipper-s3'),
 				bucket: 'fcat-images',
-				/**
-				 *  These keys should be hidden
-				 */
 				key: 'AKIAJ4BD3GPOXVPPONBQ', 
 				secret: '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',
 				headers: {
@@ -38,9 +35,9 @@ module.exports = {
 				// Otherwise, update the user avatar
 				User.update({id: user.id}, {avatar: uploadedFiles[0].extra.Location}).exec(function(err, updated) {
 					return res.json({success: 'ok all done'});
-				})
+				});
 			});
-		})
-	}
-};
+		})//End User.create query
+	}//End create action
+};//End module.exports
 

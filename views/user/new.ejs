@@ -2,7 +2,7 @@
 	<div class="container col-md-5 center-block">
 		<form class="form-horizontal" id="biography-form" role="form" action="/user" method="POST" enctype="multipart/form-data">
 			<div class="form-group">
-				<h3>Enter your biography</h3>
+				<h3>Biography</h3>
 			</div>
 			<div class="form-group">
 				<label for="firstName">First Name</label>
@@ -29,12 +29,14 @@
 			</div>
 			<div class="form-group">
 				<label>Categories</label>
+				<!-- Has to be changed to checkboxes -->
 				<select name="categories" class="form-control">
 					<option value="communication">Communication</option>
 					<option value="siat">Interactive Art and Technology</option>
 					<option value="art">Contemporary Arts</option>
 					<option value="publishing">Publishing</option>
 					<option value="media">Master of Digital Media</option>
+					<option value="faculty">Faculty member</option>
 				</select>
 			</div>
 			<div class="form-group">
@@ -48,7 +50,7 @@
 
 
 			<div class="form-group">
-				<h3>Career</h3>
+				<h3>Where are you?</h3>
 			</div>
 			<div class="form-group">
 				<label for="company">Company</label>
@@ -56,10 +58,10 @@
 			</div>
 			<div class="form-group">
 				<label for="position">Position/title</label>
-				<input type="text" name="position" class="form-control">
+				<input type="text" name="position" class="form-control" placeholder="student or current position title">
 			</div>
 			<div class="form-group">
-				<label for="responsibility">What do you do at your job?</label>
+				<label for="responsibility">What are you working on?</label>
 				<textarea class="form-control" name="responsibility" rows="3"></textarea>
 			</div>
 			<div class="form-group">
@@ -67,7 +69,7 @@
 				<textarea class="form-control" name="love" rows="3"></textarea>
 			</div>
 			<div class="form-group">
-				<label for="failure">What was your most spectacular failure?</label>
+				<label for="failure">What was your most spectacular learning moment?</label>
 				<textarea class="form-control" name="failure" rows="3"></textarea>
 			</div>
 			<div class="form-group">
