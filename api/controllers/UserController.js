@@ -34,7 +34,9 @@ module.exports = {
 
 				// Otherwise, update the user avatar
 				User.update({id: user.id}, {avatar: uploadedFiles[0].extra.Location}).exec(function(err, updated) {
-					return res.json({success: 'ok all done'});
+					// return res.json({success: 'ok all done'});
+					res.redirect("/");
+					req.flash('signup-message', '<div class="thankyou-message-wrapper bg-success"><span class="thankyou-message">Thank you for submitting the form!<br> Our administer will review your submission and publish soon.</span></div>');
 				});
 			});
 		})//End User.create query

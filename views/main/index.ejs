@@ -1,17 +1,17 @@
 <div class="hero-section">
+	<%- req.flash('signup-message') %>	
 	<div>
 		<img src="images/temp-banner.png" alt="FCAT Banner">
 	</div>
 </div>
 <div class="featured-people-wrapper container-fluid">
-
 	<% _.each(users, function(user, index) { %>
 		<div class="pull-left post element-item <%= user.categories %>">
 			<div class="inner-featured-people-wrapper">
 				<div class="image-wrapper">
 					<img src="<%= user.avatar %>" alt="Profile picture of <%=: user.firstName | capitalize%> <%=: user.lastName | capitalize %>">
 				</div>
-				<h3>
+				<h3 data-toggle="modal" data-target=".<%=user.id%>">
 					<%=: user.firstName | capitalize %>
 					<%=: user.lastName | capitalize %>
 				</h3>
@@ -27,5 +27,37 @@
 			</div>
 		</div>
 	
+		<div class="modal fade <%=user.id%>">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h4 class="modal-title"><%= user.firstName %><%= user.lastName %></h4>
+					</div>
+					<div class="modal-body">
+						<p><%= user.credential %></p>
+						<p><%= user.categories %></p>
+						<p><%= user.portfolio %></p>
+						<p><%= user.company %></p>
+						<p><%= user.responsibility %></p>
+						<p><%= user.love %></p>
+						<p><%= user.failure %></p>
+						<p><%= user.wish %></p>
+						<p><%= user.wisdom %></p>
+						<p><%= user.share %></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+
+
+
+
+
+
 	<% }) %>
 </div>

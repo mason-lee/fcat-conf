@@ -21,7 +21,7 @@ module.exports = {
 		} else {
 			// Could redirect to page to show invalid login
 			res.redirect("/admin/login");
-			req.flash('message', '<div class="error-message-wrapper"><span class="error-message bg-danger">Your password is not correct.</span></div>');	
+			req.flash('message', '<div class="error-message-wrapper pull-right"><span class="error-message bg-danger">Your password is not correct.</span></div>');	
 		}
 	},
 

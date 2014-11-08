@@ -17,20 +17,16 @@ module.exports = {
 		},
 
 		firstName: {
-			type: 'string',
-			required: true
+			type: 'string'
 		},
 
 		lastName: {
-			type: 'string',
-			required: true
+			type: 'string'
 		},
 
 		email: {
 			type: 'email',
-			email: true,
-			// unique: true,
-			required: true
+			email: true
 		},
 
 		location: {
@@ -43,7 +39,6 @@ module.exports = {
 
 		categories: {
 			type: 'string'
-			// required: true
 		},
 
 		portfolio: {
@@ -52,7 +47,6 @@ module.exports = {
 
 		credential: {
 			type: 'string'
-			// required: true
 		},
 
 		company: {
