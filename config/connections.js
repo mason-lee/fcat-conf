@@ -37,12 +37,12 @@ module.exports.connections = {
   * More adapters: https://github.com/balderdashy/sails                      *
   *                                                                          *
   ***************************************************************************/
-  productionMongoHqDb: {
-      adapter: 'sails-disk'
-    }
-
   // productionMongoHqDb: {
-  //     adapter: 'sails-mongo',
-  //     url: process.env.MONGOHQ_URL
-  //   }
+  //    adapter: 'sails-disk'
+  //  }
+
+   productionMongoHqDb: {
+       adapter: 'sails-mongo',
+       url: process.env.MONGOHQ_URL
+    }
 };
