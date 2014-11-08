@@ -29,8 +29,8 @@ module.exports = {
 		email: {
 			type: 'email',
 			email: true,
-			unique: true
-			// required: true
+			// unique: true,
+			required: true
 		},
 
 		location: {
@@ -84,6 +84,10 @@ module.exports = {
 		},
 
 		share: {
+			type: 'boolean'
+		},
+
+		shareFcat: {
 			type: 'boolean'
 		}
 	}

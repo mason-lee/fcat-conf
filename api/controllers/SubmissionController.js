@@ -28,7 +28,7 @@ module.exports = {
 			wish = req.param('wish'),
 			wisdom = req.param('wisdom');
 
-		User.update({id: req.param('id')}, {responsibility: responsibility}, {love: love}, {failure: failure}, {wish: wish}, {wisdom: wisdom}).exec(function(err, user) {
+		User.update({id: req.param('id')}, {responsibility: responsibility, love: love, failure: failure, wish: wish, wisdom: wisdom}).exec(function(err, user) {
 			res.redirect('/admin/submissions');
 		});
 	},
@@ -42,7 +42,6 @@ module.exports = {
 	reject: function(req, res) {
 		User.update({id: req.param('id')}, {status: 'rejected'}).exec(function(err, user) {
 			res.redirect('/admin/submissions');
-			// res.view("<h4 class='bg-danger'>Successfully deleted the information.</h4>");
 		});
 	}
 };
