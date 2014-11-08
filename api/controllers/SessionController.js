@@ -4,20 +4,24 @@ module.exports = {
 		res.view();
 	},
 
+	index: function(req, res) {
+		/*
+			If the admin is not logged in. Block access to the page.
+		 */
+		if(!req.session.authenticated) {
+			return res.redirect("/admin/login");
+		}
+	},
+
 	create: function(req, res) {
 		// Don't forget to move this to environmental variable
 		if (req.param('password') === "password") {
 			req.session.authenticated = true;
-			// res.send('logged in!');
 			res.redirect('/admin/submissions');
 		} else {
 			// Could redirect to page to show invalid login
 			res.redirect("/admin/login");
-			/*
-				todo: Show error message
-			 */
-			// res.send('Invalid password: ' + req.param('password'));
-			res.send("<p class='bg-danger'>The password is invalid.</p>");
+			req.flash('message', '<div class="error-message-wrapper"><span class="error-message bg-danger">Your password is not correct.</span></div>');	
 		}
 	},
 

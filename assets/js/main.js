@@ -1,4 +1,4 @@
-$(function() {
+$(window).load(function() {
 	/*
 		A little hack to make image uploading working
 	 */
@@ -46,6 +46,16 @@ $(function() {
 			shareElement[key].html(no);	
 		}
 	});
+
+
+	/*
+		Remove all "," from classes of ".post" elements
+	 */
+	$('.post').each(function() {
+	    var _sCurrClasses = $(this).attr('class');
+	    $(this).attr('class', _sCurrClasses.replace(/,/g, ' '));
+	});
+
 }); // end of jquery script
 
 

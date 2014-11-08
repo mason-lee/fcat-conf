@@ -19,25 +19,26 @@
 
 module.exports.policies = {
 
-  /***************************************************************************
-  *                                                                          *
-  * Default policy for all controllers and actions (`true` allows public     *
-  * access)                                                                  *
-  *                                                                          *
-  ***************************************************************************/
+	/***************************************************************************
+	*                                                                          *
+	* Default policy for all controllers and actions (`true` allows public     *
+	* access)                                                                  *
+	*                                                                          *
+	***************************************************************************/
 
-  // '*': true,
+	// '*': "flash",
 
-  SubmissionController: {
-    // '*': 'isAdmin'
-  }
+	SubmissionController: {
+		index: 'isAdmin',
+		create: 'isLoggedIn'
+	}
 
-  /***************************************************************************
-  *                                                                          *
-  * Here's an example of mapping some policies to run before a controller    *
-  * and its actions                                                          *
-  *                                                                          *
-  ***************************************************************************/
+	/***************************************************************************
+	*                                                                          *
+	* Here's an example of mapping some policies to run before a controller    *
+	* and its actions                                                          *
+	*                                                                          *
+	***************************************************************************/
 	// RabbitController: {
 
 		// Apply the `false` policy as the default for all of RabbitController's actions

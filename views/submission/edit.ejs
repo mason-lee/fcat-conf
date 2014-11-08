@@ -1,69 +1,91 @@
 <% _.each(users, function(user, index) { %>		
 <div class="container"><h1>Edit Page</h1>
-	<form role="form" action="/user/update/<%= user.id %>" method="post">
-		<span>
-			<h3>
-				<%= user.firstName %> <%= user.lastName %>
-			</h3>	
-		</span>
-		<span>
-			<h3>
-				<%= user.email %>	
-			</h3>
-		</span>
-		<div>
-			<b>Credential: </b><%= user.credential %>
+	<!-- <form role="form" action="/user/update/<%= user.id %>" method="post" class="edit-form"> -->
+	<form role="form" action="/admin/submissions/<%= user.id %>/update" method="post" class="edit-form">
+		<div class="form-group">
+			<span>
+				<h3>
+					<%= user.firstName %> <%= user.lastName %>
+				</h3>	
+			</span>	
 		</div>
-		<div>
-			<b>Category: </b><%= user.categories %>
+		<div class="form-group">
+			<span>
+				<h3>
+					<%= user.email %>	
+				</h3>
+			</span>	
 		</div>
-		<div>
-			<b>Portfolio: </b><%= user.portfolio %>
+		<div class="form-group">
+			<div>
+				<b>Credential: </b><%= user.credential %>
+			</div>
 		</div>
-		<div>
-			<b>Company: </b><%= user.company %>
+		<div class="form-group">
+			<div>
+				<b>Category: </b><%= user.categories %>
+			</div>
 		</div>
-
-		<div>
-			<b>Position: </b>
-			<%= user.position %>
+		<div class="form-group">
+			<div>
+				<b>Portfolio: </b><%= user.portfolio %>
+			</div>
 		</div>
-
-		<div>
-			<b>Responsibility: </b>
+		<div class="form-group">
+			<div>
+				<b>Company: </b><%= user.company %>
+			</div>	
 		</div>
-		<textarea name="responsibility"><%= user.responsibility %></textarea>
-
+		
+		<div class="form-group">
+			<div>
+				<b>Company: </b><%= user.company %>
+			</div>		
+		</div>
+		<div class="form-group">
+			<div>
+				<b>Responsibility: </b>
+			</div>
+			<textarea name="responsibility" ><%= user.responsibility %></textarea>	
+		</div>
+		<div class="form-group">
 			<div>
 				<b>Love: </b>
 			</div>
-		<textarea name="love"><%= user.love %></textarea>
-
+			<textarea name="love"><%= user.love %></textarea>
+		</div>
+		<div class="form-group">
 			<div>
 				<b>Failure: </b>
 			</div>
-		<textarea name="failure"><%= user.failure %></textarea>
-
+			<textarea name="failure"><%= user.failure %></textarea>
+		</div>
+		<div class="form-group">
 			<div>
 				<b>Wish: </b>
 			</div>
-		<textarea name="wish"><%= user.wish %></textarea>
-
+			<textarea name="wish"><%= user.wish %></textarea>
+		</div>
+		<div class="form-group">
 			<div>
 				<b>Wisdom: </b>
 			</div>
-		<textarea name="wisdom"><%= user.wisdom %></textarea>
-
-		<div>
-			<b>Share: </b>
+			<textarea name="wisdom"><%= user.wisdom %></textarea>			
 		</div>
-		<%= user.share %>
-
-	<div>
-		<input type="submit" value="Update user info" class="btn btn-info">
-	</div>
+		<div class="form-group">
+			<div>
+				<b>Share: </b>
+			</div>
+			<%= user.share %>
+		</div>
+		<div class="form-group">
+			<div class="edit-button-wrapper">
+				<input type="submit" value="Update user info" class="pull-left btn btn-success">
+				<a class="btn btn-danger pull-right" href="/admin/submissions/">Cancel</a>
+			</div>		
+			
+		</div>
 	</form>
-
-	<a class="btn btn-default" href="/admin/submissions/">Cancel</a>
+	
 </div>
 <% }) %>

@@ -1,6 +1,9 @@
 <div class="container admin-title-container">
 	<h2 class="pull-left admin-title">Submitted forms</h2>
-	<a href="/admin/logout" class="pull-right custom-button">Log out</a>
+	<!-- Show log out message only when the admin is logged in -->
+	<% if(req.session.authenticated) { %>
+		<a href="/admin/logout" class="pull-right custom-button">Log out</a>
+	<% } %>
 </div>
 <div class="container table-container">
 	<table class="user-table table table-hover">

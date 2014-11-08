@@ -14,7 +14,7 @@ module.exports = {
 
 		User.create(req.params.all(), function UserCreated(err, user) {
 			if(err) {
-				res.redirect('/submit');
+				return res.redirect('/submit');
 			}
 		
 			// Uploading image

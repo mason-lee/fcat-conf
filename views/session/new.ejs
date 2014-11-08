@@ -2,6 +2,10 @@
 	<div class="center-block">
 		<form role="form" action="/session" method="POST">
 			<div class="form-group">
+				<%- req.flash('message') %>	
+			</div>
+
+			<div class="form-group">
 				<label for="password">Welcome! Please enter the admin password:</label>
 				<input type="password" name="password" class="form-control" id="password" placeholder="Enter Password">
 			</div>
