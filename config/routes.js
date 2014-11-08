@@ -57,7 +57,6 @@ module.exports.routes = {
 	'post /admin/submissions/:id/approve': 'SubmissionController.approve',
 	'post /admin/submissions/:id/reject': 'SubmissionController.reject',
 	'post /admin/submissions/:id/edit': 'SubmissionController.edit',
-	
 	'post /admin/submissions/:id/update': 'SubmissionController.update'
 };
 

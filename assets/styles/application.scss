@@ -51,10 +51,33 @@ h5 {
 	// border-top: 1px solid $light-grey;
 }
 
+.person-detail {
+	background: none;
+	border: none;
+	padding: 0;
+}
+
+.error-message-wrapper {
+	margin-top: 13px;
+}
+
 .error-message {
 	padding: 15px;
 	border-radius: 5px;
 	color: #6E6E6E;
+}
+
+.thankyou-message-wrapper {
+	padding: 25px;
+	border-radius: 5px;
+	position: absolute;
+	top: 0px;
+	right: 0;
+	width: 317px;
+}
+
+.thankyou-message {
+	
 }
 
 .custom-button {
