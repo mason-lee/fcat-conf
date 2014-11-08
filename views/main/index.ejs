@@ -15,15 +15,12 @@
 					<%=: user.firstName | capitalize %>
 					<%=: user.lastName | capitalize %>
 				</h3>
-				<h5>
-					<%=: user.categories | capitalize %>	
-				</h5>
-				<h5>
-					<%=: user.company | capitalize %>	
-				</h5>
-				<h5>
-					<%=: user.position | capitalize %>	
-				</h5>
+				<div>
+					<%=: user.categories | capitalize %>
+				</div>
+				<div>
+					<%=: user.position | capitalize %> at <%=: user.company | capitalize %>
+				</div>
 			</div>
 		</div>
 	

@@ -4,6 +4,8 @@
 */
 
 $main-text-color: #202020;
+$sfu-red: #AE1617;
+$light-grey: #e5e5e5;
 
 body {
 	color: $main-text-color;
@@ -13,38 +15,67 @@ a {
 	// color: $main-text-color !important;
 
 	&:hover {
-		text-decoration: none !important;
-	}
-}
-
-.is-checked {
- 	color: #ff7b5a;
-}
-
-.custom-button {
-	background: none;
-	display: inline-block;
-	line-height: 1.42857143;
-	// white-space: nowrap;
-	// vertical-align: middle;
-	cursor: pointer;
-	user-select: none;
-	background-image: none;
-	padding: 6px 12px;
-	border: 2px solid $main-text-color;
-	// border-radius: 0;
-	color: $main-text-color;
-
-	&:hover {
-		background-color: #525252 !important;
-		color: white !important;
+		// text-decoration: none !important;
 	}
 }
 
 .btn-filter {
 	background: none;
 	border: none;
+	padding: 2px 0;
+	@include transition(all 0.2s);
 
+	&:hover {
+		text-decoration: underline;
+		color: lighten($main-text-color, 30%);
+	}
+
+	&:active {
+		color: black;
+	}
+}
+
+.small-sidebar-title {
+	text-transform: uppercase;
+	font-size: 10px;
+	padding: 10px 0 5px 0;
+	// border-top: 1px solid $light-grey;
+}
+
+.is-checked {
+ 	color: $sfu-red;
+ 	cursor: default;
+
+ 	&:hover {
+	 	@extend .is-checked;
+	 	text-decoration: none;
+	}
+}
+
+.custom-button {
+	display: inline-block;
+	cursor: pointer;
+	background-image: none;
+	padding: 6px 12px;
+	border: 2px solid $main-text-color;
+	color: $main-text-color;
+	text-decoration: none;
+	text-align: center;
+	@include transition(all 0.1s);
+
+	&:hover {
+		background-color: $main-text-color;
+		color: white;
+		text-decoration: none;
+	}
+
+	&:active {
+		color: #ccc;
+	}
+}
+
+.full-width {
+	width: 100%;
 }
 
 h4 {
@@ -64,7 +95,7 @@ header {
 	top: 0px;
 	bottom: 0px;
 	left: 0px;
-	// background-color: #f4f4f4;
+	// background-color: $light-grey;
 	z-index: 36;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
@@ -85,11 +116,11 @@ header {
 	}
 
 	.logo-wrapper {
-		margin-bottom: 50px;
+		margin-bottom: 20px;
 	}
 
 	.about-wrapper {
-		border-bottom: 1px solid #f4f4f4;
+		border-bottom: 1px solid $light-grey;
 		padding: 15px 0;
 
 		a {
@@ -98,7 +129,7 @@ header {
 	}
 
 	.stories-wrapper {
-		border-bottom: 1px solid #f4f4f4;
+		border-bottom: 1px solid $light-grey;
 		padding: 15px 0;
 	}
 
