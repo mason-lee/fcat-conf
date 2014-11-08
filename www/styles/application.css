@@ -10,6 +10,11 @@ a:hover {
 .is-checked {
   color: #ff7b5a; }
 
+.error-message {
+  padding: 15px;
+  border-radius: 5px;
+  color: #6E6E6E; }
+
 .custom-button {
   background: none;
   display: inline-block;
@@ -75,6 +80,11 @@ header {
 #content-admin .authentication {
   width: 500px;
   margin: 50px auto; }
+#content-admin .edit-form textarea {
+  width: 50em;
+  height: 6em; }
+#content-admin .edit-form .edit-button-wrapper {
+  padding: 50px 0; }
 
 #content {
   height: 100%;

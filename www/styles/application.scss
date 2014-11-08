@@ -21,6 +21,12 @@ a {
  	color: #ff7b5a;
 }
 
+.error-message {
+	padding: 15px;
+	border-radius: 5px;
+	color: #6E6E6E;
+}
+
 .custom-button {
 	background: none;
 	display: inline-block;
@@ -120,6 +126,18 @@ header {
 		width: 500px;
 		margin: 50px auto;
 
+	}
+
+	.edit-form {
+
+		textarea {
+			width: 50em;
+    			height: 6em;
+		}
+
+		.edit-button-wrapper {
+			padding: 50px 0;
+		}
 	}
 }
 
