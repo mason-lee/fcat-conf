@@ -36,81 +36,43 @@
 	</head>
 
 	<body>
-		<header>
-			<div class="header-inner-wrapper">
-				<div class="logo-wrapper">
-					<a href="/">
-						<img class="full-width" src="/images/FCAT-logo.svg" alt="fcat-logo">
-					</a>
+		<div id="main-container">
+			<header id="sidebar">
+				<div class="header-inner-wrapper">
+					<div class="logo-wrapper">
+						<a href="/">
+							<img class="full-width" src="/images/FCAT-logo.svg" alt="fcat-logo">
+						</a>
+					</div>
+					<div class="about-wrapper">
+						<ul>
+							<li>
+								<a href="/">
+										View Stories
+								</a>
+							</li>
+							<li>
+								<a href="/about">
+										About FCAT
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="submit-story-wrapper">
+						<a href="/submit" class="custom-button full-width">
+							Submit your story
+						</a>
+					</div>
+					<div class="twitter-wrapper">
+						<a class="twitter-timeline" href="https://twitter.com/hashtag/fcat" data-widget-id="524821383520321536">#fcat Tweets</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+					</div>
 				</div>
-				<div class="about-wrapper">
-					<ul>
-						<li>
-							<a href="/about">
-								<h4>
-									About FCAT
-								</h4> 
-							</a>
-						</li>
-					</ul>
-				</div>
-				<div class="stories-wrapper button-group" id="filters">
-					<ul>
-						<li>
-							<button data-filter="*" class="btn-filter is-checked">
-								<h4>
-									All Stories
-								</h4> 
-							</button>
-						</li>
-						<li class="small-sidebar-title">By faculty:</li>
-						<li>
-							<button class="btn-filter" data-filter=".communication">
-								Communication
-							</button>
-						</li>
-						<li>
-							<button class="btn-filter" data-filter=".siat">
-								Interactive Art and Technology
-							</button>
-						</li>
-						<li>
-							<button class="btn-filter" data-filter=".art">
-								Contemporary Arts
-							</button>
-						</li>
-						<li>
-							<button class="btn-filter" data-filter=".publishing">
-								Publishing
-							</button>
-						</li>
-						<li>
-							<button class="btn-filter" data-filter=".media">
-								Master of Digital Media
-							</button>
-						</li>
-						<li>
-							<button class="btn-filter" data-filter=".faculty">
-								Faculty members
-							</button>
-						</li>
-					</ul>
-				</div>
-				<div class="submit-story-wrapper">
-					<a href="/submit" class="custom-button full-width">
-						Submit your story
-					</a>
-				</div>
-				<div class="twitter-wrapper">
-					<a class="twitter-timeline" href="https://twitter.com/hashtag/fcat" data-widget-id="524821383520321536">#fcat Tweets</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-				</div>
-			</div>
-		</header>
+			</header>
 
-		<section id="content">
-			<%- body %>
-		</section>
-
+			<section id="content">
+				<%- body %>
+			</section>
+		</div>
 		<!--
 				Client-side Templates
 				========================

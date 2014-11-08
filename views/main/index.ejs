@@ -3,26 +3,63 @@
 		<img src="images/temp-banner.png" alt="FCAT Banner">
 	</div>
 </div>
+<div class="stories-wrapper button-group" id="filters">
+	<button data-filter="*" class="btn-filter title-btn-filter is-checked">
+			<h4>All Stories</h3>
+	</button>
+	<ul>
+		<li>
+			<button class="btn-filter" data-filter=".communication">
+				Communication
+			</button>
+		</li>
+		<li>
+			<button class="btn-filter" data-filter=".siat">
+				Interactive Arts & Technology
+			</button>
+		</li>
+		<li>
+			<button class="btn-filter" data-filter=".art">
+				Contemporary Arts
+			</button>
+		</li>
+		<li>
+			<button class="btn-filter" data-filter=".publishing">
+				Publishing
+			</button>
+		</li>
+		<li>
+			<button class="btn-filter" data-filter=".media">
+				Master of Digital Media
+			</button>
+		</li>
+		<li>
+			<button class="btn-filter" data-filter=".faculty">
+				Faculty
+			</button>
+		</li>
+	</ul>
+</div>
 <div class="featured-people-wrapper container-fluid">
 
 	<% _.each(users, function(user, index) { %>			
-		<div class="pull-left post element-item <%= user.categories %>">
-			<div class="inner-featured-people-wrapper">
-				<div class="image-wrapper">
-					<img src="<%= user.avatar %>" alt="Profile picture of <%=: user.firstName | capitalize%> <%=: user.lastName | capitalize %>">
-				</div>
-				<h3>
-					<%=: user.firstName | capitalize %>
-					<%=: user.lastName | capitalize %>
-				</h3>
-				<div>
-					<%=: user.categories | capitalize %>
-				</div>
-				<div>
-					<%=: user.position | capitalize %> at <%=: user.company | capitalize %>
-				</div>
+	<div class="pull-left post element-item <%= user.categories %>">
+		<div class="inner-featured-people-wrapper">
+			<div class="image-wrapper">
+				<img src="<%= user.avatar %>" alt="Profile picture of <%=: user.firstName | capitalize%> <%=: user.lastName | capitalize %>">
+			</div>
+			<h3>
+				<%=: user.firstName | capitalize %>
+				<%=: user.lastName | capitalize %>
+			</h3>
+			<div>
+				<%=: user.categories | capitalize %>
+			</div>
+			<div>
+				<%=: user.position | capitalize %> at <%=: user.company | capitalize %>
 			</div>
 		</div>
+	</div>
 	
 	<% }) %>
 </div>

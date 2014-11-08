@@ -1,14 +1,26 @@
 @import "bourbon";
 /*
 	Initial Style Setup
-*/
+	*/
 
+// variables
+
+// colours
 $main-text-color: #202020;
 $sfu-red: #AE1617;
 $light-grey: #e5e5e5;
 
+// dimensions
+$page-width: 1200px;
+$main-content-width: 850px;
+
 body {
 	color: $main-text-color;
+}
+
+#main-container {
+	max-width: $page-width;
+	margin: 0 auto;
 }
 
 a {
@@ -19,20 +31,17 @@ a {
 	}
 }
 
-.btn-filter {
-	background: none;
-	border: none;
-	padding: 2px 0;
-	@include transition(all 0.2s);
+.full-width {
+	width: 100%;
+}
 
-	&:hover {
-		text-decoration: underline;
-		color: lighten($main-text-color, 30%);
-	}
+h4 {
+	// font-size: 1.2em !important;
+	// font-weight: bold !important;
+}
 
-	&:active {
-		color: black;
-	}
+h5 {
+	font-weight: 200 !important;
 }
 
 .small-sidebar-title {
@@ -40,16 +49,6 @@ a {
 	font-size: 10px;
 	padding: 10px 0 5px 0;
 	// border-top: 1px solid $light-grey;
-}
-
-.is-checked {
- 	color: $sfu-red;
- 	cursor: default;
-
- 	&:hover {
-	 	@extend .is-checked;
-	 	text-decoration: none;
-	}
 }
 
 .custom-button {
@@ -74,45 +73,16 @@ a {
 	}
 }
 
-.full-width {
-	width: 100%;
-}
-
-h4 {
-	font-size: 1.2em !important;
-	font-weight: bold !important;
-}
-
-h5 {
-	font-weight: 200 !important;
-}
-/*
-	Layout styling starts
- */
-header {
+	// Layout styling starts
+#sidebar {
 	width: 275px;
-	position: fixed;
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	// background-color: $light-grey;
-	z-index: 36;
-	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
-	padding-top: 35px;
-	padding-left: 30px;
-	padding-right: 30px;
+	padding: 35px 30px 0 30px;
+	position: fixed;
 
 	ul {
 		list-style-type: none;
-		padding-left: 0 !important;
-
-		li {
-
-			a {
-				font-size: 0.8em;
-			}
-		}
+		padding-left: 0;
 	}
 
 	.logo-wrapper {
@@ -121,23 +91,21 @@ header {
 
 	.about-wrapper {
 		border-bottom: 1px solid $light-grey;
-		padding: 15px 0;
+		padding: 5px 0;
+		
+		li {
+			padding: 2px 0;
+		}
 
 		a {
 			color: $main-text-color;
 		}
 	}
 
-	.stories-wrapper {
-		border-bottom: 1px solid $light-grey;
-		padding: 15px 0;
-	}
-
 	.submit-story-wrapper {
 		padding: 15px 0;
 	}
 }
-
 
 .admin-header {
 	padding-bottom: 30px;
@@ -154,25 +122,20 @@ header {
 	}
 }
 
-
 #content {
-	height: 100%;
-	margin-left: 0;
 	overflow-y: auto;
-	overflow-x: hidden;
+	// overflow-x: hidden;
 	-webkit-overflow-scrolling: touch;
-	padding: 0 0 0 275px;
-	min-height: 100%;
-	padding-top: 35px;
-
+	max-width: $main-content-width;
+	margin-left: 275px;
 	/*
 		Index page
-	 */
+		*/
 
-	.hero-section {
-		margin-bottom: 30px;
-		padding-right: 30px;
-		width: 810px;
+		.hero-section {
+		// margin-bottom: 30px;
+		// padding-right: 30px;
+		// max-width: $main-content-width;
 
 		img {
 			width: 100%;
@@ -204,7 +167,7 @@ header {
 
 		.pull-left {
 			padding-left: 0;
-		 	padding-right: 30px;
+			padding-right: 30px;
 		}
 
 		.new-left {
@@ -225,32 +188,96 @@ header {
 }
 
 
-/*
-	Admin panel
-*/
-#content-admin {
+.stories-wrapper {
+	// border-bottom: 1px solid $light-grey;
+	// padding: 15px 0;
+	max-width: $main-content-width;
+	padding: 40px 0 10px 0;
 
-	.avatar-cell {
-		width: 200px;
-		height: 150px;
-		overflow: hidden;
+	ul {
+		list-style-type: none;
+		padding-left: 0;
+		text-align: center;
 
-		img {
-			max-height: 100%;
-			max-width: 100%;
+		li {
+			display: inline-block;
+			padding: 2px 0;
+
+			&:first-child {
+				.btn-filter {
+					border-left: 0;
+				}
+			}
+			a {
+				font-size: 0.8em;
+			}
 		}
 	}
 }
 
-.table-container {
+.btn-filter {
+	background: none;
+	border: none;
+	@include transition(all 0.2s);
+	padding: 0 5px;
+	border-left: 1px solid #bbb;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	&:hover {
+		text-decoration: underline;
+		color: lighten($main-text-color, 30%);
+	}
+
+	&:active {
+		color: black;
+	}
+	
+	&.title-btn-filter {
+		border-left: 0;
+		width: 100%;
+		text-align: center;
+	}
+
+	&.is-checked {
+		color: $sfu-red;
+		cursor: default;
+		text-decoration: underline;
+
+		&:hover {
+			@extend .is-checked;
+		}
+	}
+}
+
+/*
+	Admin panel
+	*/
+	#content-admin {
+
+		.avatar-cell {
+			width: 200px;
+			height: 150px;
+			overflow: hidden;
+
+			img {
+				max-height: 100%;
+				max-width: 100%;
+			}
+		}
+	}
+
+	.table-container {
 		overflow: scroll;
 		border: 1px solid #ddd;
-}
+	}
 
-.admin-title-container {
-	margin: 20px 0;
-}
+	.admin-title-container {
+		margin: 20px 0;
+	}
 
-.admin-title {
-	margin: 0;
-}
+	.admin-title {
+		margin: 0;
+	}
