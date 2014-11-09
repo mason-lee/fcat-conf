@@ -1,9 +1,11 @@
 { 
 	"name": "FCAT-Conference",
 	"private": true,
-	"version": "0.0.0",
-	"description": "a Sails application",
-	"keywords": [],
+	"version": "0.1.0",
+	"description": "FCAT Conference 2015",
+	"keywords": [
+
+	],
 	"dependencies": {
 		"connect-redis": "1.4.5",
 		"ejs": "~0.8.4",
