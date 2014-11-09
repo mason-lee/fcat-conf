@@ -28,6 +28,9 @@
 		"sails-redis": "^0.10.2",
 		"skipper-s3": "^0.5.5"
 	},
+	"engines": {
+	    "node": "0.10.x"
+	},
 	"scripts": {
 		"start": "node app.js",
 		"debug": "node debug app.js"
