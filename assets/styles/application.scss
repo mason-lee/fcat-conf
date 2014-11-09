@@ -17,6 +17,10 @@ a {
 	}
 }
 
+.error {
+	color: #a94442;
+}
+
 .is-checked {
  	color: #ff7b5a;
 }
@@ -235,6 +239,18 @@ header {
 }
 
 
+.form-group.required .control-label:after { 
+    color: #d00;
+    content: "*";
+    position: absolute;
+    margin-left: 4px;
+    // top: 7px;
+    font-family: 'Glyphicons Halflings';
+    font-weight: normal;
+    font-size: 9px;
+}
+
+
 /*
 	Admin panel
 */
@@ -251,6 +267,13 @@ header {
 		}
 	}
 }
+
+#shareFont-errer {
+	margin-left: 98px;
+	position: absolute;
+	top: 26px;
+}
+
 
 .table-container {
 		overflow: scroll;

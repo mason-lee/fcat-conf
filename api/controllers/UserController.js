@@ -14,6 +14,11 @@ module.exports = {
 
 		User.create(req.params.all(), function UserCreated(err, user) {
 			if(err) {
+				req.session.flash = {
+					err: err
+				}
+
+				// If error redirect back to the sign-up page
 				return res.redirect('/submit');
 			}
 		

@@ -2,10 +2,6 @@ $(function() {
 	/*
 		A little hack to make image uploading working
 	 */
-	$('#biography-form').submit(function() {
-		$(this).find('.avatar-input-group').detach().appendTo($(this)).hide();
-	})
-
 	// init Isotope
 	var $container = $('.featured-people-wrapper').isotope({
 		itemSelector: '.element-item'
@@ -30,7 +26,6 @@ $(function() {
 	$(".shareability").each(function() {
 		share.push($(this).text().trim());
 	});
-	console.log(share);
 
 	var shareElement = [];
 	$(".shareability").each(function() {
@@ -60,13 +55,13 @@ $(function() {
 		Slide in the flash message.
 	 */
 	$(".thankyou-message-wrapper").css({opacity: 0});
-	$(window).load(function() {
+	// $(window).load(function() {
 		$(".thankyou-message-wrapper").addClass("animated fadeInRight");
 		setTimeout(fadeOutMessage, 4000);
 		function fadeOutMessage() {
 			$(".thankyou-message-wrapper").removeClass("fadeInRight").addClass("fadeOut");
 		}
-	});
+	// });
 	
 	$("error-message-wrapper").css({opacity: 0});
 	$(window).load(function() {
@@ -78,6 +73,39 @@ $(function() {
 	});
 
 	$('.myModal').modal('toggle');
+
+	$("#biography-form").validate({
+		rules: {
+			firstName: {
+				required: true
+			},
+			lastName: {
+				required: true
+			},
+			email: {
+				required: true
+			},
+			location: {
+				required: true
+			},
+			avatar: {
+				required: true
+			},
+			categories: {
+				required: true
+			},
+			shareFcat: {
+				required: true
+			},
+			success: function(element) {
+				element.text("OK!").addClass('valid');
+				/*
+					Attach photo field should be the last element in the multi-part form...so just do that but hide it.
+				*/
+				$('#biography-form').find('.avatar-input-group').detach().appendTo($(this)).hide();
+			}
+		}
+	});
 }); // end of jquery script
 
 

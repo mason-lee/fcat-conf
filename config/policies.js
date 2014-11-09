@@ -29,8 +29,11 @@ module.exports.policies = {
 	// '*': "flash",
 
 	SubmissionController: {
-		index: 'isAdmin',
-		create: 'isLoggedIn'
+		index: 'isAdmin'
+	},
+
+	UserController: {
+		create: 'flash'
 	}
 
 	/***************************************************************************

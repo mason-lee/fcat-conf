@@ -4,32 +4,28 @@
 			<div class="form-group">
 				<h3>Biography</h3>
 			</div>
-			<div class="form-group">
-				<label for="firstName">First Name</label>
+			<div class="form-group required">
+				<label for="firstName" class="control-label">First Name</label>
 				<input type="text" name="firstName" class="form-control">
 			</div>
-			<div class="form-group">
-				<label for="lastName">Last Name</label>
+			<div class="form-group required">
+				<label for="lastName" class="control-label">Last Name</label>
 				<input type="text" name="lastName" class="form-control">
 			</div>
-			<div class="form-group">
-				<!--
-					Option to check email as private
-				-->
-				<label for="email">Email</label>
+			<div class="form-group required">
+				<label for="email" class="control-label">Email</label>
 				<input type="email" name="email" class="form-control">
 			</div>
-			<div class="form-group">
-				<label for="location">Current Location</label>
+			<div class="form-group required">
+				<label for="location" class="control-label">Current Location</label>
 				<input type="text" name="location" class="form-control">
 			</div>
-			<div class="form-group avatar-input-group">
-				<label for="avatar">Attach Photo</label>
+			<div class="form-group avatar-input-group required">
+				<label for="avatar" class="control-label">Attach Photo</label>
 				<input type="file" name="avatar" class="form-control" />
 			</div>
-			<div class="form-group">
-				<label>Categories</label>
-				<!-- Has to be changed to checkboxes -->
+			<div class="form-group required">
+				<label class="control-label">Categories</label>
 				<div class="checkbox">
 					<label>
 						<input type="checkbox" name="categories" value="media">Master of Digital Media
@@ -59,20 +55,16 @@
 					<label>
 						<input type="checkbox" name="categories" value="faculty">Faculty member		
 					</label>
-				</div>			
-	<!-- 			<select name="categories" class="form-control">
-					<option value="communication">Communication</option>
-					<option value="siat">Interactive Art and Technology</option>
-					<option value="art">Contemporary Arts</option>
-					<option value="publishing">Publishing</option>
-					<option value="media">Master of Digital Media</option>
-					<option value="faculty">Faculty member</option>
-				</select> -->
+				</div>	
+				<div id="id-error">
+					<label for="categories" class="error" generated="true"></label>
+				</div>
 			</div>
 			<div class="form-group">
 				<label for="portfolio">Portfolio(URL)</label>
 				<input type="url" name="portfolio" class="form-control">
 			</div>
+		
 			<div class="form-group">
 				<label for="credential">SFU Graduation Credential</label>
 				<input type="text" name="credential" class="form-control">
@@ -117,12 +109,15 @@
 					</label>
 				</div>
 			</div>
-			<div class="form-group">
+			<div class="form-group" id="fcatShare">
 				<div class="checkbox">
-					<label for="share">
-						<input type="checkbox" id="share" name="share">By submitting this information, I agree to share on this FCAT site.
+					<label for="shareFcat">
+						<input type="checkbox" id="shareFcat" name="shareFcat">By submitting this information, I agree to share on this FCAT site.
 					</label>
 				</div>
+			</div>
+			<div id="fcatShare-error">
+				<label for="shareFcat" class="error" generated="true"></label>
 			</div>
 			<div class="form-group">
 				<button type="submit" class="btn btn-primary">Submit</button>
