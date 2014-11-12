@@ -106,6 +106,21 @@ $(function() {
 			}
 		}
 	});
+
+	// var peopleSize = $(".people-wrapper .post").length;
+	// var numPic = 18;
+
+	// $('.people-wrapper .post:lt('+numPic+')').show();
+	// $("#loadMore").click(function() {
+	// 	numPic = (numPic + 5 <= peopleSize) ? numPic + 5 : peopleSize;
+	// 	$('.people-wrapper .post:lt('+numPic+')').show();
+	// });
+	// $("#showLess").click(function() {
+	// 	numPic = (numPic - 5 < 0) ? 3 : numPic - 5;
+	// 	$(".people-wrapper .post").not(':lt('+numPic+')').hide();
+	// });
+
+
 }); // end of jquery script
 
 

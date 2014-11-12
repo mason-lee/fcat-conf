@@ -33,20 +33,23 @@
 <link rel="stylesheet" href="/styles/bootstrap-theme.css">
 <link rel="stylesheet" href="/styles/bootstrap.css">
 <link rel="stylesheet" href="/styles/bootstrapValidator.css">
+<link rel="stylesheet" href="/styles/proxima-nova/specimen_files/grid_12-825-55-15.css">
+<link rel="stylesheet" href="/styles/proxima-nova/specimen_files/specimen_stylesheet.css">
+<link rel="stylesheet" href="/styles/proxima-nova/stylesheet.css">
 <link rel="stylesheet" href="/styles/style.css">
 <!--STYLES END-->
 	</head>
 
 	<body>
 		<header>
-			<div class="header-inner-wrapper">
-				<div class="logo-wrapper">
+			<div class="container">
+				<div class="logo-wrapper pull-left">
 					<a href="/">
-						<img src="/images/FCAT-logo.svg" alt="fcat-logo" width="150">
+						<img src="/images/FCAT-logo.svg" alt="fcat-logo">
 					</a>
 				</div>
-				<div class="about-wrapper">
-					<ul>
+				<nav class="pull-right">
+					<ul class="list-inline">
 						<li>
 							<a href="/about">
 								<h4>
@@ -54,63 +57,58 @@
 								</h4> 
 							</a>
 						</li>
-					</ul>
-				</div>
-				<div class="stories-wrapper button-group" id="filters">
-					<ul>
 						<li>
-							<button data-filter="*" class="btn-filter is-checked">
+							<a href="/about">
 								<h4>
-									Stories
+									What is this site for?
 								</h4> 
-							</button>
+							</a>
 						</li>
 						<li>
-							<button class="btn-filter" data-filter=".communication">
-								Communication
-							</button>
-						</li>
-						<li>
-							<button class="btn-filter" data-filter=".siat">
-								Interactive Art and Technology
-							</button>
-						</li>
-						<li>
-							<button class="btn-filter" data-filter=".art">
-								Contemporary Arts
-							</button>
-						</li>
-						<li>
-							<button class="btn-filter" data-filter=".publishing">
-								Publishing
-							</button>
-						</li>
-						<li>
-							<button class="btn-filter" data-filter=".media">
-								Master of Digital Media
-							</button>
-						</li>
-						<li>
-							<button class="btn-filter" data-filter=".faculty">
-								Faculty members
-							</button>
+							<a href="/submit" class="custom-button">
+								Submit your story
+							</a>
 						</li>
 					</ul>
-				</div>
-				<div class="submit-story-wrapper">
-					<a href="/submit" class="custom-button">
-						Submit your story
-					</a>
-				</div>
-				<div class="twitter-wrapper">
-					<a class="twitter-timeline" href="https://twitter.com/hashtag/fcat" data-widget-id="524821383520321536">#fcat Tweets</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-				</div>
+				</nav>
+				
+				
 			</div>
 		</header>
-
+		
+		<div class="header-border container"></div>
+		
 		<section id="content">
 			<%- body %>
 		</section>
+		
+		<section class="bottom-section">
+			<div class="container">
+				<div class="col-md-6 pull-left">
+					<h2>
+						Did you enjoy our story?<br>
+						Share your story as well!
+					</h2>
+				</div>
+				<div class="col-md-6 pull-left">
+					<div class="twitter-wrapper">
+						<a class="twitter-timeline" href="https://twitter.com/hashtag/fcat" data-widget-id="524821383520321536">#fcat Tweets</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class="container">
+				<span>
+					© Simon Fraser University
+				</span>
+				<div class="pull-right">
+					<span>
+						Developed by <a href="http://masonlee.me">Mason Lee</a> (Front/Back-end) and <a href="">Danny Blackstock</a> (Front-end)
+					</span>
+				</div>
+			</div>
+		</footer>
 
 		<!--
 				Client-side Templates
