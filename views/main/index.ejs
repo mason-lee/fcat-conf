@@ -8,14 +8,15 @@
 </div>
 
 <div class="featured-people-wrapper">
-	<div class="container">
-		<div class="stories-wrapper button-group" id="filters">
+	<div class="stories-wrapper button-group" id="filters">
+		<div class="container">
+			<h1 class="story-title">
+				Our Inspiring Stories
+			</h1>
 			<ul class="list-inline">
-				<li class="story-title">
+				<li>
 					<button data-filter="*" class="btn-filter is-checked">
-						<h1>
-							Our Inspiring Stories
-						</h1> 
+							All
 					</button>
 				</li>
 				<li>
@@ -50,18 +51,22 @@
 				</li>
 			</ul>
 		</div>
-		
+	</div>
+
+	<div class="container">
 		<div class="people-wrapper">
 		<% _.each(users, function(user, index) { %>
 			<div class="pull-left post element-item col-md-4 <%= user.categories %>">
 				<div class="inner-featured-people-wrapper">
-					<div class="image-wrapper">
-						<img src="<%= user.avatar %>" alt="Profile picture of <%=: user.firstName | capitalize%> <%=: user.lastName | capitalize %>">
-					</div>
-					<h3 class="name" data-toggle="modal" data-target=".<%=user.id%>">
-						<%=: user.firstName | capitalize %>
-						<%=: user.lastName | capitalize %>
-					</h3>
+					<a data-toggle="modal" data-target=".<%=user.id%>">
+						<div class="image-wrapper">
+							<img src="<%= user.avatar %>" alt="Profile picture of <%=: user.firstName | capitalize%> <%=: user.lastName | capitalize %>">
+						</div>
+						<h3 class="name">
+							<%=: user.firstName | capitalize %>
+							<%=: user.lastName | capitalize %>
+						</h3>
+					</a>
 					<h5>
 						<%=: user.categories | capitalize %>	
 					</h5>
@@ -80,3 +85,29 @@
 	<!-- <div id="loadMore">Load More</div>
 	<div id="showLess">Show Less</div> -->
 </div>
+
+<!-- Modal -->
+<% _.each(users, function(user, index) { %>
+<div class="modal fade <%=user.id%>">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<h4 class="modal-title"><%= user.firstName %><%= user.lastName %></h4>
+			</div>
+			<div class="modal-body">
+				<p><%= user.credential %></p>
+				<p><%= user.categories %></p>
+				<p><%= user.portfolio %></p>
+				<p><%= user.company %></p>
+				<p><%= user.responsibility %></p>
+				<p><%= user.love %></p>
+				<p><%= user.failure %></p>
+				<p><%= user.wish %></p>
+				<p><%= user.wisdom %></p>
+				<p><%= user.share %></p>
+			</div>
+		</div>
+	</div>
+</div>
+<% }) %>

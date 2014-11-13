@@ -120,6 +120,14 @@ $(function() {
 	// 	$(".people-wrapper .post").not(':lt('+numPic+')').hide();
 	// });
 
+	/*
+		Hide header border on the index page.
+	 */
+	if ($(".stories-wrapper").length > 0) {
+		$(".header-border").css({ "border-bottom": "none" });
+	}
+
+
 
 }); // end of jquery script
 
