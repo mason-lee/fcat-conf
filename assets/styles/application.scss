@@ -1,4 +1,6 @@
 @import "bourbon";
+@import "neat/neat";
+
 /*
 	Initial Style Setup
 	*/
@@ -13,6 +15,8 @@ $light-grey: #e5e5e5;
 // dimensions
 $page-width: 1200px;
 $main-content-width: 850px;
+
+$sidebar: 1020px;
 
 body {
 	color: $main-text-color;
@@ -103,27 +107,54 @@ h5 {
 }
 
 	// Layout styling starts
-#sidebar {
-	width: 275px;
-	-webkit-overflow-scrolling: touch;
-	padding: 35px 30px 0 30px;
-	position: fixed;
+#main-menu {
+	position: relative;
+	width: 100%;
+
+	@include clearfix();
+
+	.logo-wrapper {
+		width: 175px;
+		float: left;
+		padding: 15px;
+	}
+
+	@include media($sidebar) {
+		width: 275px;
+		-webkit-overflow-scrolling: touch;
+		padding: 35px 30px 0 30px;
+		position: fixed;
+
+		.logo-wrapper {
+			float: none;
+			width: 100%;
+			margin-bottom: 20px;
+		}
+	}
 
 	ul {
 		list-style-type: none;
 		padding-left: 0;
 	}
 
-	.logo-wrapper {
-		margin-bottom: 20px;
-	}
-
 	.about-wrapper {
-		border-bottom: 1px solid $light-grey;
-		padding: 5px 0;
-		
+		float: right;
+		padding: 0 0 0 15px;
+
+		@include media($sidebar) {
+			float: none;
+			border-bottom: 1px solid $light-grey;
+			padding: 5px 0;
+		}
+
 		li {
-			padding: 2px 0;
+			padding: 28px 10px 0 0;
+			display: inline-block;
+
+			@include media($sidebar) {
+				display: list-item;
+				padding: 2px 0;
+			}
 		}
 
 		a {
@@ -132,7 +163,21 @@ h5 {
 	}
 
 	.submit-story-wrapper {
-		padding: 15px 0;
+		float: right;
+		padding: 20px 0 0 0;
+
+		@include media($sidebar){
+			padding: 15px 0;
+			float: none;
+		}
+	}
+	
+	.twitter-wrapper {
+		display: none;
+
+		@include media($sidebar) {
+			display: block;
+		}
 	}
 }
 
@@ -164,11 +209,16 @@ h5 {
 }
 
 #content {
-	overflow-y: auto;
-	// overflow-x: hidden;
-	-webkit-overflow-scrolling: touch;
-	max-width: $main-content-width;
-	margin-left: 275px;
+	padding: 20px;
+
+	@include media(1020px) {
+		overflow-y: auto;
+		// overflow-x: hidden;
+		-webkit-overflow-scrolling: touch;
+		max-width: $main-content-width;
+		margin-left: 275px;
+	}
+
 	/*
 		Index page
 		*/
