@@ -93,9 +93,12 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-				<h4 class="modal-title"><%= user.firstName %><%= user.lastName %></h4>
+				<h4 class="modal-title"><%= user.firstName %> <%= user.lastName %></h4>
 			</div>
 			<div class="modal-body">
+				<div class="modal-profile img-rounded center-block">
+					<img src="<%= user.avatar %>" alt="Profile picture of <%=: user.firstName | capitalize%> <%=: user.lastName | capitalize %>">
+				</div>
 				<p><%= user.credential %></p>
 				<p><%= user.categories %></p>
 				<p><%= user.portfolio %></p>

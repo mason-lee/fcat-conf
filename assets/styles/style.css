@@ -11,7 +11,7 @@ body {
 	background-color: #fff;
 }
 
-	h1, h2, h3, h4, h5, li, p, a {
+	h1, h2, h3, h4, h5, li, p, a, .form-group {
 	font-family: 'proxima_nova_rgregular', Helvetica, Arial;
 	-webkit-font-smoothing: antialiased;
 	font-weight: 100;
@@ -219,6 +219,27 @@ hr {
 	padding-bottom: 80px; 
 }
 
+.biography-form-wrapper {
+	width: 60%;
+	margin: 0 auto;
+}
+
+#biography-form .form-group input[type="text"] {
+	border: none;
+	border-bottom: solid 2px #c9c9c9;
+	-webkit-transition: border 0.3s;
+	-moz-transition: border 0.3s;
+	-o-transition: border 0.3s;
+	transition: border 0.3s;
+}
+#biography-form .form-group input[type="text"]:focus, .#biography-form .form-group input[type="text"].focus {
+	border-bottom: solid 2px #969696;
+}
+
+#biography-form .form-group input[type="text"]:focus, #biography-form .form-group input[type="text"].focus {
+border-bottom: solid 2px #969696;
+}
+
 .form-group.required .control-label:after {
 	color: #d00;
 	content: "*";
@@ -258,12 +279,13 @@ hr {
 
 
 .form-control {
-	/*border: none;*/
+	border: none;
 	background: none;
 	border-radius: 0;
 	box-shadow: none;
 	height: auto;
-	font-size: 2em;
+	font-size: 1.5em;
+	padding-left: 0;
 }
 
 #biography-form h4 {
@@ -286,25 +308,25 @@ hr {
 
 ::-webkit-input-placeholder {
    font-family: 'proxima_nova_rgregular', Helvetica, Arial;
-   font-size: 2em;
+   /*font-size: 2em;*/
    font-weight: 100;
 }
 
 :-moz-placeholder { /* Firefox 18- */
    font-family: 'proxima_nova_rgregular', Helvetica, Arial;
-   font-size: 2em;
+   /*font-size: 2em;*/
    font-weight: 100;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
    font-family: 'proxima_nova_rgregular', Helvetica, Arial;
-   font-size: 2em;
+   /*font-size: 2em;*/
    font-weight: 100;
 }
 
 :-ms-input-placeholder {  
    font-family: 'proxima_nova_rgregular', Helvetica, Arial;
-   font-size: 2em;
+   /*font-size: 2em;*/
    font-weight: 100;
 }
 
@@ -349,8 +371,28 @@ footer a  {
 /*
 	Modal styling
  */
+
+.modal-header {
+	text-align: center;
+}
+
+.modal-title {
+	max-width: 100% !important;
+}
+
 .modal-content {
 	border-radius: 0;
+}
+
+.modal-profile {
+	max-width: 300px;
+	max-height: 200px;
+	overflow: hidden;
+	margin-bottom: 2em;
+}
+
+.modal-profile>img {
+	width: 100%;
 }
 
 .modal-title {
@@ -369,6 +411,9 @@ footer a  {
 	padding: 1em 0;
 }
 
+#password {
+	margin-top: 0.5em;
+}
 
 
 
