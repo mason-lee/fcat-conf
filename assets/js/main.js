@@ -127,8 +127,10 @@ $(function() {
 		$(".header-border").css({ "border-bottom": "none" });
 	}
 
-
-
+	/*
+		Responsive meny
+	 */
+	$('header nav').meanmenu();
 }); // end of jquery script
 
 
