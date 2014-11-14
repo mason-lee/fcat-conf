@@ -32,9 +32,9 @@ module.exports.policies = {
 		index: 'isAdmin'
 	},
 
-	SessionController: {
-		new: 'http-authen'
-	},
+	// SessionController: {
+	// 	new: 'http-authen'
+	// },
 
 	UserController: {
 		create: 'flash'

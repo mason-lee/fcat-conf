@@ -365,7 +365,9 @@ footer a  {
 	transition: color 0.2s ease;
 }
 
-
+.admin-action-container {
+	padding: 1em 0;
+}
 
 
 
