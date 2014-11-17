@@ -21,6 +21,12 @@ body {
 	/*color: #202020; */
 }
 
+textarea {
+	resize: none;
+	overflow: hidden;
+	outline: none;
+}
+
 a:hover {
 	text-decoration: none !important; }
 
@@ -236,7 +242,7 @@ hr {
 	margin: 0 auto;
 }
 
-#biography-form .form-group input[type="text"] {
+#biography-form .form-group input {
 	border: none;
 	border-bottom: solid 2px #c9c9c9;
 	-webkit-transition: border 0.3s;
@@ -244,11 +250,11 @@ hr {
 	-o-transition: border 0.3s;
 	transition: border 0.3s;
 }
-#biography-form .form-group input[type="text"]:focus, .#biography-form .form-group input[type="text"].focus {
+#biography-form .form-group input:focus, .#biography-form .form-group input.focus {
 	border-bottom: solid 2px #969696;
 }
 
-#biography-form .form-group input[type="text"]:focus, #biography-form .form-group input[type="text"].focus {
+#biography-form .form-group input:focus, #biography-form .form-group input.focus {
 border-bottom: solid 2px #969696;
 }
 

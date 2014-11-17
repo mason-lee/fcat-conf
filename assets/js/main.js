@@ -56,10 +56,10 @@ $(function() {
 	 */
 	$(".thankyou-message-wrapper").css({opacity: 0});
 	// $(window).load(function() {
-		$(".thankyou-message-wrapper").addClass("animated fadeInRight");
+		$(".thankyou-message-wrapper").addClass("animated fadeInTop");
 		setTimeout(fadeOutMessage, 4000);
 		function fadeOutMessage() {
-			$(".thankyou-message-wrapper").removeClass("fadeInRight").addClass("fadeOut");
+			$(".thankyou-message-wrapper").removeClass("fadeInTop").addClass("fadeOut");
 		}
 	// });
 	
@@ -131,6 +131,15 @@ $(function() {
 		Responsive meny
 	 */
 	$('header nav').meanmenu();
+
+	/*
+		Auto resize the textarea
+	 */
+	$('.form-group').on( 'keyup', 'textarea', function (){
+		$(this).height(0);
+		$(this).height(this.scrollHeight);
+	});
+	$('#container').find( 'textarea' ).keyup();
 }); // end of jquery script
 
 
