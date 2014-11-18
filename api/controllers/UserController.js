@@ -11,6 +11,7 @@ module.exports = {
 	}, //end new action
 
 	create: function  (req, res) {
+		debugger;
 		User.create(req.params.all(), function UserCreated(err, user) {
 			if(err) {
 				req.session.flash = {

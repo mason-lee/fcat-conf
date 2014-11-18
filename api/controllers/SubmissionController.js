@@ -9,6 +9,7 @@
 module.exports = {
 	index: function(req, res) {
 		User.find({ where: { status: 'pending' } }).exec(function(err, users) {
+			debugger;
 			res.locals.layout = 'layoutadmin';
 			res.view({users: users});
 		});
