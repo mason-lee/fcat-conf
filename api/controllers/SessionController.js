@@ -1,6 +1,5 @@
 module.exports = {
 	new: function(req, res) {
-		debugger;
 		res.locals.layout = 'layoutadmin';
 		res.view();
 	},
