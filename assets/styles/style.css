@@ -62,6 +62,22 @@ a:hover {
 	line-height: 1.7;
 	box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 	color: #5c5b5b;
+	font-weight: bold;
+	-webkit-animation-duration: 3s;
+	-moz-animation-delay: 2.5s;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+.remove-message {
+	-webkit-animation-duration: 1s;
+	-moz-animation-delay: 1s;
 }
 
 .custom-button {

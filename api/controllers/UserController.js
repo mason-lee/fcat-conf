@@ -10,8 +10,7 @@ module.exports = {
 		res.view();
 	}, //end new action
 
-	create: function  (req, res) {
-		debugger;
+	create: function(req, res) {
 		User.create(req.params.all(), function UserCreated(err, user) {
 			if(err) {
 				req.session.flash = {
@@ -38,9 +37,8 @@ module.exports = {
 
 				// Otherwise, update the user avatar
 				User.update({id: user.id}, {avatar: uploadedFiles[0].extra.Location}).exec(function(err, updated) {
-					// return res.json({success: 'ok all done'});
 					res.redirect("/");
-					req.flash('signup-message', '<div class="thankyou-message-wrapper bg-success"><span class="thankyou-message">Thank you for submitting the form!<br> Our administer will review your submission and publish soon.</span></div>');
+					req.flash('signup-message', '<div class="thankyou-message-wrapper bg-success"><span class="glyphicon glyphicon-remove pull-right" aria-hidden="true"></span><span class="thankyou-message">Thank you for submitting the form!<br> Our administer will review your submission and publish soon.</span></div>');
 				});
 			});
 		})//End User.create query
