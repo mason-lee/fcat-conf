@@ -48,6 +48,27 @@ $(function() {
 		}
 	});
 
+	/*
+		In the main page, change the category nicely
+	 */
+	String.prototype.capitalize = function() {
+	    return this.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
+	};
+
+	var major = [];
+	$(".category-study").each(function() {
+		major.push($(this).text().trim());
+	});
+
+	var eachMajors = [];
+	$.each(major, function(index) {
+		eachMajors.push(major[index]);
+	});
+
+	// $.each(eachMajor, function(key) {
+	// 	eachMajor[key].trim(",").capitalize();
+	// });
+	// console.log(eachMajor);
 
 	/*
 		Remove all "," from classes of ".post" elements
@@ -142,6 +163,12 @@ $(function() {
 		$(this).height(this.scrollHeight);
 	});
 	$('#container').find( 'textarea' ).keyup();
+
+	
+
+
+
+
 }); // end of jquery script
 
 
