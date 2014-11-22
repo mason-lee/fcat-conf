@@ -25,6 +25,12 @@ p {
 	margin-bottom: 20px;
 }
 
+textarea {
+	resize: none;
+	overflow: hidden;
+	outline: none;
+}
+
 a:hover {
 	text-decoration: none !important; }
 
@@ -60,6 +66,22 @@ a:hover {
 	line-height: 1.7;
 	box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 	color: #5c5b5b;
+	font-weight: bold;
+	-webkit-animation-duration: 3s;
+	-moz-animation-delay: 2.5s;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+.remove-message {
+	-webkit-animation-duration: 1s;
+	-moz-animation-delay: 1s;
 }
 
 .custom-button {
@@ -240,7 +262,7 @@ hr {
 	margin: 0 auto;
 }
 
-#biography-form .form-group input[type="text"] {
+#biography-form .form-group input {
 	border: none;
 	border-bottom: solid 2px #c9c9c9;
 	-webkit-transition: border 0.3s;
@@ -248,11 +270,11 @@ hr {
 	-o-transition: border 0.3s;
 	transition: border 0.3s;
 }
-#biography-form .form-group input[type="text"]:focus, .#biography-form .form-group input[type="text"].focus {
+#biography-form .form-group input:focus, .#biography-form .form-group input.focus {
 	border-bottom: solid 2px #969696;
 }
 
-#biography-form .form-group input[type="text"]:focus, #biography-form .form-group input[type="text"].focus {
+#biography-form .form-group input:focus, #biography-form .form-group input.focus {
 border-bottom: solid 2px #969696;
 }
 

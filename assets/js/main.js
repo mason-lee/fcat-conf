@@ -1,7 +1,12 @@
 $(function() {
 	/*
-		A little hack to make image uploading working
+		DON'T DELTE THIS. 
+		(A little hack to make image uploading working)
 	 */
+	$('#biography-form').submit(function() {
+		$(this).find('.avatar-input-group').detach().appendTo($(this)).hide();
+	});
+
 	// init Isotope
 	var $container = $('.featured-people-wrapper').isotope({
 		itemSelector: '.element-item'
@@ -38,11 +43,32 @@ $(function() {
 			shareElement[key].html(okay);	
 		}
 		else {
-			var no = share[key].replace("true", "No");
+			var no = share[key].replace("undefined", "No");
 			shareElement[key].html(no);	
 		}
 	});
 
+	/*
+		In the main page, change the category nicely
+	 */
+	String.prototype.capitalize = function() {
+	    return this.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
+	};
+
+	// var major = [];
+	// $(".category-study").each(function() {
+	// 	major.push($(this).text().trim());
+	// });
+
+	// var eachMajors = [];
+	// $.each(major, function(index) {
+	// 	eachMajors.push(major[index]);
+	// });
+
+	// $.each(eachMajor, function(key) {
+	// 	eachMajor[key].trim(",").capitalize();
+	// });
+	// console.log(eachMajor);
 
 	/*
 		Remove all "," from classes of ".post" elements
@@ -53,17 +79,14 @@ $(function() {
 	});
 	/*
 		Slide in the flash message.
-	 */
-	$(".thankyou-message-wrapper").css({opacity: 0});
-	// $(window).load(function() {
-		$(".thankyou-message-wrapper").addClass("animated fadeInRight");
-		setTimeout(fadeOutMessage, 4000);
-		function fadeOutMessage() {
-			$(".thankyou-message-wrapper").removeClass("fadeInRight").addClass("fadeOut");
-		}
-	// });
-	
-	$("error-message-wrapper").css({opacity: 0});
+	*/
+	$(".thankyou-message-wrapper").addClass("hide");
+	$(".thankyou-message-wrapper").delay(5000).removeClass("hide").addClass("animated fadeInDown");
+	$(".glyphicon-remove").click(function() {
+		$(this).parent("div").addClass("fadeOutUpBig remove-message hide");
+		$(this).parent("div").removeClass("animated");
+	});
+
 	$(window).load(function() {
 		$(".error-message-wrapper").addClass("animated fadeInDown");
 		setTimeout(fadeOutErrorMessage, 3000);
@@ -131,6 +154,16 @@ $(function() {
 		Responsive meny
 	 */
 	$('header nav').meanmenu();
+
+	/*
+		Auto resize the textarea
+	 */
+	$('.form-group').on( 'keyup', 'textarea', function (){
+		$(this).height(0);
+		$(this).height(this.scrollHeight);
+	});
+	$('#container').find( 'textarea' ).keyup();
+
 }); // end of jquery script
 
 

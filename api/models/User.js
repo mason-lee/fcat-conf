@@ -7,8 +7,7 @@
 
 module.exports = {
 	// Allow us to save only the data that we wanted to the server
-	// schema: true,
-	// autoPK: false,
+	schema: true,
 
 	attributes: {
 		status: {
@@ -25,8 +24,7 @@ module.exports = {
 		},
 
 		email: {
-			type: 'email',
-			email: true
+			type: 'email'
 		},
 
 		location: {

@@ -1,4 +1,4 @@
-<%- req.flash('signup-message') %>	
+<%- req.flash('signup-message') %>
 <div class="hero-section">
 	<div class="container">
 		<div>
@@ -67,7 +67,7 @@
 							<%=: user.lastName | capitalize %>
 						</h3>
 					</a>
-					<h5>
+					<h5 class="category-study">
 						<%=: user.categories | capitalize %>	
 					</h5>
 					<h5>
@@ -108,7 +108,6 @@
 				<p><%= user.failure %></p>
 				<p><%= user.wish %></p>
 				<p><%= user.wisdom %></p>
-				<p><%= user.share %></p>
 			</div>
 		</div>
 	</div>
