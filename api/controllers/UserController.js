@@ -27,9 +27,12 @@ module.exports = {
 			res.setTimeout(0);
 			req.file('avatar').upload({
 				adapter: require('skipper-s3'),
-				bucket: process.env.S3_BUCKET,
-				key: process.env.S3_KEY,
-				secret: process.env.S3_SECRET,
+				// bucket: process.env.S3_BUCKET,
+				// key: process.env.S3_KEY,
+				// secret: process.env.S3_SECRET,
+				bucket: 'fcat-images',
+	 			key: 'AKIAJ4BD3GPOXVPPONBQ', 
+				secret: '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',
 				headers: {
 					'x-amz-acl': 'public-read'
 				}
