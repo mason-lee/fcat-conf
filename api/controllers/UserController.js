@@ -22,17 +22,19 @@ module.exports = {
 				// If error redirect back to the sign-up page
 				return res.redirect('/submit');
 			}
-		
+			
+			/*
+				
+			 */
+			
+			
 			// Uploading image
 			res.setTimeout(0);
 			req.file('avatar').upload({
 				adapter: require('skipper-s3'),
-				// bucket: process.env.S3_BUCKET,
-				// key: process.env.S3_KEY,
-				// secret: process.env.S3_SECRET,
-				bucket: 'fcat-images',
-	 			key: 'AKIAJ4BD3GPOXVPPONBQ', 
-				secret: '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',
+				bucket: process.env.S3_BUCKET,
+				key: process.env.S3_KEY,
+				secret: process.env.S3_SECRET,
 				headers: {
 					'x-amz-acl': 'public-read'
 				}
