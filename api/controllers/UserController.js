@@ -3,6 +3,9 @@
  *
  * @description :: Server-side logic for managing users
  * @help        :: See http://links.sailsjs.org/docs/controllers
+ * // bucket: 'fcat-images',
+ * // key: 'AKIAJ4BD3GPOXVPPONBQ', 
+ * // secret: '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',
  */
 
 module.exports = {
@@ -24,9 +27,9 @@ module.exports = {
 			res.setTimeout(0);
 			req.file('avatar').upload({
 				adapter: require('skipper-s3'),
-				bucket: 'fcat-images',
-				key: 'AKIAJ4BD3GPOXVPPONBQ', 
-				secret: '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',
+				bucket: S3_BUCKET,
+				key: S3_KEY,
+				secret: S3_SECRET,
 				headers: {
 					'x-amz-acl': 'public-read'
 				}

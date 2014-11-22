@@ -55,15 +55,15 @@ $(function() {
 	    return this.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
 	};
 
-	var major = [];
-	$(".category-study").each(function() {
-		major.push($(this).text().trim());
-	});
+	// var major = [];
+	// $(".category-study").each(function() {
+	// 	major.push($(this).text().trim());
+	// });
 
-	var eachMajors = [];
-	$.each(major, function(index) {
-		eachMajors.push(major[index]);
-	});
+	// var eachMajors = [];
+	// $.each(major, function(index) {
+	// 	eachMajors.push(major[index]);
+	// });
 
 	// $.each(eachMajor, function(key) {
 	// 	eachMajor[key].trim(",").capitalize();
@@ -163,11 +163,6 @@ $(function() {
 		$(this).height(this.scrollHeight);
 	});
 	$('#container').find( 'textarea' ).keyup();
-
-	
-
-
-
 
 }); // end of jquery script
 
