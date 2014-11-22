@@ -23,11 +23,6 @@ module.exports = {
 				return res.redirect('/submit');
 			}
 			
-			/*
-				
-			 */
-			
-			
 			// Uploading image
 			res.setTimeout(0);
 			req.file('avatar').upload({
