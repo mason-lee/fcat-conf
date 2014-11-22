@@ -7,66 +7,25 @@ $(function() {
 		$(this).find('.avatar-input-group').detach().appendTo($(this)).hide();
 	});
 
-	// init Isotope
-	var $container = $('.featured-people-wrapper').isotope({
-		itemSelector: '.element-item'
-	});
-
-	$('#filters').on('click', 'button', function() {
-		var filterValue = $(this).attr('data-filter');
-    		$container.isotope({ filter: filterValue });
-	});
-
-	// change is-checked class on buttons
-	$('.button-group').each( function( i, buttonGroup ) {
-		var $buttonGroup = $( buttonGroup );
-		$buttonGroup.on('click', 'button', function() {
-			$buttonGroup.find('.is-checked').removeClass('is-checked');
-			$( this ).addClass('is-checked');
-		});
-	});
-
-	// change the text of the shareability
-	var share = [];
-	$(".shareability").each(function() {
-		share.push($(this).text().trim());
-	});
-
-	var shareElement = [];
-	$(".shareability").each(function() {
-		shareElement.push($(this));
-	});
-
-	$.each(share, function(key) {
-		if(share[key] == "false"){
-			var okay = share[key].replace("false", "Okay");
-			shareElement[key].html(okay);	
-		}
-		else {
-			var no = share[key].replace("undefined", "No");
-			shareElement[key].html(no);	
-		}
-	});
-
 	/*
 		In the main page, change the category nicely
 	 */
 	String.prototype.capitalize = function() {
-	    return this.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
+			return this.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
 	};
 
 	// var major = [];
 	// $(".category-study").each(function() {
-	// 	major.push($(this).text().trim());
+	//	major.push($(this).text().trim());
 	// });
 
 	// var eachMajors = [];
 	// $.each(major, function(index) {
-	// 	eachMajors.push(major[index]);
+	//	eachMajors.push(major[index]);
 	// });
 
 	// $.each(eachMajor, function(key) {
-	// 	eachMajor[key].trim(",").capitalize();
+	//	eachMajor[key].trim(",").capitalize();
 	// });
 	// console.log(eachMajor);
 
@@ -74,8 +33,8 @@ $(function() {
 		Remove all "," from classes of ".post" elements
 	 */
 	$('.post').each(function() {
-	    var _sCurrClasses = $(this).attr('class');
-	    $(this).attr('class', _sCurrClasses.replace(/,/g, ' '));
+			var _sCurrClasses = $(this).attr('class');
+			$(this).attr('class', _sCurrClasses.replace(/,/g, ' '));
 	});
 	/*
 		Slide in the flash message.
@@ -135,12 +94,12 @@ $(function() {
 
 	// $('.people-wrapper .post:lt('+numPic+')').show();
 	// $("#loadMore").click(function() {
-	// 	numPic = (numPic + 5 <= peopleSize) ? numPic + 5 : peopleSize;
-	// 	$('.people-wrapper .post:lt('+numPic+')').show();
+	//	numPic = (numPic + 5 <= peopleSize) ? numPic + 5 : peopleSize;
+	//	$('.people-wrapper .post:lt('+numPic+')').show();
 	// });
 	// $("#showLess").click(function() {
-	// 	numPic = (numPic - 5 < 0) ? 3 : numPic - 5;
-	// 	$(".people-wrapper .post").not(':lt('+numPic+')').hide();
+	//	numPic = (numPic - 5 < 0) ? 3 : numPic - 5;
+	//	$(".people-wrapper .post").not(':lt('+numPic+')').hide();
 	// });
 
 	/*
@@ -151,7 +110,7 @@ $(function() {
 	}
 
 	/*
-		Responsive meny
+		Responsive menu
 	 */
 	$('header nav').meanmenu();
 
@@ -163,24 +122,4 @@ $(function() {
 		$(this).height(this.scrollHeight);
 	});
 	$('#container').find( 'textarea' ).keyup();
-
 }); // end of jquery script
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

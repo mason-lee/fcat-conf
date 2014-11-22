@@ -36,7 +36,7 @@ a:hover {
 
 .is-checked {
 	background-color: rgba(207, 73, 74, 0.9) !important;
-	padding: 0.3em 0.5em;
+	/*padding: 0.3em 0.5em;*/
 	color: white;
 }
 
@@ -117,6 +117,10 @@ a:hover {
 	background: none;
 	border: none; }
 
+#contemporary-arts-subfilters, #communication-subfilters {
+	border-top: 1px solid #ccc;
+}
+
 h5 {
 	font-weight: 200 !important; }
 
@@ -129,6 +133,7 @@ h5 {
 	width: 90%;
 	/*padding: 0;*/
 	position: relative;
+	height: 100%;
 }
 
 header {
@@ -185,7 +190,6 @@ nav ul li a {
 
 #content {
 	padding-top: 1.5em;
-	padding-bottom: 8em;
 }
 
 .hero-section>.container {
@@ -197,7 +201,8 @@ nav ul li a {
 }
 
 .people-wrapper {
-	position: relative;
+	-webkit-transition: height 0.2s;
+					transition: height 0.2s;
 }
 
 .story-title {
@@ -367,7 +372,6 @@ border-bottom: solid 2px #969696;
 .bottom-section {
 	background-color: rgba(207, 73, 74, 0.0196078);
 	padding: 40px 0;
-	margin-top: 40px;
 }
 
 .bottom-section h2 {
