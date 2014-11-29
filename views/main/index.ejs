@@ -9,104 +9,138 @@
 
 <div class="featured-people-wrapper">
 	<div class="stories-wrapper button-group">
-		<div class="container">
+		<div class="container" id="filters">
 			<h1 class="story-title">
 				Our Inspiring Stories
 			</h1>
-			<ul class="list-inline" id="filters">
-				<li>
-					<button data-filter="*" class="btn-filter is-checked">
-							All
-					</button>
-				</li>
-				<li>
-					<button class="btn-filter" data-filter=".communication">
-						Communication
-					</button>
-				</li>
-				<li>
-					<button class="btn-filter" data-filter=".siat">
-						Interactive Arts & Technology
-					</button>
-				</li>
-				<li>
-					<button class="btn-filter" data-filter=".art">
-						Contemporary Arts
-					</button>
-				</li>
-				<li>
-					<button class="btn-filter" data-filter=".publishing">
-						Publishing
-					</button>
-				</li>
-				<li>
-					<button class="btn-filter" data-filter=".media">
-						Master of Digital Media
-					</button>
-				</li>
-				<li>
-					<button class="btn-filter" data-filter=".faculty">
-						Faculty members
-					</button>
-				</li>
-			</ul>
+			<div class="ui-group">
+				<h3>
+					Schools
+				</h3>
+				<ul class="list-inline button-group" data-filter-group="school">
+					<li>
+						<button data-filter="*" class="btn-filter is-checked">
+								All
+						</button>
+					</li>
+					<li>
+						<button class="btn-filter" data-filter=".communication">
+							Communication
+						</button>
+					</li>
+					<li>
+						<button class="btn-filter" data-filter=".siat">
+							Interactive Arts & Technology
+						</button>
+					</li>
+					<li>
+						<button class="btn-filter" data-filter=".art">
+							Contemporary Arts
+						</button>
+					</li>
+					<li>
+						<button class="btn-filter" data-filter=".publishing">
+							Publishing
+						</button>
+					</li>
+					<li>
+						<button class="btn-filter" data-filter=".media">
+							Master of Digital Media
+						</button>
+					</li>
+					<li>
+						<button class="btn-filter" data-filter=".faculty">
+							Faculty members
+						</button>
+					</li>
+				</ul>
+				<ul class="list-inline" id="contemporary-arts-subfilters" style="display: none;">
+					<li>
+						<button class="btn-filter" data-filter=".dance">
+							Dance
+						</button>
+					</li>
+					<li>
+						<button class="btn-filter" data-filter=".film">
+							Film	
+						</button>
+					</li>
+					<li>
+						<button class="btn-filter" data-filter=".music">
+							Music
+						</button>
+					</li>
+					<li>
+						<button class="btn-filter" data-filter=".theatre-performance">
+							Theatre Performance
+						</button>
+					</li>
+					<li>
+						<button class="btn-filter" data-filter=".theatre-production">
+							Theatre Production and Design
+						</button>
+					</li>
+					<li>
+						<button class="btn-filter" data-filter=".visual-art">
+							Visual Art
+						</button>
+					</li>
+					<li>
+						<button class="btn-filter" data-filter=".visual-culture">
+							Visual Culture & Performance Studies 
+						</button>
+					</li>
+					<li>
+						<button class="btn-filter" data-filter=".film-studies">
+							Film & Video Studies
+						</button>
+					</li>
+					<li>
+						<button class="btn-filter" data-filter=".fine-arts">
+							Fine & Performing Arts
+						</button>
+					</li>
+				</ul>
 
-			<ul class="list-inline" id="contemporary-arts-subfilters" style="display: none;">
-				<li>
-					<button class="btn-filter" data-filter=".dance">
-						Dance
-					</button>
-				</li>
-				<li>
-					<button class="btn-filter" data-filter=".film">
-						Film	
-					</button>
-				</li>
-				<li>
-					<button class="btn-filter" data-filter=".music">
-						Music
-					</button>
-				</li>
-				<li>
-					<button class="btn-filter" data-filter=".theatre-performance">
-						Theatre Performance
-					</button>
-				</li>
-				<li>
-					<button class="btn-filter" data-filter=".theatre-production">
-						Theatre Production and Design
-					</button>
-				</li>
-				<li>
-					<button class="btn-filter" data-filter=".visual-art">
-						Visual Art
-					</button>
-				</li>
-				<li>
-					<button class="btn-filter" data-filter=".visual-culture">
-						Visual Culture & Performance Studies 
-					</button>
-				</li>
-				<li>
-					<button class="btn-filter" data-filter=".film-studies">
-						Film & Video Studies
-					</button>
-				</li>
-				<li>
-					<button class="btn-filter" data-filter=".fine-arts">
-						Fine & Performing Arts
-					</button>
-				</li>
-			</ul>
-
-			<ul class="list-inline" id="communication-subfilters" style="display: none;">
-				<li>
-					<button class="btn-filter" data-filter=".dialogue">
-						Dialogue
-					</button>
-				</li>
-			</ul>
-
+				<ul class="list-inline" id="communication-subfilters" style="display: none;">
+					<li>
+						<button class="btn-filter" data-filter=".dialogue">
+							Dialogue
+						</button>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="ui-group">
+				<h3>Title</h3>
+				<ul class="button-group list-inline" data-filter-group="title">
+					<li>
+						<button data-filter="*" class="btn-filter is-checked">
+								All
+						</button>
+					</li>
+					<li>
+						<button class="btn-filter" data-filter=".Alumni">
+							Alumni
+						</button>
+					</li>
+					<li>
+						<button class="btn-filter" data-filter=".Student">
+							Student
+						</button>
+					</li>
+					<li>
+						<button class="btn-filter" data-filter=".Faculty">
+							Faculty
+						</button>
+					</li>
+					<li>
+						<button class="btn-filter" data-filter=".Staff">
+							Staff
+						</button>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 

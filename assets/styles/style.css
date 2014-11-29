@@ -27,11 +27,15 @@ textarea {
 	outline: none;
 }
 
+p {
+	margin-bottom: 20px;
+}
+
 a:hover {
 	text-decoration: none !important; }
 
-.error {
-	color: #a94442; 
+.error, .ad-lib-input-container .error {
+ 	color: #a94442; 
 }
 
 .is-checked {
@@ -259,7 +263,7 @@ hr {
 }
 
 .biography-form-wrapper {
-	width: 60%;
+	/*width: 60%;*/
 	margin: 0 auto;
 }
 
@@ -474,6 +478,85 @@ footer a  {
 	}
 }
 
+
+/* Start custom ad-lib style form for story submission */
+
+.ad-lib-input-container {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+}
+
+.ad-lib-input-container-new label {
+	font-weight: 300;
+	margin-right: 4px;
+}
+
+.ad-lib-input-container-new label input[type="checkbox"] {
+	margin-right: 3px;
+}
+
+.last-checkbox {
+	margin-right: -3px !important;
+}
+
+.ad-lib-textarea-container {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+ 
+.ad-lib-textarea {
+	width: 100%;
+	border: 1px solid #c9c9c9;
+
+	-webkit-transition: border 0.3s;
+	-moz-transition: border 0.3s;
+	-o-transition: border 0.3s;
+	transition: border 0.3s;
+}
+ 
+.ad-lib-input-container label, .ad-lib-textarea-container label, label.error {
+	display: block;
+	font-weight: normal;
+	line-height: 14px;
+	margin-top: 4px;
+	text-transform: uppercase;
+	font-size: 11px;
+	color: #aaa;
+}
+ 
+.ad-lib-input {
+	display: block;
+	border: none;
+	border-bottom: 1px solid #c9c9c9;
+	line-height: 14px;
+	margin-top: 4px;
+ 
+	-webkit-transition: border 0.3s;
+	-moz-transition: border 0.3s;
+	-o-transition: border 0.3s;
+	transition: border 0.3s;
+}
+ 
+.ad-lib-input:focus, .ad-lib-file:focus {
+	border-bottom: 1px solid #444;
+}
+ 
+.ad-lib-textarea:focus {
+	border: 1px solid #444;
+}
+
+.ad-lib-file {
+	display: inline-block;
+	line-height: normal;
+	border-bottom: 1px solid #c9c9c9;
+	padding-bottom: 5px;
+	width: 190px;
+}
 
 
 

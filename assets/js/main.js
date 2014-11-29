@@ -122,4 +122,38 @@ $(function() {
 		$(this).height(this.scrollHeight);
 	});
 	$('#container').find( 'textarea' ).keyup();
+
+
+	/*
+		Dealing with sub filters
+	 */
+	$(".subfilterButton").click(function() {
+		$(".subfilter input[type='checkbox']:checked").each(function() {
+			$(".schoolOfContemp").append("," + $(this).val());
+		});
+	});
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }); // end of jquery script

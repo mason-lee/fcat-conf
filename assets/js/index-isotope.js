@@ -1,14 +1,25 @@
 // wait till resources loaded
 $(window).load(function(){
 
+  var filters =  {};
+
   // init Isotope
   var $container = $('.people-wrapper').isotope({
     itemSelector: '.element-item'
   });
 
   $('#filters').on('click', 'button', function() {
-    var filterValue = $(this).attr('data-filter');
-    // console.log(filterValue);
+    var $this = $(this);
+    // get group key
+    var $buttonGroup = $this.parents('.button-group');
+    var filterGroup = $buttonGroup.attr('data-filter-group');
+    // set filter for group
+    filters[filterGroup] = $this.attr('data-filter');
+    // combine filters
+    var filterValue = '';
+    for (var prop in filters) {
+      filterValue += filters[prop];
+    }
     $container.isotope({ filter: filterValue });
 
     // show the arts subfilters if arts is selected
@@ -48,6 +59,14 @@ $(window).load(function(){
       $( this ).addClass('is-checked');
     });
   });
+
+
+
+
+
+
+
+
 
   // change the text of the shareability
   var share = [];
