@@ -18,13 +18,20 @@
 		</div>
 		<div class="form-group">
 			<div>
-				<b>Credential: </b><%= user.credential %>
+				<b>Title: </b><%= user.credential %>
 			</div>
 		</div>
 		<div class="form-group">
 			<div>
-				<b>Category: </b><%= user.categories %>
+				<b>School: </b>
 			</div>
+			<textarea name="categories"><%= user.categories %></textarea>
+		</div>
+		<div class="form-group">
+			<div>
+				<b>Major: </b>
+			</div>
+			<textarea name="major"><%= user.major %></textarea>
 		</div>
 		<div class="form-group">
 			<div>

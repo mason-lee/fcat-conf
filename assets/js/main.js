@@ -6,35 +6,26 @@ $(function() {
 	$('#biography-form').submit(function() {
 		$(this).find('.avatar-input-group').detach().appendTo($(this)).hide();
 	});
-
 	/*
 		In the main page, change the category nicely
 	 */
-	String.prototype.capitalize = function() {
-			return this.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
-	};
-
-	// var major = [];
-	// $(".category-study").each(function() {
-	//	major.push($(this).text().trim());
-	// });
-
-	// var eachMajors = [];
-	// $.each(major, function(index) {
-	//	eachMajors.push(major[index]);
-	// });
-
-	// $.each(eachMajor, function(key) {
-	//	eachMajor[key].trim(",").capitalize();
-	// });
-	// console.log(eachMajor);
-
+	var studyElem = $(".category-study");
+	studyElem.each(function() {
+		var arrCategory = $(this).text().split(/\n/);
+		$.each(arrCategory, function(index, value) {
+			if(index === 1) {
+				// console.log($(this).parent().prev());
+				// var newSchools = arrCategory[index].replace(/,/g, ' | ');
+			}
+		});
+	});
+	
 	/*
 		Remove all "," from classes of ".post" elements
 	 */
 	$('.post').each(function() {
-			var _sCurrClasses = $(this).attr('class');
-			$(this).attr('class', _sCurrClasses.replace(/,/g, ' '));
+		var _sCurrClasses = $(this).attr('class');
+		$(this).attr('class', _sCurrClasses.replace(/,/g, ' '));
 	});
 	/*
 		Slide in the flash message.
@@ -45,7 +36,6 @@ $(function() {
 		$(this).parent("div").addClass("fadeOutUpBig remove-message hide");
 		$(this).parent("div").removeClass("animated");
 	});
-
 	$(window).load(function() {
 		$(".error-message-wrapper").addClass("animated fadeInDown");
 		setTimeout(fadeOutErrorMessage, 3000);
@@ -89,6 +79,15 @@ $(function() {
 		}
 	});
 
+	$.validator.methods.url = function(value, element) {
+	    return this.optional(element) || true;
+	};
+
+	$.validator.addMethod("isurl",function(value,element) {
+	  return this.optional(element) 
+	     || /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/.test(value); 
+	},"Proper URL, please");
+
 	// var peopleSize = $(".people-wrapper .post").length;
 	// var numPic = 18;
 
@@ -122,8 +121,6 @@ $(function() {
 		$(this).height(this.scrollHeight);
 	});
 	$('#container').find( 'textarea' ).keyup();
-
-
 	/*
 		Dealing with sub filters
 	 */
@@ -132,9 +129,15 @@ $(function() {
 			$(".schoolOfContemp").append("," + $(this).val());
 		});
 	});
-	
+	// Initiate chosen library
+	$(".chosen-select").chosen();
 
-
+	// contemporary art subfilter
+	$("#source").change(function() {
+		// if($('#source option:selected').text() == "Contemporary Arts" || $('#source option:selected').text() == "Communication") {
+		// 	$(".major-options").show();
+		// } 
+	});
 
 
 

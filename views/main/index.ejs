@@ -17,40 +17,35 @@
 				<h3>
 					Schools
 				</h3>
-				<ul class="list-inline button-group" data-filter-group="school">
+				<ul class="list-inline button-group button-group-school js-radio-button-group" data-filter-group="school">
 					<li>
 						<button data-filter="*" class="btn-filter is-checked">
 								All
 						</button>
 					</li>
 					<li>
-						<button class="btn-filter" data-filter=".communication">
+						<button class="btn-filter" data-filter=".Communication">
 							Communication
 						</button>
 					</li>
 					<li>
-						<button class="btn-filter" data-filter=".siat">
+						<button class="btn-filter" data-filter=".Interactive">
 							Interactive Arts & Technology
 						</button>
 					</li>
 					<li>
-						<button class="btn-filter" data-filter=".art">
+						<button class="btn-filter" data-filter=".Contemporary">
 							Contemporary Arts
 						</button>
 					</li>
 					<li>
-						<button class="btn-filter" data-filter=".publishing">
+						<button class="btn-filter" data-filter=".Publishing">
 							Publishing
 						</button>
 					</li>
 					<li>
-						<button class="btn-filter" data-filter=".media">
-							Master of Digital Media
-						</button>
-					</li>
-					<li>
-						<button class="btn-filter" data-filter=".faculty">
-							Faculty members
+						<button class="btn-filter" data-filter=".Digital">
+							Digital Media
 						</button>
 					</li>
 				</ul>
@@ -113,7 +108,7 @@
 			
 			<div class="ui-group">
 				<h3>Title</h3>
-				<ul class="button-group list-inline" data-filter-group="title">
+				<ul class="button-group button-group-title list-inline" data-filter-group="title">
 					<li>
 						<button data-filter="*" class="btn-filter is-checked">
 								All
@@ -147,7 +142,7 @@
 	<div class="container">
 		<div class="people-wrapper">
 		<% _.each(users, function(user, index) { %>
-			<div class="pull-left post element-item col-md-4 <%= user.categories %>">
+			<div class="pull-left post element-item col-md-4 <%= user.categories %> <%= user.credential %>">
 				<div class="inner-featured-people-wrapper">
 					<a data-toggle="modal" data-target=".<%=user.id%>">
 						<div class="image-wrapper">

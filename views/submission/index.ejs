@@ -28,7 +28,10 @@
 							Title
 						</th>
 						<th>
-							Faculty
+							School
+						</th>
+						<th>
+							Major
 						</th>
 						<th>
 							Portfolio
@@ -66,7 +69,10 @@
 							<%= user.credential %>
 						</td>
 						<td>
-							<%= user.categories %>
+							<%=: user.categories | capitalize%>
+						</td>
+						<td>
+							<%=: user.major | capitalize%>
 						</td>
 						<td>
 							<a href="<%= user.portfolio %>" title="<%=: user.firstName | capitalize%>'s Portfolio">

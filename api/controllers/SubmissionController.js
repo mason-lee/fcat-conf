@@ -22,13 +22,15 @@ module.exports = {
 	},
 
 	update: function(req, res) {
-		var responsibility = req.param('responsibility'),
+		var categories = req.param('categories'),
+			major = req.param('major'),
+			responsibility = req.param('responsibility'),
 			love = req.param('love'),
 			failure = req.param('failure'),
 			wish = req.param('wish'),
 			wisdom = req.param('wisdom');
 
-		User.update({id: req.param('id')}, {responsibility: responsibility, love: love, failure: failure, wish: wish, wisdom: wisdom}).exec(function(err, user) {
+		User.update({id: req.param('id')}, {categories: categories, major: major, responsibility: responsibility, love: love, failure: failure, wish: wish, wisdom: wisdom}).exec(function(err, user) {
 			res.redirect('/admin/submissions');
 		});
 	},

@@ -558,11 +558,15 @@ footer a  {
 	width: 190px;
 }
 
+.major-options {
+	/*display: none;*/
+}
 
-
-
-
-
+.chosen-container .chosen-results li.disabled-result {
+	font-weight: 700;
+	color: #666;
+	text-transform: uppercase;
+}
 
 
 

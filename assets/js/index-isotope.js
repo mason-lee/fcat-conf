@@ -20,16 +20,17 @@ $(window).load(function(){
     for (var prop in filters) {
       filterValue += filters[prop];
     }
+    console.log(filterValue);
     $container.isotope({ filter: filterValue });
 
     // show the arts subfilters if arts is selected
-    if (filterValue == ".art") {
+    if (filterValue == ".Art") {
       $("#communication-subfilters").slideUp();
       $("#contemporary-arts-subfilters").slideDown();
     }
 
     // show the arts subfilter if communications is selected
-    else if (filterValue == ".communication") {
+    else if (filterValue == ".Communication") {
       $("#contemporary-arts-subfilters").slideUp();
       $("#communication-subfilters").slideDown();
     }
@@ -51,23 +52,24 @@ $(window).load(function(){
     $container.isotope({ filter: filterValue });
   });
 
-  // change is-checked class on buttons
-  $('.button-group').each( function( i, buttonGroup ) {
+  // change is-checked class on buttons for school
+  $('.button-group-school').each( function( i, buttonGroup ) {
     var $buttonGroup = $( buttonGroup );
     $buttonGroup.on('click', 'button', function() {
       $buttonGroup.find('.is-checked').removeClass('is-checked');
-      $( this ).addClass('is-checked');
+      $(this).addClass('is-checked');
+    });
+  });
+  // change is-checked class on buttons for title
+  $('.button-group-title').each( function( i, buttonGroup ) {
+    var $buttonGroup = $( buttonGroup );
+    $buttonGroup.on('click', 'button', function() {
+      $buttonGroup.find('.is-checked').removeClass('is-checked');
+      $(this).addClass('is-checked');
     });
   });
 
-
-
-
-
-
-
-
-
+  
   // change the text of the shareability
   var share = [];
   $(".shareability").each(function() {

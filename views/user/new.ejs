@@ -156,7 +156,7 @@
 			<p>
 				I am a 
 				<span class="ad-lib-input-container-new">
-					<label>
+					<!-- <label>
 						<input type="checkbox" name="credential" value="Alumni">Alumni		
 					</label>
 					<label>
@@ -167,7 +167,14 @@
 					</label>
 					<label class="last-checkbox">
 						<input type="checkbox" name="credential" value="Staff">Staff
-					</label>
+					</label> -->
+					<select name="credential" data-placeholder="Choose your title(s)" class="chosen-select" multiple style="width: 350px;" tabindex="-1">
+						<option value></option>
+						<option value="Alumni" name="credential">Alumni</option>
+						<option value="Student" name="credential">Student</option>
+						<option value="Faculty" name="credential">Faculty</option>
+						<option value="Staff" name="credential">Staff</option>
+					</select>
 				</span>,
 
 				and my awesome selfie 
@@ -176,33 +183,33 @@
 					<label class="ad-lib-input-label" for="avatar">Attach Photo</label>
 				</span>
 					clearly shows you how I study/studied 
-				<!-- <select>
-					<option value="art" name="categories">Contemporary Arts</option>
-					<option value="faculty" name="categories">Faculty member</option>
-					<option value="siat" name="categories">Interactive Art and Technology</option>
-					<option value="media" name="categories">Master of Digital Media</option>
-					<option value="publishing" name="categories">Publishing</option>
-				</select> -->
 				<span class="ad-lib-input-container-new">
-					<label>
-						<input type="checkbox" name="categories" value="Communications">Communications
-					</label>
-					<label>
-						<input type="checkbox" name="categories" value="SIAT">Interactive Art & Technology
-					</label>
-					<label class="schoolOfContemp">
-						<input type="checkbox" name="categories" value="Contemporary art" data-toggle="modal" data-target="#contemArts">Contemporary Arts
-					</label>
-					<label>
-						<input type="checkbox" name="categories" value="Publishing">Publishing		
-					</label>
-					<label>
-						<input type="checkbox" name="categories" value="Media">Master of Digital Media		
-					</label>
-					<label>
-						<input type="checkbox" name="categories" value="Faculty Member">Faculty member		
-					</label>
+					<select name="categories" data-placeholder="Choose your school(s)" class="chosen-select" multiple style="width:350px;" tabindex="-1" id="source">
+						<option value></option>
+						<option value="Communication" name="categories">Communication</option>
+						<option value="Contemporary Arts" name="categories">Contemporary Arts</option>
+						<option value="Interactive Arts and Technology" name="categories">Interactive Arts & Technology</option>
+						<option value="Publishing" name="categories">Publishing</option>
+						<option value="Digital Media" name="categories">Digital Media</option>
+					</select>
 				</span>
+
+				<select name="major" data-placeholder="Choose your major" class="chosen-select major-options" multiple style="width:350px;">
+					<option value></option>
+					<option value disabled>Communication</option>
+					<option value="dialogue" name="major">Dialogue</option>
+					<option value disabled>Contemporary Arts</option>
+					<option value="dance" name="major">Dance</option>
+					<option value="film" name="major">Film</option>
+					<option value="music" name="major">Music</option>
+					<option value="theatre-performance" name="major">Theatre Performance</option>
+					<option value="theatre-production" name="major">Theatre Production and Design</option>
+					<option value="visual-art" name="major">Visual Art</option>
+					<option value="visual-culture" name="major">Visual Culture and Performance Studies </option>
+					<option value="film-studies" name="major">Film and Video Studies</option>
+					<option value="fine-arts" name="major">Fine and Performing Arts</option>
+				</select>
+
 					and now study/work as a super-awesome 
 				<span class="ad-lib-input-container">
 					<input class="ad-lib-input" type="text" name="position">
