@@ -9,6 +9,7 @@ $(function() {
 	/*
 		In the main page, change the category nicely
 	 */
+	// Danny - Change the schools nicely.
 	var studyElem = $(".category-study");
 	studyElem.each(function() {
 		var arrCategory = $(this).text().split(/\n/);
@@ -132,11 +133,21 @@ $(function() {
 	// Initiate chosen library
 	$(".chosen-select").chosen();
 
+	// Danny - How to show different dropdown depending on the selection.
 	// contemporary art subfilter
 	$("#source").change(function() {
-		// if($('#source option:selected').text() == "Contemporary Arts" || $('#source option:selected').text() == "Communication") {
-		// 	$(".major-options").show();
-		// } 
+		if($('#source option:selected').text() == "Contemporary Arts") {
+			console.log("contemporary arts = ")
+			console.log($("#source option:selected").text());
+			$(".major-art").show();
+			$(".chosen-container").css({ "width": "350px" });
+		} 
+		else if ($('#source option:selected').text() == "Communication") {
+			console.log("communications = ")
+			console.log($("#source option:selected").text());
+			$(".major-communication").show();
+			$(".chosen-container").css({ "width": "350px" });
+		}  
 	});
 
 

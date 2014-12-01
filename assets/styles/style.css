@@ -558,8 +558,12 @@ footer a  {
 	width: 190px;
 }
 
-.major-options {
-	/*display: none;*/
+.major-art {
+	display: none;
+}
+
+.major-communication {
+	display: none;
 }
 
 .chosen-container .chosen-results li.disabled-result {
