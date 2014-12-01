@@ -160,6 +160,22 @@ header .submit-story-wrapper {
 	width: 60%;
 }
 
+.banner-wrapper {
+	margin-bottom: 2em;
+}
+
+.banner-wrapper img {
+	width: 100%;
+}
+
+.about-wrapper h4 {
+	font-size: 1.1em;
+}
+
+.about-wrapper a {
+	font-size: 1.1em;
+}
+
 #twitter-widget-0 {
 	width: 100% !important;
 }
@@ -194,6 +210,7 @@ nav ul li a {
 
 #content {
 	padding-top: 1.5em;
+	padding-bottom: 3em;
 }
 
 .hero-section>.container {
@@ -340,8 +357,12 @@ border-bottom: solid 2px #969696;
 
 #biography-form h1 {
 	font-size: 2.25em;
-	text-align: center;
+	/*text-align: center;*/
 	margin: 3% 0;
+}
+
+.story-title-form {
+	margin-bottom: 2.5em;
 }
 
 .form-control:focus {
@@ -406,8 +427,7 @@ footer a  {
 .stories-wrapper {
 	background-color: rgba(207, 73, 74, 0.0196078);
 	padding: 20px 0px;
-	margin-top: -1.5em;
-	margin-bottom: 1.5em;
+	margin: 1.5em 0;
 }
 
 /*
@@ -556,6 +576,19 @@ footer a  {
 	border-bottom: 1px solid #c9c9c9;
 	padding-bottom: 5px;
 	width: 190px;
+	margin-top: 15px;
+}
+
+.submit-instruction {
+	font-style: italic;
+}
+
+.major-paragraph-input {
+	margin-top: 15px;
+}
+
+.major-paragraph {
+	line-height: 50px;
 }
 
 .major-art {
@@ -566,14 +599,29 @@ footer a  {
 	display: none;
 }
 
+.chosen-container-multi .chosen-choices {
+	position: relative;
+	overflow: hidden;
+	margin: 0;
+	/* padding: 0 5px; */
+	width: 100%;
+	height: auto !important;
+	height: 1%;
+	 border: 1px solid #aaa; 
+	background-color: #fff;
+	cursor: text;
+}
+
+
 .chosen-container .chosen-results li.disabled-result {
 	font-weight: 700;
 	color: #666;
 	text-transform: uppercase;
 }
 
-
-
+.message {
+	/*font-size: 1.3em;*/
+}
 
 
 

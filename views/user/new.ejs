@@ -1,137 +1,11 @@
-<!-- <div class="container">
-	<div class="biography-form-wrapper">
-		<form class="form-horizontal" id="biography-form" role="form" action="/user" method="POST" enctype="multipart/form-data">
-			<div class="form-group">
-				<h1>Biography</h1>
-			</div>
-			<div class="form-group required">
-				<label for="firstName" class="control-label">First Name</label>
-				<input type="text" name="firstName" class="form-control">
-			</div>
-			<div class="form-group required">
-				<label for="lastName" class="control-label">Last Name</label>
-				<input type="text" name="lastName" class="form-control">
-			</div>
-			<div class="form-group required">
-				<label for="email" class="control-label">Email</label>
-				<input type="email" name="email" class="form-control">
-			</div>
-			<div class="form-group required">
-				<label for="location" class="control-label">Current Location</label>
-				<input type="text" name="location" class="form-control">
-			</div>
-			<div class="form-group avatar-input-group required">
-				<label for="avatar" class="control-label">Attach Photo</label>
-				<input type="file" name="avatar" class="form-control" />
-			</div>
-			<div class="form-group required">
-				<label for="categories" class="control-label" >Categories</label>
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" name="categories" value="communications">Communications
-					</label>	
-				</div>
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" name="categories" value="siat">Interactive Art and Technology		
-					</label>
-				</div>
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" name="categories" value="art">Contemporary Arts		
-					</label>
-				</div>
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" name="categories" value="publishing">Publishing		
-					</label>
-				</div>
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" name="categories" value="media">Master of Digital Media		
-					</label>
-				</div>
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" name="categories" value="faculty">Faculty member		
-					</label>
-				</div>	
-				<div id="id-error">
-					<label for="categories" class="error" generated="true"></label>
-				</div>
-			</div>
-			
-			<div class="form-group">
-				<label for="portfolio">Portfolio(URL)</label>
-				<input type="url" name="portfolio" class="form-control" placeholder="https://mywebsite.com">
-			</div>
-		
-			<div class="form-group">
-				<label for="credential">SFU Graduation Credential</label>
-				<input type="text" name="credential" class="form-control">
-			</div>
-
-
-			<div class="form-group">
-				<h3>Where are you?</h3>
-			</div>
-			<div class="form-group">
-				<label for="company">Company</label>
-				<input type="text" name="company" class="form-control">
-			</div>
-			<div class="form-group">
-				<label for="position">Position/title</label>
-				<input type="text" name="position" class="form-control" placeholder="student or current position title">
-			</div>
-			<div class="form-group">
-				<label for="responsibility">What are you working on?</label>
-				<textarea class="form-control" name="responsibility" rows="3"></textarea>
-			</div>
-			<div class="form-group">
-				<label for="love">Why do you love what you do?</label>
-				<textarea class="form-control" name="love" rows="3"></textarea>
-			</div>
-			<div class="form-group">
-				<label for="failure">What was your most spectacular learning moment?</label>
-				<textarea class="form-control" name="failure" rows="3"></textarea>
-			</div>
-			<div class="form-group">
-				<label for="wish">I wish I had known...</label>
-				<textarea class="form-control" name="wish" rows="3"></textarea>
-			</div>
-			<div class="form-group">
-				<label for="wisdom">Any words of wisdom for students?</label>
-				<textarea class="form-control" name="wisdom" rows="3"></textarea>
-			</div>
-			<div class="form-group">
-				<div class="checkbox">
-					<label for="share">
-						<input type="checkbox" id="share" name="share">I agree to share my information with SFU alumni relations.
-					</label>
-				</div>
-			</div>
-			<div class="form-group" id="fcatShare">
-				<div class="checkbox">
-					<label for="shareFcat">
-						<input type="checkbox" id="shareFcat" name="shareFcat">By submitting this information, I agree to share on this FCAT site.
-					</label>
-				</div>
-			</div>
-			<div id="fcatShare-error">
-				<label for="shareFcat" class="error" generated="true"></label>
-			</div>
-			<div class="form-group">
-				<button type="submit" class="custom-button">Submit</button>
-			</div>
-		</form>
-	</div>
-</div> -->
-
 <div class="container">
 	<div class="biography-form-wrapper">
 		<form class="form-horizontal" id="biography-form" role="form" action="/user" method="POST" enctype="multipart/form-data">
-			<div class="form-group">
+			<div class="form-group story-title-form">
 				<h1>Share your story!</h1>
+				<p class="submit-instruction">
+					* Once you submit your story, FCAT faculties will review your form and publish to the site soon.
+				</p>
 			</div>
 	
 			<p>
@@ -153,7 +27,7 @@
 					<label class="ad-lib-input-label" for="location">Location</label>
 				</span>. 
 			</p> 
-			<p>
+			<p class="major-paragraph">
 				I am a 
 				<span class="ad-lib-input-container-new">
 					<!-- <label>
@@ -239,11 +113,11 @@
 
 					and now study/work as a super-awesome 
 				<span class="ad-lib-input-container">
-					<input class="ad-lib-input" type="text" name="position">
+					<input class="ad-lib-input major-paragraph-input" type="text" name="position">
 						<label class="ad-lib-input-label" for="position">student/position title</label>
 				</span> at 
 				<span class="ad-lib-input-container">
-					<input class="ad-lib-input" type="text" name="company">
+					<input class="ad-lib-input major-paragraph-input" type="text" name="company">
 					<label class="ad-lib-input-label" for="company">Company</label>
 				</span>.
 			</p>
@@ -303,54 +177,6 @@
 			<div id="fcatShare-error">
 				<label for="shareFcat" class="error" generated="true"></label>
 			</div>
-
-
-			<!-- Modal for contemporary arts -->
-			<!-- <div class="modal fade" id="contemArts" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			  <div class="modal-dialog">
-			    <div class="modal-content">
-			      <div class="modal-header">
-			        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-			        <h4 class="modal-title" id="myModalLabel">What is your program?</h4>
-			      </div>
-			      <div class="modal-body">
-			        	<span class="ad-lib-input-container-new subfilter">
-			        		<label>
-			        			<input type="checkbox" name="contemporarySub" value="Dance">Dance
-			        		</label>
-			        		<label>
-			        			<input type="checkbox" name="contemporarySub" value="Film">Film
-			        		</label>
-			        		<label>
-			        			<input type="checkbox" name="contemporarySub" value="Music">Music
-			        		</label>
-			        		<label>
-			        			<input type="checkbox" name="contemporarySub" value="Theatre Performance">Theatre Performance
-			        		</label>
-			        		<label>
-			        			<input type="checkbox" name="contemporarySub" value="Theatre Production and Design">Theatre Production and Design
-			        		</label>
-			        		<label>
-			        			<input type="checkbox" name="contemporarySub" value="Visual Art">Visual Art
-			        		</label>
-			        		<label>
-			        			<input type="checkbox" name="contemporarySub" value="Visual Culture and Performance Studies">Visual Culture and Performance Studies
-			        		</label>
-			        		<label>
-			        			<input type="checkbox" name="contemporarySub" value="Film and Video Studies">Film and Video Studies
-			        		</label>
-			        		<label>
-			        			<input type="checkbox" name="contemporarySub" value="Fine and Performing Arts">Fine and Performing Arts
-			        		</label>
-			        	</span>
-			      </div>
-			      <div class="modal-footer">
-			        <button type="button" class="btn btn-primary subfilterButton" data-dismiss="modal">Confirm</button>
-			      </div>
-			    </div>
-			  </div>
-			</div> -->
-
 			<div class="form-group">
 				<button type="submit" class="custom-button">Submit</button>
 			</div>

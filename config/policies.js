@@ -26,7 +26,7 @@ module.exports.policies = {
 	*                                                                          *
 	***************************************************************************/
 
-	// '*': "flash",
+	// '*': "false",
 
 	SubmissionController: {
 		index: 'isAdmin'
