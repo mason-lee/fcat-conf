@@ -23,14 +23,15 @@ $(window).load(function(){
     // console.log(filterValue);
     $container.isotope({ filter: filterValue });
 
+
     // show the arts subfilters if arts is selected
-    if (filterValue == ".Contemporary") {
+    if (filterValue.indexOf(".Contemporary") > -1) {
       $("#communication-subfilters").slideUp();
       $("#contemporary-arts-subfilters").slideDown();
     }
 
     // show the arts subfilter if communications is selected
-    else if (filterValue == ".Communication") {
+    else if (filterValue.indexOf(".Communication") > -1) {
       $("#contemporary-arts-subfilters").slideUp();
       $("#communication-subfilters").slideDown();
     }
@@ -40,6 +41,8 @@ $(window).load(function(){
       $("#contemporary-arts-subfilters").slideUp();
       $("#communication-subfilters").slideUp();
     }
+
+    // console.log(filterValue);
   });
 
   $("#contemporary-arts-subfilters").on('click', 'button', function() {
@@ -54,6 +57,22 @@ $(window).load(function(){
 
   // change is-checked class on buttons for school
   $('.button-group-school').each( function( i, buttonGroup ) {
+    var $buttonGroup = $( buttonGroup );
+    $buttonGroup.on('click', 'button', function() {
+      $buttonGroup.find('.is-checked').removeClass('is-checked');
+      $(this).addClass('is-checked');
+    });
+  });
+  // change is-checked class on buttons for arts subfilters
+  $('#contemporary-arts-subfilters').each( function( i, buttonGroup ) {
+    var $buttonGroup = $( buttonGroup );
+    $buttonGroup.on('click', 'button', function() {
+      $buttonGroup.find('.is-checked').removeClass('is-checked');
+      $(this).addClass('is-checked');
+    });
+  });
+    // change is-checked class on buttons for communications subfilters
+  $('#communication-subfilters').each( function( i, buttonGroup ) {
     var $buttonGroup = $( buttonGroup );
     $buttonGroup.on('click', 'button', function() {
       $buttonGroup.find('.is-checked').removeClass('is-checked');
