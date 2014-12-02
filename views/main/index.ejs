@@ -14,7 +14,7 @@
 				Our Inspiring Stories
 			</h1>
 			<div class="ui-group">
-				<h3>
+				<h3 class="filter-titles">
 					Schools
 				</h3>
 				<ul class="list-inline button-group button-group-school js-radio-button-group" data-filter-group="school">
@@ -107,7 +107,7 @@
 			</div>
 			
 			<div class="ui-group">
-				<h3>Title</h3>
+				<h3 class="filter-titles">Title</h3>
 				<ul class="button-group button-group-title list-inline" data-filter-group="title">
 					<li>
 						<button data-filter="*" class="btn-filter is-checked">
@@ -148,6 +148,13 @@
 					<a data-toggle="modal" data-target=".<%=user.id%>">
 						<div class="image-wrapper">
 							<img src="<%= user.avatar %>" alt="Profile picture of <%=: user.firstName | capitalize%> <%=: user.lastName | capitalize %>">
+							<figcaption>
+								<p>
+									Check stories about <br>
+									<%=: user.firstName | capitalize %>
+									<%=: user.lastName | capitalize %>
+								</p>
+							</figcaption>
 						</div>
 						<h3 class="name">
 							<%=: user.firstName | capitalize %>

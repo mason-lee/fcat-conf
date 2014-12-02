@@ -24,7 +24,7 @@ $(window).load(function(){
     $container.isotope({ filter: filterValue });
 
     // show the arts subfilters if arts is selected
-    if (filterValue == ".Art") {
+    if (filterValue == ".Contemporary") {
       $("#communication-subfilters").slideUp();
       $("#contemporary-arts-subfilters").slideDown();
     }

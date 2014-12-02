@@ -146,6 +146,24 @@ $(function() {
 	});
 
 
+	$(".image-wrapper").hover(function() {
+		$(this).find("figcaption p").css({
+			"opacity": "1",
+			"-webkit-transform": "translate3d(0,0,0)",
+			"transform": "translate3d(0,0,0)"
+		})
+	}).mouseleave(function() {
+		$(this).find("figcaption p").css({
+			"opacity": "0",
+			"-webkit-transition": "opacity 0.35s",
+			"-webkit-transform": "0.35s",
+			"transition": "opacity 0.35s",
+			"transform": "0.35s",
+			"-webkit-transform": "translate3d(-40px,0,0)",
+			"transform": "translate3d(-40px,0,0)"
+		})
+	})
+
 
 
 
