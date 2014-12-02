@@ -48,13 +48,7 @@
 							Digital Media
 						</button>
 					</li>
-				</ul>
-				<ul class="list-inline" id="contemporary-arts-subfilters" style="display: none;">
-					<li>
-						<button data-filter=".*" class="btn-filter is-checked">
-								All
-						</button></li>
-					<li>
+		
 						<button class="btn-filter" data-filter=".dance">
 							Dance
 						</button>
@@ -76,7 +70,7 @@
 					</li>
 					<li>
 						<button class="btn-filter" data-filter=".theatre-production">
-							Theatre Production and Design
+							Theatre Production & Design
 						</button>
 					</li>
 					<li>
@@ -99,14 +93,6 @@
 							Fine & Performing Arts
 						</button>
 					</li>
-				</ul>
-
-				<ul class="list-inline" id="communication-subfilters" style="display: none;">
-					<li>
-						<button data-filter=".*" class="btn-filter is-checked">
-								All
-						</button></li>
-					<li>
 					<li>
 						<button class="btn-filter" data-filter=".dialogue">
 							Dialogue
@@ -169,16 +155,17 @@
 							<%=: user.firstName | capitalize %>
 							<%=: user.lastName | capitalize %>
 						</h3>
+						<h5 class="category-study">
+							<%=: user.categories | capitalize %>	
+						</h5>
 					</a>
-					<h5 class="category-study">
-						<%=: user.categories | capitalize %>	
-					</h5>
-					<h5>
+					
+					<!-- <h5>
 						<%=: user.company | capitalize %>	
 					</h5>
 					<h5>
 						<%=: user.position | capitalize %>	
-					</h5>
+					</h5> -->
 				</div>
 				<hr>
 			</div>	
