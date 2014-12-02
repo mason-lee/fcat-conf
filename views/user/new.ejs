@@ -4,12 +4,12 @@
 			<div class="form-group story-title-form">
 				<h1>Share your story!</h1>
 				<p class="submit-instruction">
-					* Once you submit your story, FCAT faculties will review your form and publish to the site soon.
+					* Once you submit your story, FCAT staff members will review your submission and publish to the site soon.
 				</p>
 			</div>
 	
 			<p>
-			I am 
+			Hi! My name is
 				<span class="ad-lib-input-container">
 					<input class="ad-lib-input" type="text" name="firstName">
 					<label class="ad-lib-input-label" for="firstName">First Name</label>
@@ -17,18 +17,23 @@
 				<span class="ad-lib-input-container">
 					<input class="ad-lib-input" type="text" name="lastName">
 						<label class="ad-lib-input-label" for="lastName">Last Name</label>
-				</span>, who can be reached at 
+				</span>, and I can be reached at 
 				<span class="ad-lib-input-container">
 					<input class="ad-lib-input" type="email" name="email">
 					<label class="ad-lib-input-label" for="email">Email</label>
-				</span> in 
+				</span>. Currently, I'm located in beautiful  
 				<span class="ad-lib-input-container">
 					<input class="ad-lib-input" type="text" name="location">
 					<label class="ad-lib-input-label" for="location">Location</label>
 				</span>. 
 			</p> 
 			<p class="major-paragraph">
-				I am a 
+				
+				Here's an awesome selfie of me 
+				<span class="ad-lib-input-container avatar-input-group">
+					<input class="ad-lib-file" type="file" name="avatar"/>
+					<label class="ad-lib-input-label" for="avatar">Attach Photo</label>
+				</span>, which clearly shows you my outstanding involvement as a
 				<span class="ad-lib-input-container-new">
 					<!-- <label>
 						<input type="checkbox" name="credential" value="Alumni">Alumni		
@@ -42,52 +47,44 @@
 					<label class="last-checkbox">
 						<input type="checkbox" name="credential" value="Staff">Staff
 					</label> -->
-					<select name="credential" data-placeholder="Choose your title(s)" class="chosen-select" multiple style="width: 350px;" tabindex="-1">
+					<select name="credential" data-placeholder="Choose your title(s)" multiple style="width:350px;" class="chosen-select" tabindex="-1" id="title-chooser">
 						<option value></option>
 						<option value="Alumni" name="credential">Alumni</option>
 						<option value="Student" name="credential">Student</option>
 						<option value="Faculty" name="credential">Faculty</option>
 						<option value="Staff" name="credential">Staff</option>
 					</select>
-				</span>,
-
-				and my awesome selfie 
-				<span class="ad-lib-input-container avatar-input-group">
-					<input class="ad-lib-file" type="file" name="avatar"/>
-					<label class="ad-lib-input-label" for="avatar">Attach Photo</label>
-				</span>
-					clearly shows you how I study/studied 
+				</span> in 
 				<span class="ad-lib-input-container-new">
-					<select name="categories" data-placeholder="Choose your school(s)" class="chosen-select" multiple style="width:350px;" tabindex="-1" id="source">
+					<select name="categories" data-placeholder="Choose your School(s)/Program(s)/Department(s)" class="chosen-select" multiple style="width:350px;" tabindex="-1" id="source">
 						<option value></option>
-						<option value disabled>Major</option>
-						<option value="Communication(Major)" name="categories">Communication</option>
-						<option value="Contemporary Arts(Major)" name="categories">Contemporary Arts</option>
-						<option value="Interactive Arts and Technology(Major)" name="categories">Interactive Arts & Technology</option>
-						<option value="Publishing(Major)" name="categories">Publishing</option>
-						<option value="Digital Media(Major)" name="categories">Digital Media</option>
-						<option value disabled>Minor</option>
-						<option value="Communication(Minor)" name="categories">Communication</option>
-						<option value="Contemporary Arts(Minor)" name="categories">Contemporary Arts</option>
-						<option value="Interactive Arts and Technology(Minor)" name="categories">Interactive Arts & Technology</option>
-						<option value="Publishing(Minor)" name="categories">Publishing</option>
-						<option value="Digital Media(Minor)" name="categories">Digital Media</option>
-						<option value disabled>Honours</option>
-						<option value="Communication(Honours)" name="categories">Communication</option>
-						<option value="Contemporary Arts(Honours)" name="categories">Contemporary Arts</option>
-						<option value="Interactive Arts and Technology(Honours)" name="categories">Interactive Arts & Technology</option>
-						<option value="Publishing(Honours)" name="categories">Publishing</option>
-						<option value="Digital Media(Honours)" name="categories">Digital Media</option>
-						<option value disabled>Master</option>
-						<option value="Communication(Master)" name="categories">Communication</option>
-						<option value="Contemporary Arts(Master)" name="categories">Contemporary Arts</option>
-						<option value="Interactive Arts and Technology(Master)" name="categories">Interactive Arts & Technology</option>
-						<option value="Publishing(Master)" name="categories">Publishing</option>
-						<option value="Digital Media(Master)" name="categories">Digital Media</option>
+						<option value disabled>Schools/Departments</option>
+						<option value="communications" name="categories">Communication</option>
+						<option value="contemporary-arts" name="categories">Contemporary Arts</option>
+						<option value="siat" name="categories">Interactive Arts & Technology</option>
+						<option value="publishing" name="categories">Publishing</option>
+						<option value="digital-media" name="categories">Digital Media</option>
+						<option value="deans-list" name="categories">Dean's Office</option>
+						<option value disabled>Programs</option>
+						<option value="dialogue" name="categories">Dialogue</option>
+						<option value="dance" name="categories">Dance</option>
+						<option value="film" name="categories">Film</option>
+						<option value="music" name="categories">Music</option>
+						<option value="theatre-performance" name="categories">Theatre Performance</option>
+						<option value="theatre-production" name="categories">Theatre Production and Design</option>
+						<option value="visual-art" name="categories">Visual Art</option>
+						<option value="visual-culture" name="categories">Visual Culture and Performance Studies </option>
+						<option value="film-studies" name="categories">Film and Video Studies</option>
+						<option value="fine-arts" name="categories">Fine and Performing Arts</option>
 					</select>
-				</span>
+				</span>.
 				
-				<span class="ad-lib-input-container-new major-communication">
+
+			</p> 
+			<p class="major-paragraph" id="alumni-info" style="display: none;">
+				As an alumni member, I now study/work as a super-awesome  
+				
+				<!-- <span class="ad-lib-input-container-new major-communication">
 					<select name="major" data-placeholder="Choose your major" class="chosen-select" multiple style="width:350px;">
 						<option value></option>
 						<option value disabled>Communication</option>
@@ -110,15 +107,15 @@
 						<option value="fine-arts" name="major">Fine and Performing Arts</option>
 					</select>
 				</span>
+ 					and now study/work as a super-awesome -->
 
-					and now study/work as a super-awesome 
 				<span class="ad-lib-input-container">
 					<input class="ad-lib-input major-paragraph-input" type="text" name="position">
 						<label class="ad-lib-input-label" for="position">student/position title</label>
 				</span> at 
 				<span class="ad-lib-input-container">
 					<input class="ad-lib-input major-paragraph-input" type="text" name="company">
-					<label class="ad-lib-input-label" for="company">Company</label>
+					<label class="ad-lib-input-label" for="company">Company/Organization</label>
 				</span>.
 			</p>
 			<p>I love my work doing 
@@ -170,9 +167,13 @@
 			<div class="form-group" id="fcatShare">
 				<div class="checkbox">
 					<label for="shareFcat">
-						<input type="checkbox" id="shareFcat" name="shareFcat">By submitting this information, I agree to share on this FCAT site.
+						<input type="checkbox" id="shareFcat" name="shareFcat">By submitting this information, I agree to share on this FCAT site. By using this website, I understand the <a href="http://www.sfu.ca/contact/terms-conditions.html">Terms and Conditions</a> which govern the use of all websites hosted by SFU. All information collected is in accordance with the University Act and will be maintained in accordance with the <a href="http://www.sfu.ca/main/contact/terms-conditions/privacy.html">SFU Privacy Policy</a>.
 					</label>
 				</div>
+			</div>
+			
+			<div id="fcatShare-error">
+				<label for="shareFcat" class="error" generated="true"></label>
 			</div>
 			<div id="fcatShare-error">
 				<label for="shareFcat" class="error" generated="true"></label>
