@@ -159,9 +159,9 @@
 							<img src="<%= user.avatar %>" alt="Profile picture of <%=: user.firstName | capitalize%> <%=: user.lastName | capitalize %>">
 							<figcaption>
 								<p>
-									Check stories about <br>
+									Check out <br>
 									<%=: user.firstName | capitalize %>
-									<%=: user.lastName | capitalize %>
+									<%=: user.lastName | capitalize %>'s Story
 								</p>
 							</figcaption>
 						</div>
@@ -202,10 +202,9 @@
 				<div class="modal-profile img-rounded center-block">
 					<img src="<%= user.avatar %>" alt="Profile picture of <%=: user.firstName | capitalize%> <%=: user.lastName | capitalize %>">
 				</div>
-				<p><%= user.credential %></p>
-				<p><%= user.categories %></p>
-				<p><%= user.portfolio %></p>
-				<p><%= user.company %></p>
+				<p><%= user.credential %> from <%= user.categories %></p>
+				<p><a href="<%= user.portfolio %>">View <%= user.firstName %>'s website</a></p>
+				<p>Currently works as a <%= user.position %> at <%= user.company %>.</p>
 				<p><%= user.responsibility %></p>
 				<p><%= user.love %></p>
 				<p><%= user.failure %></p>

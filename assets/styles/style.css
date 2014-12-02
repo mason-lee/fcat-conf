@@ -313,6 +313,10 @@ figcaption {
 	height: 100%;
 }
 
+.image-wrapper {
+	cursor: pointer;
+}
+
 figcaption:before, figcaption:after {
 	pointer-events: none;
 }
@@ -326,17 +330,17 @@ figcaption p {
 	/*width: 50%;
 	text-align: right;*/
 	-webkit-transition: opacity 1.0s, 
-	-webkit-transform 1.0s;
-	transition: opacity 1.0s;
-	transform: 1.0s;
+	-webkit-transform 0.35s;
+	transition: all 0.35s;
+	transform: 0.35s;
 	-webkit-transform: translate3d(-40px,0,0);
 	transform: translate3d(-40px,0,0);
 }
 
-figcaption p:hover {
-/*	opacity: 1;
+figcaption:hover p {
+	opacity: 1;
 	-webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);*/
+	transform: translate3d(0,0,0);
 }
 
 .name {
