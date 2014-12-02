@@ -160,7 +160,7 @@ footer a:hover {
 }
 
 header {
-	padding: 2em 0 0 0;
+	padding: 2em 0;
 }
 
 .header-border {
@@ -232,12 +232,13 @@ nav ul li a {
 	padding: 50px 0; }
 
 #content {
-	/*padding-top: 1.5em;*/
+	padding-top: 1.5em;
 	padding-bottom: 3em;
 }
 
-.hero-section>.container {
-	
+.hero-section {
+	padding-top: 2em;
+	padding-bottom: 4em;
 }
 
 #content .hero-section img {
