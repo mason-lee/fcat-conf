@@ -11,8 +11,8 @@ body {
 	background-color: #fff;
 }
 
-	h1, h2, h3, h4, h5, li, p, a, .form-group {
-	font-family: 'Lato', Helvetica, Arial;
+	h1, h2, h3, h4, h5, li, p, a, .form-group, input, div {
+	font-family: 'Lato', Helvetica, Arial !important;
 	-webkit-font-smoothing: antialiased;
 	font-weight: 400;
 	color: #666;
@@ -32,8 +32,14 @@ p {
 }
 
 a:hover {
-	text-decoration: none !important; }
+	text-decoration: none !important;
+	-webkit-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+	}
 
+footer a:hover {
+	color: #aaa;
+}
 .error, .ad-lib-input-container .error {
  	color: #a94442; 
 }
@@ -366,6 +372,11 @@ figcaption p:hover {
 border-bottom: solid 2px #969696;
 }
 
+.chosen-single, .chosen-drop {
+	border-radius: 0 !important;
+	height: inherit;
+}
+
 .form-group.required .control-label:after {
 	color: #d00;
 	content: "*";
@@ -434,6 +445,7 @@ border-bottom: solid 2px #969696;
 
 .story-title-form {
 	margin-bottom: 2.5em;
+	padding: 15px;
 }
 
 .form-control:focus {
@@ -676,8 +688,7 @@ footer a  {
 	margin: 0;
 	/* padding: 0 5px; */
 	width: 100%;
-	height: auto !important;
-	height: 1%;
+	min-height: 27px !important;
 	 border: 1px solid #aaa; 
 	background-color: #fff;
 	cursor: text;

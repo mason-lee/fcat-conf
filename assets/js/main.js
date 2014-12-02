@@ -145,6 +145,18 @@ $(function() {
 		}  
 	});
 
+	$("#title-chooser").change(function(){
+		 values = $("#title-chooser").chosen().val();
+		 //values is an array containing all the results.
+		 // console.log(values);
+
+		 if (!$.inArray("Alumni", values)) {
+		 	$("#alumni-info").slideDown();
+		 }
+		 else {
+		 	$("#alumni-info").slideUp();
+		 }
+	});
 
 	$(".image-wrapper").hover(function() {
 		$(this).find("figcaption p").css({
