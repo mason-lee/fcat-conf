@@ -3,13 +3,23 @@ $(function() {
 		DON'T DELTE THIS. 
 		(A little hack to make image uploading working)
 	 */
+	$("#form-submit-button").prop('disabled', true);
+	$("#form-submit-button").css({ "backgroundColor": "#cccac9" });
+
 	$('#biography-form').submit(function() {
 		$(this).find('.avatar-input-group').detach().appendTo($(this)).hide();
 		// $(this).find('.avatar-input-group').detach().appendTo($(this));
 	});
-	/*
-		In the main page, change the category nicely
-	 */
+
+	$(".ad-lib-file").change(function() {
+		if($(this).val()) {
+			$("#form-submit-button").prop('disabled', false);
+			$("#form-submit-button").css({ "backgroundColor": "rgba(207, 73, 74, 0.9)" });
+		}
+	});
+
+	
+	//In the main page, change the category nicely
 	// Change the schools texts nicely.
 	var studyElem = $(".category-study");
 	studyElem.each(function() {
@@ -18,9 +28,8 @@ $(function() {
 		$(this).empty();
 		$(this).append(currentMajor2);
 	});
-	/*
-		Remove all "," from classes of ".post" elements
-	 */
+	
+	// Remove all "," from classes of ".post" elements
 	$('.post').each(function() {
 		var _sCurrClasses = $(this).attr('class');
 		$(this).attr('class', _sCurrClasses.replace(/,/g, ' '));
