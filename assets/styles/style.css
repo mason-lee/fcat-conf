@@ -591,6 +591,9 @@ footer a  {
 	transition: color 0.2s ease;
 }
 
+.modal-placeholder-text {
+	font-style: italic;
+}
 .admin-action-container {
 	padding: 1em 0;
 }

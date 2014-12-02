@@ -171,7 +171,6 @@
 							<%=: user.categories | capitalize %>	
 						</h5>
 					</a>
-					
 					<!-- <h5>
 						<%=: user.company | capitalize %>	
 					</h5>
@@ -201,17 +200,19 @@
 				<div class="modal-profile img-rounded center-block">
 					<img src="<%= user.avatar %>" alt="Profile picture of <%=: user.firstName | capitalize%> <%=: user.lastName | capitalize %>">
 				</div>
-				<p><!-- TODO: hide #alumni-position span if not an alumni. make sure all categories are displayed nicely and with proper wording. -->
-					<%= user.credential %> from <%= user.categories %><span id="alumni-position">, currently working as a(n) <%= user.position %> at <%= user.company %>.</span>
+				<p>
+					<span class="title-modal"><%= user.credential %> </span>from <span class="programs-modal"><%= user.categories %></span><span id="alumni-position">, currently working as a(n) <%= user.position %> at <%= user.company %> in <%= user.location %>.</span>
 				</p>
 				<p>
+				<% if(user.portfolio) { %>
 					<%= user.firstName %>'s website: <a href="<%= user.portfolio %>"><%= user.portfolio %></a>
+				<% } %>
 				</p>
-				<p>I love my work doing...<br><%= user.responsibility %></p>
-				<p>I love my work because...<br><%= user.love %></p>
-				<p>My biggest failure was when...<br><%= user.failure %></p>
-				<p>I wish I had known...<br><%= user.wish %></p>
-				<p>Here are some words of wisdom...<br><%= user.wisdom %></p>
+				<p><span class="modal-placeholder-text">I love my work doing...</span><br><span class="modal-paragraphs"><%= user.responsibility %></span></p>
+				<p><span class="modal-placeholder-text">I love my work because...</span><br><span class="modal-paragraphs"><%= user.love %></span></p>
+				<p><span class="modal-placeholder-text">My biggest failure was when...</span><br><span class="modal-paragraphs"><%= user.failure %></span></p>
+				<p><span class="modal-placeholder-text">I wish I had known...</span><br><span class="modal-paragraphs"><%= user.wish %></span></p>
+				<p><span class="modal-placeholder-text">Here are some words of wisdom...</span><br><span class="modal-paragraphs"><%= user.wisdom %></span></p>
 			</div>
 		</div>
 	</div>

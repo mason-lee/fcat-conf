@@ -13,9 +13,10 @@ $(function() {
 	// Change the schools texts nicely.
 	var studyElem = $(".category-study");
 	studyElem.each(function() {
-		var currentMajor = $(this).html().replace(/,/g, ' | ');
+		var currentMajor1 = $(this).html().replace(/-/g, ' ');
+		var currentMajor2 = currentMajor1.replace(/,/g, ' | ');
 		$(this).empty();
-		$(this).append(currentMajor);
+		$(this).append(currentMajor2);
 	});
 	/*
 		Remove all "," from classes of ".post" elements
@@ -24,6 +25,31 @@ $(function() {
 		var _sCurrClasses = $(this).attr('class');
 		$(this).attr('class', _sCurrClasses.replace(/,/g, ' '));
 	});
+
+	/*
+		Text formatting in the modal
+	 */
+	// e.g., Alumni,student....
+	var modalTitle = $(".title-modal");
+	modalTitle.each(function() {
+		var newModalTitle = $(this).html().replace(/,/g, ' and ');
+		$(this).empty();
+		$(this).append(newModalTitle);
+	});
+	// e.g., Music,Theatre-Production and Design......
+	var modalPrograms = $(".programs-modal");
+	modalPrograms.each(function() {
+		var modalPrograms1 = $(this).html().replace(/-/g, ' ');
+		var modalPrograms2 = modalPrograms1.replace(/,/g, ', ');
+		$(this).empty();
+		$(this).append(modalPrograms2);
+	});
+
+
+
+
+
+
 	/*
 		Slide in the flash message.
 	*/

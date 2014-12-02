@@ -39,10 +39,6 @@ module.exports = {
 			type: 'string'
 		},
 
-		major: {
-			type: 'string'
-		},
-
 		portfolio: {
 			type:'string'
 		},

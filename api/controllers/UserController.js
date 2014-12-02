@@ -36,7 +36,8 @@ module.exports = {
 			}, function (err, uploadedFiles) {
 				// Maybe here just say image upload fail but otherwise success..
 				// Ask them to email image to somewhere?
-				if(err) return res.send(500, err);
+				// if(err) return res.send(500, err);
+				res.redirect("/");
 
 				// Otherwise, update the user avatar
 				User.update({id: user.id}, {avatar: uploadedFiles[0].extra.Location}).exec(function(err, updated) {
