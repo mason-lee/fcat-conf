@@ -35,7 +35,11 @@ a:hover {
 	text-decoration: none !important;
 	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
-	}
+}
+
+ a:focus {
+ 	text-decoration: none !important;
+ }
 
 footer a:hover {
 	color: #aaa;
