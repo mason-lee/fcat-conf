@@ -12,7 +12,7 @@ body {
 }
 
 	h1, h2, h3, h4, h5, li, p, a, .form-group {
-	font-family: 'proxima_nova_rgregular', Helvetica, Arial;
+	font-family: 'proxima_nova_rgregular', 'Lato', Helvetica, Arial;
 	-webkit-font-smoothing: antialiased;
 	font-weight: 100;
 	color: #666;
@@ -371,25 +371,25 @@ border-bottom: solid 2px #969696;
 }
 
 ::-webkit-input-placeholder {
-   font-family: 'proxima_nova_rgregular', Helvetica, Arial;
+   font-family: 'proxima_nova_rgregular', 'Lato', Helvetica, Arial;
    /*font-size: 2em;*/
    font-weight: 100;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   font-family: 'proxima_nova_rgregular', Helvetica, Arial;
+   font-family: 'proxima_nova_rgregular', 'Lato', Helvetica, Arial;
    /*font-size: 2em;*/
    font-weight: 100;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   font-family: 'proxima_nova_rgregular', Helvetica, Arial;
+   font-family: 'proxima_nova_rgregular', 'Lato', Helvetica, Arial;
    /*font-size: 2em;*/
    font-weight: 100;
 }
 
 :-ms-input-placeholder {  
-   font-family: 'proxima_nova_rgregular', Helvetica, Arial;
+   font-family: 'proxima_nova_rgregular', 'Lato', Helvetica, Arial;
    /*font-size: 2em;*/
    font-weight: 100;
 }

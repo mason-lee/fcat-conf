@@ -20,7 +20,7 @@ $(window).load(function(){
     for (var prop in filters) {
       filterValue += filters[prop];
     }
-    console.log(filterValue);
+    // console.log(filterValue);
     $container.isotope({ filter: filterValue });
 
     // show the arts subfilters if arts is selected

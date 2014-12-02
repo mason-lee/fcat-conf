@@ -9,18 +9,13 @@ $(function() {
 	/*
 		In the main page, change the category nicely
 	 */
-	// Danny - Change the schools nicely.
+	// Change the schools texts nicely.
 	var studyElem = $(".category-study");
 	studyElem.each(function() {
-		var arrCategory = $(this).text().split(/\n/);
-		$.each(arrCategory, function(index, value) {
-			if(index === 1) {
-				// console.log($(this).parent().prev());
-				// var newSchools = arrCategory[index].replace(/,/g, ' | ');
-			}
-		});
+		var currentMajor = $(this).html().replace(/,/g, ' | ');
+		$(this).empty();
+		$(this).append(currentMajor);
 	});
-	
 	/*
 		Remove all "," from classes of ".post" elements
 	 */
