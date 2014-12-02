@@ -240,6 +240,7 @@ nav ul li a {
 .story-title {
 	display: block !important;
 	font-size: 1.6em;
+	margin: 20px 0;
 }
 
 .story-title h1 {
