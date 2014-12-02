@@ -202,14 +202,17 @@
 				<div class="modal-profile img-rounded center-block">
 					<img src="<%= user.avatar %>" alt="Profile picture of <%=: user.firstName | capitalize%> <%=: user.lastName | capitalize %>">
 				</div>
-				<p><%= user.credential %> from <%= user.categories %></p>
-				<p><a href="<%= user.portfolio %>">View <%= user.firstName %>'s website</a></p>
-				<p>Currently works as a <%= user.position %> at <%= user.company %>.</p>
-				<p><%= user.responsibility %></p>
-				<p><%= user.love %></p>
-				<p><%= user.failure %></p>
-				<p><%= user.wish %></p>
-				<p><%= user.wisdom %></p>
+				<p><!-- TODO: hide #alumni-position span if not an alumni. make sure all categories are displayed nicely and with proper wording. -->
+					<%= user.credential %> from <%= user.categories %><span id="alumni-position">, currently working as a(n) <%= user.position %> at <%= user.company %>.</span>
+				</p>
+				<p>
+					<%= user.firstName %>'s website: <a href="<%= user.portfolio %>"><%= user.portfolio %></a>
+				</p>
+				<p>I love my work doing...<br><%= user.responsibility %></p>
+				<p>I love my work because...<br><%= user.love %></p>
+				<p>My biggest failure was when...<br><%= user.failure %></p>
+				<p>I wish I had known...<br><%= user.wish %></p>
+				<p>Here are some words of wisdom...<br><%= user.wisdom %></p>
 			</div>
 		</div>
 	</div>
