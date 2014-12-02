@@ -48,6 +48,7 @@
 							Digital Media
 						</button>
 					</li>
+<<<<<<< HEAD
 					<li>
 						<button class="btn-filter" data-filter=".Deans">
 							Dean's Office
@@ -61,6 +62,10 @@
 						</button></li>
 					<li>
 						<button class="btn-filter" data-filter=".Dance">
+=======
+		
+						<button class="btn-filter" data-filter=".dance">
+>>>>>>> a4f038200f5014bea9c619c1f2c5b8c74a25a6c7
 							Dance
 						</button>
 					</li>
@@ -104,14 +109,6 @@
 							Fine & Performing Arts
 						</button>
 					</li>
-				</ul>
-
-				<ul class="list-inline" id="communication-subfilters" style="display: none;">
-					<li>
-						<button data-filter=".*" class="btn-filter is-checked">
-								All
-						</button></li>
-					<li>
 					<li>
 						<button class="btn-filter" data-filter=".dialogue">
 							Dialogue
@@ -160,13 +157,13 @@
 			<div class="pull-left post element-item col-md-4 <%= user.categories %> <%= user.credential %>">
 				<div class="inner-featured-people-wrapper">
 					<a data-toggle="modal" data-target=".<%=user.id%>">
-						<div class="image-wrapper">
-							<img src="<%= user.avatar %>" alt="Profile picture of <%=: user.firstName | capitalize%> <%=: user.lastName | capitalize %>">
+						<div class="image-wrapper" style="background-image: url(<%= user.avatar %>)">
+							<!-- <img src="<%= user.avatar %>" alt="Profile picture of <%=: user.firstName | capitalize%> <%=: user.lastName | capitalize %>"> -->
 							<figcaption>
 								<p>
-									Check stories about <br>
+									Check out <br>
 									<%=: user.firstName | capitalize %>
-									<%=: user.lastName | capitalize %>
+									<%=: user.lastName | capitalize %>'s Story
 								</p>
 							</figcaption>
 						</div>
@@ -174,16 +171,17 @@
 							<%=: user.firstName | capitalize %>
 							<%=: user.lastName | capitalize %>
 						</h3>
+						<h5 class="category-study">
+							<%=: user.categories | capitalize %>	
+						</h5>
 					</a>
-					<h5 class="category-study">
-						<%=: user.categories | capitalize %>	
-					</h5>
-					<h5>
+					
+					<!-- <h5>
 						<%=: user.company | capitalize %>	
 					</h5>
 					<h5>
 						<%=: user.position | capitalize %>	
-					</h5>
+					</h5> -->
 				</div>
 				<hr>
 			</div>	
@@ -207,15 +205,17 @@
 				<div class="modal-profile img-rounded center-block">
 					<img src="<%= user.avatar %>" alt="Profile picture of <%=: user.firstName | capitalize%> <%=: user.lastName | capitalize %>">
 				</div>
-				<p><%= user.credential %></p>
-				<p><%= user.categories %></p>
-				<p><%= user.portfolio %></p>
-				<p><%= user.company %></p>
-				<p><%= user.responsibility %></p>
-				<p><%= user.love %></p>
-				<p><%= user.failure %></p>
-				<p><%= user.wish %></p>
-				<p><%= user.wisdom %></p>
+				<p><!-- TODO: hide #alumni-position span if not an alumni. make sure all categories are displayed nicely and with proper wording. -->
+					<%= user.credential %> from <%= user.categories %><span id="alumni-position">, currently working as a(n) <%= user.position %> at <%= user.company %>.</span>
+				</p>
+				<p>
+					<%= user.firstName %>'s website: <a href="<%= user.portfolio %>"><%= user.portfolio %></a>
+				</p>
+				<p>I love my work doing...<br><%= user.responsibility %></p>
+				<p>I love my work because...<br><%= user.love %></p>
+				<p>My biggest failure was when...<br><%= user.failure %></p>
+				<p>I wish I had known...<br><%= user.wish %></p>
+				<p>Here are some words of wisdom...<br><%= user.wisdom %></p>
 			</div>
 		</div>
 	</div>

@@ -130,7 +130,14 @@ footer a:hover {
 
 .btn-filter {
 	background: none;
-	border: none; }
+	border: none;
+	transition: all 0.2s ease;
+	-webkit-transition: all 0.2s ease;
+}
+
+.btn-filter:hover:not(.is-checked)  {
+	background: #ddd;
+}
 
 #contemporary-arts-subfilters, #communication-subfilters {
 	border-top: 1px solid #ccc;
@@ -153,7 +160,7 @@ footer a:hover {
 }
 
 header {
-	padding: 2em 0;
+	padding: 2em 0 0 0;
 }
 
 .header-border {
@@ -166,6 +173,10 @@ header .about-wrapper a {
 
 header .submit-story-wrapper {
 	padding: 15px 0; 
+}
+
+.logo-wrapper {
+	margin-top: 15px;
 }
 
 .logo-wrapper a img {
@@ -221,7 +232,7 @@ nav ul li a {
 	padding: 50px 0; }
 
 #content {
-	padding-top: 1.5em;
+	/*padding-top: 1.5em;*/
 	padding-bottom: 3em;
 }
 
@@ -270,9 +281,14 @@ hr {
 	margin: 10px 1%;
 	min-height: 255px;
 	height: 255px;
+	min-width: 255px;
 	overflow: hidden;
 	text-align: center;
-	background: rgba(207, 73, 74, 0.6);
+	/*background: rgba(207, 73, 74, 0.6);*/
+	background-size: cover;
+	background-position: 50% 50%;
+	-webkit-transition: background-position 0.35s;
+	transition: background-position 0.35s;
 }
 
 .inner-featured-people-wrapper .image-wrapper img {
@@ -282,22 +298,26 @@ hr {
 	display: block;
 	min-height: 100%;
 	opacity: 1;
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transition: all 0.35s;
+	transition: all 0.35s;
 	-webkit-transform: translate3d(-30px,0,0) scale(1.12);
 	transform: translate3d(-30px,0,0) scale(1.12);
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 }
-.inner-featured-people-wrapper .image-wrapper:hover {
-		/*background: rgba(207, 73, 74, 0.6);*/
+
+.inner-featured-people-wrapper:hover .image-wrapper figcaption{
+	background-color: rgba(207, 73, 74, 0.6);
 }
 
-.inner-featured-people-wrapper .image-wrapper:hover img {
+.inner-featured-people-wrapper:hover .image-wrapper {
+	background-position: 45% 45%;
+}
+
+.inner-featured-people-wrapper:hover .image-wrapper img {
 	opacity: 0.5;
 	-webkit-transform: translate3d(0,0,0) scale(1);
 	transform: translate3d(0,0,0) scale(1);
-
 }
 
 figcaption {
@@ -312,6 +332,14 @@ figcaption {
 	left: 0;
 	width: 100%;
 	height: 100%;
+	background-color: rgba(207, 73, 74, 0.0)
+	-webkit-transition: all 0.35s;
+	transition: all 0.35s;
+}
+
+.inner-featured-people-wrapper {
+	cursor: pointer;
+	text-align: center;
 }
 
 figcaption:before, figcaption:after {
@@ -332,24 +360,24 @@ figcaption p {
 	/*width: 50%;
 	text-align: right;*/
 	-webkit-transition: opacity 1.0s, 
-	-webkit-transform 1.0s;
-	transition: opacity 1.0s;
-	transform: 1.0s;
+	-webkit-transform 0.35s;
+	transition: all 0.35s;
+	transform: 0.35s;
 	-webkit-transform: translate3d(-40px,0,0);
 	transform: translate3d(-40px,0,0);
 }
 
-figcaption p:hover {
-/*	opacity: 1;
+.inner-featured-people-wrapper:hover figcaption p {
+	opacity: 1;
 	-webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);*/
+	transform: translate3d(0,0,0);
 }
 
 .name {
 	color: #202020;
 	font-weight: 600;
-	margin: 1em 0 0 0;
-	max-width: 85%;
+	margin: 0;
+	/*max-width: 85%;*/
 	line-height: 1.4;
 	-webkit-transition: color 0.2s ease;
 	-moz-transition: color 0.2s ease;
@@ -357,6 +385,9 @@ figcaption p:hover {
 	transition: color 0.2s ease;
 }
 
+.category-study {
+	margin: 0;
+}
 
 #content .new-form {
 	padding-bottom: 80px; 
@@ -423,6 +454,7 @@ border-bottom: solid 2px #969696;
 	text-transform: uppercase;
 	font-size: 0.7em;
 	font-family: 'Lato', Helvetica, Arial;
+	margin: 10px 0 0 0;
 }
 
 
@@ -446,11 +478,11 @@ border-bottom: solid 2px #969696;
 #biography-form h1 {
 	font-size: 2.25em;
 	/*text-align: center;*/
-	margin: 3% 0;
+	margin: 0 0 0.5em 0;
 }
 
 .story-title-form {
-	margin-bottom: 2.5em;
+	/*margin-bottom: 2.5em;*/
 	padding: 15px;
 }
 
