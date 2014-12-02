@@ -5,6 +5,7 @@ $(function() {
 	 */
 	$('#biography-form').submit(function() {
 		$(this).find('.avatar-input-group').detach().appendTo($(this)).hide();
+		// $(this).find('.avatar-input-group').detach().appendTo($(this));
 	});
 	/*
 		In the main page, change the category nicely
@@ -70,7 +71,7 @@ $(function() {
 				/*
 					Attach photo field should be the last element in the multi-part form...so just do that but hide it.
 				*/
-				$('#biography-form').find('.avatar-input-group').detach().appendTo($(this)).hide();
+				// $('#biography-form').find('.avatar-input-group').detach().appendTo($(this)).hide();
 			}
 		}
 	});

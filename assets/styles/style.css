@@ -42,7 +42,7 @@ a:hover {
  }
 
 footer a:hover {
-	color: #aaa;
+	color: white;
 }
 .error, .ad-lib-input-container .error {
  	color: #a94442; 
@@ -100,11 +100,12 @@ footer a:hover {
 	user-select: none;
 	padding: 10px 12px;
 	color: #202020;
-	padding: 0.3rem 1rem;
+	padding: 0.3rem 2rem;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	line-height: 31px;
 	color: #FFFFFF;
+	font-weight: 400 !important;
 	border: none !important;
 	-webkit-transition: 0.2s ease-out;
 	-moz-transition: 0.2s ease-out;
@@ -202,7 +203,7 @@ header .submit-story-wrapper {
 nav ul li a {
 	display: block;
 	line-height: 1.4;
-	padding: 1.4em 0.3em;
+	padding: 0.4em 0.3em;
 	font-weight: 100;
 }
 
@@ -406,11 +407,6 @@ border-bottom: solid 2px #969696;
 	#content-admin .avatar-cell img {
 		max-height: 100%;
 		max-width: 100%; }
-
-#shareFont-errer {
-	margin-left: 98px;
-	position: absolute;
-	top: 26px; }
 
 .table-container {
 	overflow: scroll;
@@ -639,7 +635,7 @@ footer a  {
 	margin-top: 4px;
 	text-transform: uppercase;
 	font-size: 11px;
-	color: #aaa;
+	/*color: #aaa;*/
 }
  
 .ad-lib-input {
