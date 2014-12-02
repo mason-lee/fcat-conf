@@ -289,7 +289,7 @@ hr {
 }
 
 figcaption {
-	padding: 2em;
+	padding: 2em 1em;
 	color: #fff;
 	text-transform: uppercase;
 	font-size: 1.25em;
@@ -309,6 +309,11 @@ figcaption:before, figcaption:after {
 figcaption p {
 	margin: 0;
 	letter-spacing: 1px;
+	
+	/*padding: 0 10px 0 0;
+	width: 50%;
+	border-right: 1px solid #fff;*/
+
 	opacity: 0;
 	color: #fff;
 	font-weight: 800;
