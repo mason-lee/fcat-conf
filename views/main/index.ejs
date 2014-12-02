@@ -141,8 +141,8 @@
 			<div class="pull-left post element-item col-md-4 <%= user.categories %> <%= user.credential %>">
 				<div class="inner-featured-people-wrapper">
 					<a data-toggle="modal" data-target=".<%=user.id%>">
-						<div class="image-wrapper">
-							<img src="<%= user.avatar %>" alt="Profile picture of <%=: user.firstName | capitalize%> <%=: user.lastName | capitalize %>">
+						<div class="image-wrapper" style="background-image: url(<%= user.avatar %>)">
+							<!-- <img src="<%= user.avatar %>" alt="Profile picture of <%=: user.firstName | capitalize%> <%=: user.lastName | capitalize %>"> -->
 							<figcaption>
 								<p>
 									Check out <br>

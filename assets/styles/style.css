@@ -280,9 +280,14 @@ hr {
 	margin: 10px 1%;
 	min-height: 255px;
 	height: 255px;
+	min-width: 255px;
 	overflow: hidden;
 	text-align: center;
-	background: rgba(207, 73, 74, 0.6);
+	/*background: rgba(207, 73, 74, 0.6);*/
+	background-size: cover;
+	background-position: 50% 50%;
+	-webkit-transition: background-position 0.35s;
+	transition: background-position 0.35s;
 }
 
 .inner-featured-people-wrapper .image-wrapper img {
@@ -292,22 +297,26 @@ hr {
 	display: block;
 	min-height: 100%;
 	opacity: 1;
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transition: all 0.35s;
+	transition: all 0.35s;
 	-webkit-transform: translate3d(-30px,0,0) scale(1.12);
 	transform: translate3d(-30px,0,0) scale(1.12);
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 }
-.inner-featured-people-wrapper .image-wrapper:hover {
-		/*background: rgba(207, 73, 74, 0.6);*/
+
+.inner-featured-people-wrapper:hover .image-wrapper figcaption{
+	background-color: rgba(207, 73, 74, 0.6);
 }
 
-.inner-featured-people-wrapper .image-wrapper:hover img {
+.inner-featured-people-wrapper:hover .image-wrapper {
+	background-position: 45% 45%;
+}
+
+.inner-featured-people-wrapper:hover .image-wrapper img {
 	opacity: 0.5;
 	-webkit-transform: translate3d(0,0,0) scale(1);
 	transform: translate3d(0,0,0) scale(1);
-
 }
 
 figcaption {
@@ -322,6 +331,9 @@ figcaption {
 	left: 0;
 	width: 100%;
 	height: 100%;
+	background-color: rgba(207, 73, 74, 0.0)
+	-webkit-transition: all 0.35s;
+	transition: all 0.35s;
 }
 
 .inner-featured-people-wrapper {
