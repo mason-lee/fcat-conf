@@ -746,10 +746,40 @@ footer a  {
 .message {
 	/*font-size: 1.3em;*/
 }
+.areyoufcat {
+	padding-top: 2em;
+}
 
+.areyoufcat h3 {
+	font-weight: 800;
+	font-size: 3em;
+	text-align: center;
+	margin-bottom: 0.6em;
+}
 
+.hero-subtitle {
+	list-style: none;
 
+}
 
+.areyoufcat ul {
+	display: table; 
+	margin: 0 auto;
+}
+
+.areyoufcat ul li {
+	margin-bottom: 0.3em;
+}
+
+.areyoufcat ul li a {
+	/*color: rgba(207, 73, 74, 0.9);
+	font-weight: 800;*/
+	font-size: 1.6em;
+}
+
+.areyoufcat ul li a:hover {
+	color: rgba(207, 73, 74, 0.9);
+}
 
 
 

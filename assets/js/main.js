@@ -95,7 +95,16 @@ $(function() {
 			avatar: {
 				required: true
 			},
+			credential: {
+				required: true
+			},
 			categories: {
+				required: true
+			},
+			responsibility: {
+				required: true
+			},
+			love: {
 				required: true
 			},
 			shareFcat: {
@@ -137,7 +146,7 @@ $(function() {
 		Hide header border on the index page.
 	 */
 	if ($(".stories-wrapper").length > 0) {
-		$(".header-border").css({ "border-bottom": "none" });
+		// $(".header-border").css({ "border-bottom": "none" });
 	}
 
 	/*
