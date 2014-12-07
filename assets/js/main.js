@@ -3,22 +3,30 @@ $(function() {
 		DON'T DELTE THIS. 
 		(A little hack to make image uploading working)
 	 */
-	$("#form-submit-button").prop('disabled', true);
-	$("#form-submit-button").css({ "backgroundColor": "#cccac9" });
+	// $('#biography-form').submit(function() {
+	// 	$(this).find('.avatar-input-group').detach().appendTo($(this)).hide();
+	// });
 
-	$('#biography-form').submit(function() {
-		$(this).find('.avatar-input-group').detach().appendTo($(this)).hide();
-		// $(this).find('.avatar-input-group').detach().appendTo($(this));
+	// Custom image upload
+	var input = $("#special-image>input[type='file']");
+	$("#uploadButton").on("click", function(e) {
+		e.preventDefault();
+		input.trigger("click");
 	});
 
-	$(".ad-lib-file").change(function() {
-		if($(this).val()) {
-			$("#form-submit-button").prop('disabled', false);
-			$("#form-submit-button").css({ "backgroundColor": "rgba(207, 73, 74, 0.9)" });
+	input.bind("change", function(e) {
+		var file = e.target.files[0];
+		if(!file) return;
+		else {
+			$("#uploadButton").text(file.name);
+			$("#filename_field").val(file.name);
 		}
 	});
-
 	
+	$("filename_field").bind("change", function(e) {
+		$("#filename_field-error").fadeOut();
+	});
+
 	//In the main page, change the category nicely
 	// Change the schools texts nicely.
 	var studyElem = $(".category-study");
@@ -35,9 +43,8 @@ $(function() {
 		$(this).attr('class', _sCurrClasses.replace(/,/g, ' '));
 	});
 
-	/*
-		Text formatting in the modal
-	 */
+	
+	// Text formatting in the modal
 	// e.g., Alumni,student....
 	var modalTitle = $(".title-modal");
 	modalTitle.each(function() {
@@ -54,14 +61,8 @@ $(function() {
 		$(this).append(modalPrograms2);
 	});
 
-
-
-
-
-
-	/*
-		Slide in the flash message.
-	*/
+	
+	//Slide in the flash message.
 	$(".thankyou-message-wrapper").addClass("hide");
 	$(".thankyou-message-wrapper").delay(5000).removeClass("hide").addClass("animated fadeInDown");
 	$(".glyphicon-remove").click(function() {
@@ -95,6 +96,9 @@ $(function() {
 			avatar: {
 				required: true
 			},
+			filename: {
+				required: true
+			},
 			credential: {
 				required: true
 			},
@@ -112,10 +116,6 @@ $(function() {
 			},
 			success: function(element) {
 				element.text("OK!").addClass('valid');
-				/*
-					Attach photo field should be the last element in the multi-part form...so just do that but hide it.
-				*/
-				// $('#biography-form').find('.avatar-input-group').detach().appendTo($(this)).hide();
 			}
 		}
 	});
@@ -129,42 +129,19 @@ $(function() {
 	     || /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/.test(value); 
 	},"Proper URL, please");
 
-	// var peopleSize = $(".people-wrapper .post").length;
-	// var numPic = 18;
-
-	// $('.people-wrapper .post:lt('+numPic+')').show();
-	// $("#loadMore").click(function() {
-	//	numPic = (numPic + 5 <= peopleSize) ? numPic + 5 : peopleSize;
-	//	$('.people-wrapper .post:lt('+numPic+')').show();
-	// });
-	// $("#showLess").click(function() {
-	//	numPic = (numPic - 5 < 0) ? 3 : numPic - 5;
-	//	$(".people-wrapper .post").not(':lt('+numPic+')').hide();
-	// });
-
-	/*
-		Hide header border on the index page.
-	 */
-	if ($(".stories-wrapper").length > 0) {
-		// $(".header-border").css({ "border-bottom": "none" });
-	}
-
-	/*
-		Responsive menu
-	 */
+	
+	// Responsive menu
 	$('header nav').meanmenu();
 
-	/*
-		Auto resize the textarea
-	 */
+
+	// Auto resize the textarea
 	$('.form-group').on( 'keyup', 'textarea', function (){
 		$(this).height(0);
 		$(this).height(this.scrollHeight);
 	});
 	$('#container').find( 'textarea' ).keyup();
-	/*
-		Dealing with sub filters
-	 */
+	
+	// Dealing with sub filters 
 	$(".subfilterButton").click(function() {
 		$(".subfilter input[type='checkbox']:checked").each(function() {
 			$(".schoolOfContemp").append("," + $(this).val());
@@ -173,7 +150,7 @@ $(function() {
 	// Initiate chosen library
 	$(".chosen-select").chosen();
 
-	// Danny - How to show different dropdown depending on the selection.
+	// How to show different dropdown depending on the selection.
 	// contemporary art subfilter
 	$("#source").change(function() {
 		if($('#source option:selected').text() == "Contemporary Arts") {
@@ -193,8 +170,6 @@ $(function() {
 	$("#title-chooser").change(function(){
 		 values = $("#title-chooser").chosen().val();
 		 //values is an array containing all the results.
-		 // console.log(values);
-
 		 if (!$.inArray("Alumni", values)) {
 		 	$("#alumni-info").slideDown();
 		 }

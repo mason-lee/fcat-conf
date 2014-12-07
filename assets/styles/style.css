@@ -755,6 +755,7 @@ footer a  {
 	font-size: 3em;
 	text-align: center;
 	margin-bottom: 0.6em;
+	line-height: 1.5;
 }
 
 .hero-subtitle {
@@ -772,8 +773,6 @@ footer a  {
 }
 
 .areyoufcat ul li a {
-	/*color: rgba(207, 73, 74, 0.9);
-	font-weight: 800;*/
 	font-size: 1.6em;
 }
 
@@ -781,6 +780,28 @@ footer a  {
 	color: rgba(207, 73, 74, 0.9);
 }
 
+#special-image{
+	display: none;
+}
+
+#filename_field{ 
+	width: 0;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+.avatar-input-group>.btn {
+	border: none;
+	color: #666;
+}
+
+#uploadButton {
+	box-shadow: none;
+	border-radius: 0;
+	border: 1px solid #c9c9c9;
+	/*border-bottom: 1px solid #c9c9c9;*/
+}
 
 
 

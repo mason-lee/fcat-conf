@@ -12,6 +12,8 @@ module.exports = function(req, res, next) {
 	if(!req.session.flash) return next();
 	res.locals.flash = _.clone(req.session.flash);
 
+      // console.log(is the server clearing flash session before page render)
+
 	// clear flash
 	req.session.flash = {};
 
