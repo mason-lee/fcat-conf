@@ -1,12 +1,4 @@
 $(function() {
-	/*
-		DON'T DELTE THIS. 
-		(A little hack to make image uploading working)
-	 */
-	// $('#biography-form').submit(function() {
-	// 	$(this).find('.avatar-input-group').detach().appendTo($(this)).hide();
-	// });
-
 	// Custom image upload
 	var input = $("#special-image>input[type='file']");
 	$("#uploadButton").on("click", function(e) {
@@ -69,17 +61,19 @@ $(function() {
 		$(this).parent("div").addClass("fadeOutUpBig remove-message hide");
 		$(this).parent("div").removeClass("animated");
 	});
-	$(window).load(function() {
-		$(".error-message-wrapper").addClass("animated fadeInDown");
-		setTimeout(fadeOutErrorMessage, 3000);
-		function fadeOutErrorMessage() {
-			$(".error-message-wrapper").removeClass("fadeInDown").addClass("fadeOut");
-		}
-	});
+	// $(window).load(function() {
+	$(".error-message-wrapper").addClass("animated fadeInDown");
+	setTimeout(fadeOutErrorMessage, 3000);
+	function fadeOutErrorMessage() {
+		$(".error-message-wrapper").removeClass("fadeInDown").addClass("fadeOut");
+	}
+	// });
 
 	$('.myModal').modal('toggle');
 
 	$("#biography-form").validate({
+		ignore:  ":hidden:not(select)",
+
 		rules: {
 			firstName: {
 				required: true
@@ -133,7 +127,6 @@ $(function() {
 	// Responsive menu
 	$('header nav').meanmenu();
 
-
 	// Auto resize the textarea
 	$('.form-group').on( 'keyup', 'textarea', function (){
 		$(this).height(0);
@@ -154,14 +147,10 @@ $(function() {
 	// contemporary art subfilter
 	$("#source").change(function() {
 		if($('#source option:selected').text() == "Contemporary Arts") {
-			console.log("contemporary arts = ")
-			console.log($("#source option:selected").text());
 			$(".major-art").show();
 			$(".chosen-container").css({ "width": "350px" });
 		} 
 		else if ($('#source option:selected').text() == "Communication") {
-			console.log("communications = ")
-			console.log($("#source option:selected").text());
 			$(".major-communication").show();
 			$(".chosen-container").css({ "width": "350px" });
 		}  

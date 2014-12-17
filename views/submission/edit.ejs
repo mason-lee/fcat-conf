@@ -1,6 +1,5 @@
 <% _.each(users, function(user, index) { %>		
 <div class="container"><h1>Edit Page</h1>
-	<!-- <form role="form" action="/user/update/<%= user.id %>" method="post" class="edit-form"> -->
 	<form role="form" action="/admin/submissions/<%= user.id %>/update" method="post" class="edit-form">
 		<div class="form-group">
 			<span>
@@ -35,12 +34,32 @@
 		</div>
 		<div class="form-group">
 			<div>
-				<b>Portfolio: </b><%= user.portfolio %>
+				<b>Portfolio: </b>
+				<% if(user.portfolio) { %>
+					<%= user.portfolio %>
+				<% } else { %>
+					<p>x</p>
+				<% } %>
 			</div>
 		</div>
 		<div class="form-group">
 			<div>
-				<b>Company: </b><%= user.company %>
+				<b>Position: </b>
+			<% if(user.position) { %>
+				<%= user.position %>
+			<% } else { %>
+				<p>x</p>
+			<% } %>
+			</div>	
+		</div>
+		<div class="form-group">
+			<div>
+				<b>Company: </b>
+			<% if(user.company) { %>
+				<%= user.company %>
+			<% } else { %>
+				<p>x</p>
+			<% } %>
 			</div>	
 		</div>
 		<div class="form-group">
@@ -59,19 +78,31 @@
 			<div>
 				<b>Failure: </b>
 			</div>
-			<textarea name="failure"><%= user.failure %></textarea>
+			<% if(user.failure) { %>
+				<textarea name="failure"><%= user.failure %></textarea>
+			<% } else { %> 
+				<p>x</p>
+			<% } %>
 		</div>
 		<div class="form-group">
 			<div>
 				<b>Wish: </b>
 			</div>
-			<textarea name="wish"><%= user.wish %></textarea>
+			<% if(user.wish) { %>
+				<textarea name="wish"><%= user.wish %></textarea>
+			<% } else { %>
+				<p>x</p>
+			<% } %>
 		</div>
 		<div class="form-group">
 			<div>
 				<b>Wisdom: </b>
 			</div>
-			<textarea name="wisdom"><%= user.wisdom %></textarea>			
+			<% if(user.wisdom) { %>
+				<textarea name="wisdom"><%= user.wisdom %></textarea>
+			<% } else { %>
+				<p>x</p>
+			<% } %>
 		</div>
 		<div class="form-group">
 			<div>

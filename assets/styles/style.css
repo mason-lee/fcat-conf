@@ -18,7 +18,6 @@ body {
 	color: #666;
 	font-size: 14px;
 	line-height: 26px;
-	/*color: #202020; */
 }
 
 textarea {
@@ -50,7 +49,6 @@ footer a:hover {
 
 .is-checked {
 	background-color: rgba(207, 73, 74, 0.9) !important;
-	/*padding: 0.3em 0.5em;*/
 	color: white;
 }
 
@@ -143,10 +141,6 @@ footer a:hover {
 	border-top: 1px solid #ccc;
 }
 
-/*h5 {
-	font-weight: 400 !important; 
-}*/
-
 /*
 	Layout styling starts
  */
@@ -154,7 +148,6 @@ footer a:hover {
 	*zoom: 1;
 	max-width: 80.625em;
 	width: 90%;
-	/*padding: 0;*/
 	position: relative;
 	height: 100%;
 }
@@ -197,6 +190,11 @@ header .submit-story-wrapper {
 
 .about-wrapper a {
 	font-size: 1.1em;
+	text-decoration: underline;
+}
+
+.about-wrapper a:hover {
+	color: #666;
 }
 
 #twitter-widget-0 {
@@ -263,8 +261,6 @@ nav ul li a {
 
 .post {
 	padding: 0;
-	/*position: relative !important;*/
-	/*display: none;*/
 }
 
 .inner-featured-people-wrapper {
@@ -285,7 +281,6 @@ hr {
 	min-width: 255px;
 	overflow: hidden;
 	text-align: center;
-	/*background: rgba(207, 73, 74, 0.6);*/
 	background-size: cover;
 	background-position: 50% 50%;
 	-webkit-transition: background-position 0.35s;
@@ -350,16 +345,9 @@ figcaption:before, figcaption:after {
 figcaption p {
 	margin: 0;
 	letter-spacing: 1px;
-	
-	/*padding: 0 10px 0 0;
-	width: 50%;
-	border-right: 1px solid #fff;*/
-
 	opacity: 0;
 	color: #fff;
 	font-weight: 800;
-	/*width: 50%;
-	text-align: right;*/
 	-webkit-transition: opacity 1.0s, 
 	-webkit-transform 0.35s;
 	transition: all 0.35s;
@@ -378,7 +366,6 @@ figcaption p {
 	color: #202020;
 	font-weight: 600;
 	margin: 0;
-	/*max-width: 85%;*/
 	line-height: 1.4;
 	-webkit-transition: color 0.2s ease;
 	-moz-transition: color 0.2s ease;
@@ -395,7 +382,6 @@ figcaption p {
 }
 
 .biography-form-wrapper {
-	/*width: 60%;*/
 	margin: 0 auto;
 }
 
@@ -465,7 +451,6 @@ border-bottom: solid 2px #969696;
 	border-radius: 0;
 	box-shadow: none;
 	height: auto;
-	/*font-size: 1.5em;*/
 	padding-left: 0;
 }
 
@@ -478,12 +463,10 @@ border-bottom: solid 2px #969696;
 
 #biography-form h1 {
 	font-size: 2.25em;
-	/*text-align: center;*/
 	margin: 0 0 0.5em 0;
 }
 
 .story-title-form {
-	/*margin-bottom: 2.5em;*/
 	padding: 15px;
 }
 
@@ -494,25 +477,21 @@ border-bottom: solid 2px #969696;
 
 ::-webkit-input-placeholder {
    font-family: 'Lato', Helvetica, Arial;
-   /*font-size: 2em;*/
    font-weight: 100;
 }
 
 :-moz-placeholder { /* Firefox 18- */
    font-family: 'Lato', Helvetica, Arial;
-   /*font-size: 2em;*/
    font-weight: 100;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
    font-family: 'Lato', Helvetica, Arial;
-   /*font-size: 2em;*/
    font-weight: 100;
 }
 
 :-ms-input-placeholder {  
    font-family: 'Lato', Helvetica, Arial;
-   /*font-size: 2em;*/
    font-weight: 100;
 }
 
@@ -533,12 +512,10 @@ footer {
 
 footer span {
 	color: #fff3ec;
-	/*font-size: 0.8em;*/
 }
 
 footer a  {
 	color: #fff3ec;
-	/*font-size: 0.8em;*/
 	font-weight: 600;
 }
 
@@ -633,6 +610,10 @@ footer a  {
 	vertical-align: top;
 }
 
+.ad-lib-input-container-new {
+	display: inline-block;
+}
+
 .ad-lib-input-container-new label {
 	font-weight: 300;
 	margin-right: 4px;
@@ -644,6 +625,14 @@ footer a  {
 
 .last-checkbox {
 	margin-right: -3px !important;
+}
+
+.checkbox a {
+	text-decoration: underline;
+}
+
+.checkbox a:hover {
+	color: #333;
 }
 
 .ad-lib-textarea-container {
@@ -671,7 +660,6 @@ footer a  {
 	margin-top: 4px;
 	text-transform: uppercase;
 	font-size: 11px;
-	/*color: #aaa;*/
 }
  
 .ad-lib-input {
@@ -728,7 +716,6 @@ footer a  {
 	position: relative;
 	overflow: hidden;
 	margin: 0;
-	/* padding: 0 5px; */
 	width: 100%;
 	min-height: 27px !important;
 	 border: 1px solid #aaa; 
@@ -743,9 +730,6 @@ footer a  {
 	text-transform: uppercase;
 }
 
-.message {
-	/*font-size: 1.3em;*/
-}
 .areyoufcat {
 	padding-top: 2em;
 }
@@ -800,9 +784,17 @@ footer a  {
 	box-shadow: none;
 	border-radius: 0;
 	border: 1px solid #c9c9c9;
-	/*border-bottom: 1px solid #c9c9c9;*/
 }
 
+.success-page {
+	text-align: center;
+}	
+
+.thankyou-title {
+	font-size: 1.5em;
+	font-weight: 800;
+	line-height: 1.5;
+}
 
 
 

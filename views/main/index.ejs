@@ -76,13 +76,6 @@
 							Dean's Office
 						</button>
 					</li>
-				<!-- </ul>
-				<ul class="list-inline" id="contemporary-arts-subfilters" style="display: none;">
-					<li>
-						<button data-filter=".*" class="btn-filter is-checked">
-								All
-						</button>
-					</li> -->
 					<li>
 						<button class="btn-filter" data-filter=".Dialogue">
 							Dialogue
@@ -171,13 +164,11 @@
 
 	<div class="container">
 		<div class="people-wrapper">
-			<!-- <h4 class='no-story'>No stories just yet:(</h4> -->
 		<% _.each(users, function(user, index) { %>
 			<div class="pull-left post element-item col-md-4 <%= user.categories %> <%= user.credential %>">
 				<div class="inner-featured-people-wrapper">
 					<a data-toggle="modal" data-target=".<%=user.id%>">
 						<div class="image-wrapper" style="background-image: url(<%= user.avatar %>)">
-							<!-- <img src="<%= user.avatar %>" alt="Profile picture of <%=: user.firstName | capitalize%> <%=: user.lastName | capitalize %>"> -->
 							<figcaption>
 								<p>
 									Check out <br>
@@ -194,20 +185,18 @@
 							<%=: user.categories | capitalize %>	
 						</h5>
 					</a>
-					<!-- <h5>
-						<%=: user.company | capitalize %>	
-					</h5>
-					<h5>
-						<%=: user.position | capitalize %>	
-					</h5> -->
+						<% if(user.position) {%>
+							<%=: user.position | capitalize %>	
+						<% } %>
+						<% if(user.company) { %>
+							<%=: user.company | capitalize %>
+						<% } %>
 				</div>
 				<hr>
 			</div>	
 		<% }) %>
 		</div>
 	</div><!--end container-->
-	<!-- <div id="loadMore">Load More</div>
-	<div id="showLess">Show Less</div> -->
 </div>
 
 <!-- Modal -->
@@ -224,18 +213,48 @@
 					<img src="<%= user.avatar %>" alt="Profile picture of <%=: user.firstName | capitalize%> <%=: user.lastName | capitalize %>">
 				</div>
 				<p>
-					<span class="title-modal"><%= user.credential %> </span>from <span class="programs-modal"><%= user.categories %></span><span id="alumni-position">, currently working as a(n) <%= user.position %> at <%= user.company %> in <%= user.location %>.</span>
+					<span class="title-modal"><%= user.credential %> </span>from <span class="programs-modal"><%= user.categories %></span><span id="alumni-position">
+					
+					<% if(user.position) { %>
+						, currently working as a(n) <%= user.position %>  
+					<% } %>
+					<% if(user.company) { %>
+						at <%= user.company %>
+					<% } %>
+					in <%= user.location %>.</span>
 				</p>
 				<p>
 				<% if(user.portfolio) { %>
 					<%= user.firstName %>'s website: <a href="<%= user.portfolio %>"><%= user.portfolio %></a>
 				<% } %>
 				</p>
-				<p><span class="modal-placeholder-text">I love my work doing...</span><br><span class="modal-paragraphs"><%= user.responsibility %></span></p>
+				<p><span class="modal-placeholder-text">I love my work doing...</span><br>
+					<span class="modal-paragraphs">
+						<%= user.responsibility %>
+					</span>
+				</p>
 				<p><span class="modal-placeholder-text">I love my work because...</span><br><span class="modal-paragraphs"><%= user.love %></span></p>
-				<p><span class="modal-placeholder-text">My biggest failure was when...</span><br><span class="modal-paragraphs"><%= user.failure %></span></p>
-				<p><span class="modal-placeholder-text">I wish I had known...</span><br><span class="modal-paragraphs"><%= user.wish %></span></p>
-				<p><span class="modal-placeholder-text">Here are some words of wisdom...</span><br><span class="modal-paragraphs"><%= user.wisdom %></span></p>
+				<% if(user.failure) { %>
+					<p><span class="modal-placeholder-text">My biggest failure was when...</span><br>
+						<span class="modal-paragraphs">
+								<%= user.failure %>
+						</span>
+					</p>
+				<% } %>
+				<% if(user.wish) { %>
+					<p><span class="modal-placeholder-text">I wish I had known...</span><br>
+						<span class="modal-paragraphs">
+							<%= user.wish %>
+						</span>
+					</p>
+				<% } %>
+				<% if(user.wisdom) { %>
+					<p><span class="modal-placeholder-text">Here are some words of wisdom...</span><br>
+						<span class="modal-paragraphs">
+							<%= user.wisdom %>
+						</span>
+					</p>
+				<% } %>
 			</div>
 		</div>
 	</div>

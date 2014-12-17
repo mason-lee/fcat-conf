@@ -52,7 +52,6 @@
                         </td>
                         <td>
                             <div class="avatar-cell">
-                                <!-- <img src="<%= user.avatar %>" alt="Profile picture of <%=: user.firstName | capitalize%> <%=: user.lastName | capitalize %>"> -->
                                 <img src="<%= user.avatar %>" alt="Profile picture of <%=: user.firstName | capitalize%> <%=: user.lastName | capitalize %>">
                             </div>
                         </td>
@@ -71,14 +70,27 @@
                         </td>
                         <td>
                             <a href="<%= user.portfolio %>" title="<%=: user.firstName | capitalize%>'s Portfolio">
-                                <%= user.portfolio %>
+                                <% if(user.portfolio) { %>
+                                    <%= user.portfolio %>
+                                <% } else { %>
+                                    <p>x</p>
+                                <% } %>
                             </a>
                         </td>
                         <td>
-                            <%= user.company %>
+                            <% if(user.company) { %>
+                                <%= user.company %>
+                            <% } else { %>
+                                <p>x</p>
+                             <% } %>
                         </td>
                         <td>
-                            <%= user.position %>
+                            <% if(user.position) { %>
+                                <%= user.position %>
+                            <% } else { %>
+                                <p>x</p>
+                            <% } %>
+
                         </td>
                         <td>
                             <form action="/admin/submissions/<%= user.id %>/edit" method="post">

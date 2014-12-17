@@ -49,6 +49,10 @@ module.exports.routes = {
 		view: 'static/about'
 	},
 
+	'/success': {
+		view: 'static/success'
+	},
+
 	'/admin/login': 'SessionController.new',
 	'post /session': 'SessionController.create',
 	'/admin/logout': 'SessionController.destroy',
