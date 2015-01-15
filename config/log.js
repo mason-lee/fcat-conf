@@ -10,6 +10,18 @@
  * http://sailsjs.org/#/documentation/concepts/Logging
  */
 
+
+var winston = require('winston');
+
+var customLogger = new winston.Logger({
+  transports: [
+    new(winston.transports.File)({
+      level: 'debug',
+      filename: './fcat_log_file.log'
+    }),
+  ],
+});
+
 module.exports.log = {
 
   /***************************************************************************
@@ -24,6 +36,8 @@ module.exports.log = {
   *                                                                          *
   ***************************************************************************/
 
-  // level: 'info'
+  level: 'verbose',
+  colors: false,
+  custom: customLogger
 
 };

@@ -27,7 +27,8 @@
     "sails-redis": "^0.10.2",
     "skipper-disk": "^0.5.3",
     "skipper-gridfs": "^0.5.3",
-    "skipper-s3": "^0.5.5"
+    "skipper-s3": "^0.5.5",
+    "winston": "^0.8.3"
   },
   "engines": {
     "node": "0.10.x"
