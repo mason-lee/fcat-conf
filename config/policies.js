@@ -26,15 +26,11 @@ module.exports.policies = {
 	*                                                                          *
 	***************************************************************************/
 
-	// '*': "false",
+	'*': "false",
 
 	SubmissionController: {
 		index: 'isAdmin'
 	},
-
-	// SessionController: {
-	// 	new: 'http-authen'
-	// },
 
 	UserController: {
 		create: 'flash'
