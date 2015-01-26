@@ -30,12 +30,11 @@ module.exports.policies = {
 
 	SubmissionController: {
 		index: 'isAdmin'
-	}
+	},
 
-	// UserController: {
-		// '*': false
-		// create: 'flash'
-	// }
+	UserController: {
+		// create: "rate"
+	}
 
 	/***************************************************************************
 	*                                                                          *

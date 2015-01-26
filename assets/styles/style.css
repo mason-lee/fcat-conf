@@ -796,7 +796,13 @@ footer a  {
 	line-height: 1.5;
 }
 
+.realperson-regen {
+	text-align: left;
+}
 
+.realperson-text {
+	font-family: "Courier New",monospace !important;
+}
 
 
 
